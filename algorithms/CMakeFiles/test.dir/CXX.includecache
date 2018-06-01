@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/lltest.cpp
+LinkedList.h
+/home/mddarr/projects/data_structures/algorithms/LinkedList.h
+
+containers/LinkedList.h
+

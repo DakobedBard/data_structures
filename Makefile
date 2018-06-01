@@ -122,6 +122,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named aglorithm
+
+# Build rule for target.
+aglorithm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 aglorithm
+.PHONY : aglorithm
+
+# fast build rule for target.
+aglorithm/fast:
+	$(MAKE) -f algorithms/CMakeFiles/aglorithm.dir/build.make algorithms/CMakeFiles/aglorithm.dir/build
+.PHONY : aglorithm/fast
+
+#=============================================================================
+# Target rules for targets named all_subsets
+
+# Build rule for target.
+all_subsets: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 all_subsets
+.PHONY : all_subsets
+
+# fast build rule for target.
+all_subsets/fast:
+	$(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/build
+.PHONY : all_subsets/fast
+
+#=============================================================================
+# Target rules for targets named lca
+
+# Build rule for target.
+lca: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lca
+.PHONY : lca
+
+# fast build rule for target.
+lca/fast:
+	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
+.PHONY : lca/fast
+
+#=============================================================================
 # Target rules for targets named graph
 
 # Build rule for target.
@@ -156,6 +195,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... aglorithm"
+	@echo "... all_subsets"
+	@echo "... lca"
 	@echo "... graph"
 	@echo "... container"
 .PHONY : help

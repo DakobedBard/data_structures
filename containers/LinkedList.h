@@ -46,6 +46,8 @@ class LinkedList{
 };
 
 
+
+
 template<class DataType>
 int LinkedList<DataType>::getSize(){
 		return size;
@@ -85,8 +87,5 @@ void LinkedList<DataType>::insert_tail(DataType item){
 	tail = tail->next;
 	size++;
 }
-
-
-
 
 

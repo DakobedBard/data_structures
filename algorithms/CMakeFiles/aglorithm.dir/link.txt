@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/aglorithm.dir/stack_test.cpp.o  -o aglorithm ../graphs/libgraph.a ../containers/libcontainer.a 

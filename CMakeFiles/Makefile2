@@ -60,6 +60,141 @@ CMAKE_SOURCE_DIR = /home/mddarr/projects/data_structures
 CMAKE_BINARY_DIR = /home/mddarr/projects/data_structures
 
 #=============================================================================
+# Directory level rules for directory algorithms
+
+# Convenience name for "all" pass in the directory.
+algorithms/all: algorithms/CMakeFiles/aglorithm.dir/all
+algorithms/all: algorithms/CMakeFiles/all_subsets.dir/all
+algorithms/all: algorithms/CMakeFiles/lca.dir/all
+
+.PHONY : algorithms/all
+
+# Convenience name for "clean" pass in the directory.
+algorithms/clean: algorithms/CMakeFiles/aglorithm.dir/clean
+algorithms/clean: algorithms/CMakeFiles/all_subsets.dir/clean
+algorithms/clean: algorithms/CMakeFiles/lca.dir/clean
+
+.PHONY : algorithms/clean
+
+# Convenience name for "preinstall" pass in the directory.
+algorithms/preinstall:
+
+.PHONY : algorithms/preinstall
+
+#=============================================================================
+# Target rules for target algorithms/CMakeFiles/aglorithm.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/aglorithm.dir/all: graphs/CMakeFiles/graph.dir/all
+algorithms/CMakeFiles/aglorithm.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/aglorithm.dir/build.make algorithms/CMakeFiles/aglorithm.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/aglorithm.dir/build.make algorithms/CMakeFiles/aglorithm.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=1,2 "Built target aglorithm"
+.PHONY : algorithms/CMakeFiles/aglorithm.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/aglorithm.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/aglorithm.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/aglorithm.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/aglorithm.dir/rule
+
+# Convenience name for target.
+aglorithm: algorithms/CMakeFiles/aglorithm.dir/rule
+
+.PHONY : aglorithm
+
+# clean rule for target.
+algorithms/CMakeFiles/aglorithm.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/aglorithm.dir/build.make algorithms/CMakeFiles/aglorithm.dir/clean
+.PHONY : algorithms/CMakeFiles/aglorithm.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/aglorithm.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/CMakeFiles/all_subsets.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/all_subsets.dir/all: graphs/CMakeFiles/graph.dir/all
+algorithms/CMakeFiles/all_subsets.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=3,4 "Built target all_subsets"
+.PHONY : algorithms/CMakeFiles/all_subsets.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/all_subsets.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/all_subsets.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/all_subsets.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/all_subsets.dir/rule
+
+# Convenience name for target.
+all_subsets: algorithms/CMakeFiles/all_subsets.dir/rule
+
+.PHONY : all_subsets
+
+# clean rule for target.
+algorithms/CMakeFiles/all_subsets.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/clean
+.PHONY : algorithms/CMakeFiles/all_subsets.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/all_subsets.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/CMakeFiles/lca.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/lca.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=10,11 "Built target lca"
+.PHONY : algorithms/CMakeFiles/lca.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/lca.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/lca.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/lca.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/lca.dir/rule
+
+# Convenience name for target.
+lca: algorithms/CMakeFiles/lca.dir/rule
+
+.PHONY : lca
+
+# clean rule for target.
+algorithms/CMakeFiles/lca.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/clean
+.PHONY : algorithms/CMakeFiles/lca.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/lca.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory graphs
 
 # Convenience name for "all" pass in the directory.
@@ -84,7 +219,7 @@ graphs/preinstall:
 graphs/CMakeFiles/graph.dir/all: containers/CMakeFiles/container.dir/all
 	$(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/depend
 	$(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=3,4 "Built target graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=7,8,9 "Built target graph"
 .PHONY : graphs/CMakeFiles/graph.dir/all
 
 # Include target in all.
@@ -94,7 +229,7 @@ all: graphs/CMakeFiles/graph.dir/all
 
 # Build rule for subdir invocation for target.
 graphs/CMakeFiles/graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 graphs/CMakeFiles/graph.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
 .PHONY : graphs/CMakeFiles/graph.dir/rule
@@ -139,7 +274,7 @@ containers/preinstall:
 containers/CMakeFiles/container.dir/all:
 	$(MAKE) -f containers/CMakeFiles/container.dir/build.make containers/CMakeFiles/container.dir/depend
 	$(MAKE) -f containers/CMakeFiles/container.dir/build.make containers/CMakeFiles/container.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=1,2 "Built target container"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=5,6 "Built target container"
 .PHONY : containers/CMakeFiles/container.dir/all
 
 # Include target in all.

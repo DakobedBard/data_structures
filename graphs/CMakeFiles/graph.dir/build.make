@@ -70,17 +70,32 @@ graphs/CMakeFiles/graph.dir/lltest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph.dir/lltest.cpp.s"
 	cd /home/mddarr/projects/data_structures/graphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/graphs/lltest.cpp -o CMakeFiles/graph.dir/lltest.cpp.s
 
+graphs/CMakeFiles/graph.dir/Graph.cpp.o: graphs/CMakeFiles/graph.dir/flags.make
+graphs/CMakeFiles/graph.dir/Graph.cpp.o: graphs/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object graphs/CMakeFiles/graph.dir/Graph.cpp.o"
+	cd /home/mddarr/projects/data_structures/graphs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/graph.dir/Graph.cpp.o -c /home/mddarr/projects/data_structures/graphs/Graph.cpp
+
+graphs/CMakeFiles/graph.dir/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graph.dir/Graph.cpp.i"
+	cd /home/mddarr/projects/data_structures/graphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/graphs/Graph.cpp > CMakeFiles/graph.dir/Graph.cpp.i
+
+graphs/CMakeFiles/graph.dir/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph.dir/Graph.cpp.s"
+	cd /home/mddarr/projects/data_structures/graphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/graphs/Graph.cpp -o CMakeFiles/graph.dir/Graph.cpp.s
+
 # Object files for target graph
 graph_OBJECTS = \
-"CMakeFiles/graph.dir/lltest.cpp.o"
+"CMakeFiles/graph.dir/lltest.cpp.o" \
+"CMakeFiles/graph.dir/Graph.cpp.o"
 
 # External object files for target graph
 graph_EXTERNAL_OBJECTS =
 
 graphs/libgraph.a: graphs/CMakeFiles/graph.dir/lltest.cpp.o
+graphs/libgraph.a: graphs/CMakeFiles/graph.dir/Graph.cpp.o
 graphs/libgraph.a: graphs/CMakeFiles/graph.dir/build.make
 graphs/libgraph.a: graphs/CMakeFiles/graph.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgraph.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgraph.a"
 	cd /home/mddarr/projects/data_structures/graphs && $(CMAKE_COMMAND) -P CMakeFiles/graph.dir/cmake_clean_target.cmake
 	cd /home/mddarr/projects/data_structures/graphs && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graph.dir/link.txt --verbose=$(VERBOSE)
 

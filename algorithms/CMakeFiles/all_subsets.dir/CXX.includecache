@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/all_subsets.cpp
+iostream
+-
+Graph.h
+/home/mddarr/projects/data_structures/algorithms/Graph.h
+vector
+-
+math.h
+-
+
+graphs/Graph.h
+

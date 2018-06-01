@@ -5,6 +5,6 @@ project(myProject)
 enable_testing()
 
 #add_subdirectory(main)
-#add_subdirectory(test)
+add_subdirectory(algorithms)
 add_subdirectory(graphs)
 add_subdirectory(containers)

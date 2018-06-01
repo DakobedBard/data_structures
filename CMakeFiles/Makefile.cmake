@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.11.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.11.1/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "algorithms/CMakeLists.txt"
   "containers/CMakeLists.txt"
   "graphs/CMakeLists.txt"
   "/usr/share/cmake-3.11/Modules/CMakeCInformation.cmake"
@@ -41,12 +42,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "algorithms/CMakeFiles/CMakeDirectoryInformation.cmake"
   "graphs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "containers/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "algorithms/CMakeFiles/aglorithm.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/all_subsets.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/lca.dir/DependInfo.cmake"
   "graphs/CMakeFiles/graph.dir/DependInfo.cmake"
   "containers/CMakeFiles/container.dir/DependInfo.cmake"
   )

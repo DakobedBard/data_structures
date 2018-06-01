@@ -136,6 +136,33 @@ graph/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/build
 .PHONY : graph/fast
 
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
+
 lltest.o: lltest.cpp.o
 
 .PHONY : lltest.o
@@ -173,6 +200,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... graph"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... lltest.o"
 	@echo "... lltest.i"
 	@echo "... lltest.s"

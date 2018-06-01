@@ -1,6 +1,9 @@
 set(libbar_SRCS
    
-    lltest.cpp
+    	lltest.cpp
+	Graph.h
+	Graph.cpp
+
 
 )
 

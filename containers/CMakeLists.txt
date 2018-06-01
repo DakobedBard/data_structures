@@ -1,7 +1,23 @@
 set(Container_SRCS
-    LinkedList.h
-	lltest.cpp
+    	LinkedList.h
+#	LinkedList.cpp
+	Stack.h
+	Queue.h
+	Heap.h
+	Matrix.h
+	Vector.h
+	Vector.cpp
+	BinaryTree.h
+	gay.h
 )
+
+
+ADD_DEFINITIONS(
+    -std=c++11 # Or -std=c++0x
+    # Other flags
+)
+
+
 
 # Declare the library
 add_library(container STATIC

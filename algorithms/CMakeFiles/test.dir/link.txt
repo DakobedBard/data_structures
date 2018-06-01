@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test.dir/lltest.cpp.o  -o test ../graphs/libgraph.a ../containers/libcontainer.a 

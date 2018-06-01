@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/stack_test.cpp
+Stack.h
+/home/mddarr/projects/data_structures/algorithms/Stack.h
+
+containers/Stack.h
+iostream
+-
+stdexcept
+-
+
