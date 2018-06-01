@@ -4,7 +4,7 @@ project(myProject)
 
 enable_testing()
 
-add_subdirectory(main)
-add_subdirectory(test)
-add_subdirectory(libfoo)
-add_subdirectory(libbar)
+#add_subdirectory(main)
+#add_subdirectory(test)
+add_subdirectory(graphs)
+add_subdirectory(containers)

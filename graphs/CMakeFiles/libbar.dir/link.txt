@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibbar.a  CMakeFiles/libbar.dir/bar.cpp.o
+/usr/bin/ranlib liblibbar.a

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/main/main.cpp
+bar.h
+/home/mddarr/projects/data_structures/main/bar.h
+foo.h
+/home/mddarr/projects/data_structures/main/foo.h
+
+containers/bar.h
+ibar.h
+containers/ibar.h
+
+graphs/foo.h
+
+graphs/ibar.h
+

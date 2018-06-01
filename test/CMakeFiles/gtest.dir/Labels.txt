@@ -1,0 +1,13 @@
+# Target labels
+ gtest
+# Source files and their labels
+/home/mddarr/projects/data_structures/test/CMakeFiles/gtest
+/home/mddarr/projects/data_structures/test/CMakeFiles/gtest.rule
+/home/mddarr/projects/data_structures/test/CMakeFiles/gtest-complete.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-install.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-mkdir.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-download.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-update.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-patch.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-configure.rule
+/home/mddarr/projects/data_structures/test/gtest/src/gtest-stamp/gtest-build.rule
