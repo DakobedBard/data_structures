@@ -12,6 +12,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.11.1/CMakeSystem.cmake"
   "CMakeLists.txt"
   "algorithms/CMakeLists.txt"
+  "algorithms/arrays/CMakeLists.txt"
+  "algorithms/dynamic/CMakeLists.txt"
+  "algorithms/interview/CMakeLists.txt"
   "containers/CMakeLists.txt"
   "graphs/CMakeLists.txt"
   "/usr/share/cmake-3.11/Modules/CMakeCInformation.cmake"
@@ -43,15 +46,30 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "algorithms/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "algorithms/interview/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "algorithms/dynamic/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "algorithms/arrays/CMakeFiles/CMakeDirectoryInformation.cmake"
   "graphs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "containers/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "algorithms/CMakeFiles/search2D.dir/DependInfo.cmake"
   "algorithms/CMakeFiles/aglorithm.dir/DependInfo.cmake"
   "algorithms/CMakeFiles/all_subsets.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/nqueens.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/level_order_bst.dir/DependInfo.cmake"
   "algorithms/CMakeFiles/lca.dir/DependInfo.cmake"
+  "algorithms/interview/CMakeFiles/nthstair.dir/DependInfo.cmake"
+  "algorithms/dynamic/CMakeFiles/largest_square.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/repeating_numbers.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/lcs.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/inplace_manipulation.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/find_cycle_array.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/king_queen.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/intersection.dir/DependInfo.cmake"
+  "algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/DependInfo.cmake"
   "graphs/CMakeFiles/graph.dir/DependInfo.cmake"
   "containers/CMakeFiles/container.dir/DependInfo.cmake"
   )

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/nqueens.dir/nqueens.cpp.o  -o nqueens ../containers/libcontainer.a 

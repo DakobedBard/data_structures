@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/king_queen.dir/king_queen.cpp.o  -o king_queen 

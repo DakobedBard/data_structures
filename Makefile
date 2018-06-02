@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named search2D
+
+# Build rule for target.
+search2D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 search2D
+.PHONY : search2D
+
+# fast build rule for target.
+search2D/fast:
+	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
+.PHONY : search2D/fast
+
+#=============================================================================
 # Target rules for targets named aglorithm
 
 # Build rule for target.
@@ -148,6 +161,32 @@ all_subsets/fast:
 .PHONY : all_subsets/fast
 
 #=============================================================================
+# Target rules for targets named nqueens
+
+# Build rule for target.
+nqueens: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nqueens
+.PHONY : nqueens
+
+# fast build rule for target.
+nqueens/fast:
+	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
+.PHONY : nqueens/fast
+
+#=============================================================================
+# Target rules for targets named level_order_bst
+
+# Build rule for target.
+level_order_bst: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 level_order_bst
+.PHONY : level_order_bst
+
+# fast build rule for target.
+level_order_bst/fast:
+	$(MAKE) -f algorithms/CMakeFiles/level_order_bst.dir/build.make algorithms/CMakeFiles/level_order_bst.dir/build
+.PHONY : level_order_bst/fast
+
+#=============================================================================
 # Target rules for targets named lca
 
 # Build rule for target.
@@ -159,6 +198,123 @@ lca: cmake_check_build_system
 lca/fast:
 	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
 .PHONY : lca/fast
+
+#=============================================================================
+# Target rules for targets named nthstair
+
+# Build rule for target.
+nthstair: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nthstair
+.PHONY : nthstair
+
+# fast build rule for target.
+nthstair/fast:
+	$(MAKE) -f algorithms/interview/CMakeFiles/nthstair.dir/build.make algorithms/interview/CMakeFiles/nthstair.dir/build
+.PHONY : nthstair/fast
+
+#=============================================================================
+# Target rules for targets named largest_square
+
+# Build rule for target.
+largest_square: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 largest_square
+.PHONY : largest_square
+
+# fast build rule for target.
+largest_square/fast:
+	$(MAKE) -f algorithms/dynamic/CMakeFiles/largest_square.dir/build.make algorithms/dynamic/CMakeFiles/largest_square.dir/build
+.PHONY : largest_square/fast
+
+#=============================================================================
+# Target rules for targets named repeating_numbers
+
+# Build rule for target.
+repeating_numbers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 repeating_numbers
+.PHONY : repeating_numbers
+
+# fast build rule for target.
+repeating_numbers/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/repeating_numbers.dir/build.make algorithms/arrays/CMakeFiles/repeating_numbers.dir/build
+.PHONY : repeating_numbers/fast
+
+#=============================================================================
+# Target rules for targets named lcs
+
+# Build rule for target.
+lcs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lcs
+.PHONY : lcs
+
+# fast build rule for target.
+lcs/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/lcs.dir/build.make algorithms/arrays/CMakeFiles/lcs.dir/build
+.PHONY : lcs/fast
+
+#=============================================================================
+# Target rules for targets named inplace_manipulation
+
+# Build rule for target.
+inplace_manipulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inplace_manipulation
+.PHONY : inplace_manipulation
+
+# fast build rule for target.
+inplace_manipulation/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build.make algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build
+.PHONY : inplace_manipulation/fast
+
+#=============================================================================
+# Target rules for targets named find_cycle_array
+
+# Build rule for target.
+find_cycle_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 find_cycle_array
+.PHONY : find_cycle_array
+
+# fast build rule for target.
+find_cycle_array/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/find_cycle_array.dir/build.make algorithms/arrays/CMakeFiles/find_cycle_array.dir/build
+.PHONY : find_cycle_array/fast
+
+#=============================================================================
+# Target rules for targets named king_queen
+
+# Build rule for target.
+king_queen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 king_queen
+.PHONY : king_queen
+
+# fast build rule for target.
+king_queen/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/king_queen.dir/build.make algorithms/arrays/CMakeFiles/king_queen.dir/build
+.PHONY : king_queen/fast
+
+#=============================================================================
+# Target rules for targets named intersection
+
+# Build rule for target.
+intersection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 intersection
+.PHONY : intersection
+
+# fast build rule for target.
+intersection/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/intersection.dir/build.make algorithms/arrays/CMakeFiles/intersection.dir/build
+.PHONY : intersection/fast
+
+#=============================================================================
+# Target rules for targets named overlapping_rectangles
+
+# Build rule for target.
+overlapping_rectangles: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 overlapping_rectangles
+.PHONY : overlapping_rectangles
+
+# fast build rule for target.
+overlapping_rectangles/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build.make algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build
+.PHONY : overlapping_rectangles/fast
 
 #=============================================================================
 # Target rules for targets named graph
@@ -195,9 +351,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... search2D"
 	@echo "... aglorithm"
 	@echo "... all_subsets"
+	@echo "... nqueens"
+	@echo "... level_order_bst"
 	@echo "... lca"
+	@echo "... nthstair"
+	@echo "... largest_square"
+	@echo "... repeating_numbers"
+	@echo "... lcs"
+	@echo "... inplace_manipulation"
+	@echo "... find_cycle_array"
+	@echo "... king_queen"
+	@echo "... intersection"
+	@echo "... overlapping_rectangles"
 	@echo "... graph"
 	@echo "... container"
 .PHONY : help

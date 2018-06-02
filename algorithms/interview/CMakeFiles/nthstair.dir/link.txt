@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/nthstair.dir/nthstair.cpp.o  -o nthstair ../../containers/libcontainer.a 

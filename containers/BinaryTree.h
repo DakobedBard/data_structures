@@ -6,13 +6,20 @@ It would be cool if the BinarySearchTree inherited from the BinaryTree class at 
 
 */
 
+
+#ifndef _DTL_BINARYTREE_H_
+#define _DTL_BINARYTREE_H_
+
 #include <iostream>
+
+namespace DTL{
+
 
 
 template <class DataType>
 class BinarySearchTree{
 
-  private:
+  public:
 	struct Node{
 		Node* left;
 		Node* right;
@@ -25,7 +32,7 @@ class BinarySearchTree{
 	Node* root;
 
 
-  public:
+  
 
 	BinarySearchTree(){
 		root = nullptr;
@@ -38,6 +45,7 @@ class BinarySearchTree{
 	void preorder(Node* node);
 	void print_postorder();
 	void postorder(Node* node);
+	bool search(DataType data);
 
 
 };
@@ -68,10 +76,52 @@ void BinarySearchTree<DataType>::insert(DataType data){
 			parent->right = node;
 
 	}	
-
-	
 }
 
+/*
+
+We have implemented a search function that uses a while loop...
+
+
+I should try to search the BST using recursion.  
+
+
+*/
+
+template<class DataType>
+bool BinarySearchTree<DataType>::search(DataType data){
+	bool found = false;
+	if(isEmpty()){
+		std::cout << "The tree is emtpy.. data not found" << std::endl;
+		return found;
+	}
+	
+	std::cout << "i get here " << data << std::endl;
+	Node* currentnode = root;
+	Node* parentnode = nullptr;
+	
+	while(currentnode != nullptr){
+		std::cout << "I am currentnodes data " << currentnode->data << std::endl; 
+
+		if(currentnode->data == data){
+			parentnode = currentnode;
+			found = true;
+			break;
+		}else{
+			parentnode = currentnode;
+			if(data>currentnode->data)
+				currentnode = currentnode->right;
+			else
+				currentnode = currentnode->left;
+		}
+	}
+
+	if(!found)
+		std::cout << "Data not found! " << std::endl;
+	else
+		std::cout <<"Data found" << std::endl;
+	return found;	
+}
 
 
 
@@ -145,7 +195,7 @@ void BinarySearchTree<DataType>::postorder(Node* node){
 
 }
 
+}  // DTL
 
-
-
+#endif  
 

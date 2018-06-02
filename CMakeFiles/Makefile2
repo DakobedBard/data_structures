@@ -63,23 +63,74 @@ CMAKE_BINARY_DIR = /home/mddarr/projects/data_structures
 # Directory level rules for directory algorithms
 
 # Convenience name for "all" pass in the directory.
+algorithms/all: algorithms/CMakeFiles/search2D.dir/all
 algorithms/all: algorithms/CMakeFiles/aglorithm.dir/all
 algorithms/all: algorithms/CMakeFiles/all_subsets.dir/all
+algorithms/all: algorithms/CMakeFiles/nqueens.dir/all
+algorithms/all: algorithms/CMakeFiles/level_order_bst.dir/all
 algorithms/all: algorithms/CMakeFiles/lca.dir/all
+algorithms/all: algorithms/interview/all
+algorithms/all: algorithms/dynamic/all
+algorithms/all: algorithms/arrays/all
 
 .PHONY : algorithms/all
 
 # Convenience name for "clean" pass in the directory.
+algorithms/clean: algorithms/CMakeFiles/search2D.dir/clean
 algorithms/clean: algorithms/CMakeFiles/aglorithm.dir/clean
 algorithms/clean: algorithms/CMakeFiles/all_subsets.dir/clean
+algorithms/clean: algorithms/CMakeFiles/nqueens.dir/clean
+algorithms/clean: algorithms/CMakeFiles/level_order_bst.dir/clean
 algorithms/clean: algorithms/CMakeFiles/lca.dir/clean
+algorithms/clean: algorithms/interview/clean
+algorithms/clean: algorithms/dynamic/clean
+algorithms/clean: algorithms/arrays/clean
 
 .PHONY : algorithms/clean
 
 # Convenience name for "preinstall" pass in the directory.
-algorithms/preinstall:
+algorithms/preinstall: algorithms/interview/preinstall
+algorithms/preinstall: algorithms/dynamic/preinstall
+algorithms/preinstall: algorithms/arrays/preinstall
 
 .PHONY : algorithms/preinstall
+
+#=============================================================================
+# Target rules for target algorithms/CMakeFiles/search2D.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/search2D.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=34,35 "Built target search2D"
+.PHONY : algorithms/CMakeFiles/search2D.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/search2D.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/search2D.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/search2D.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/search2D.dir/rule
+
+# Convenience name for target.
+search2D: algorithms/CMakeFiles/search2D.dir/rule
+
+.PHONY : search2D
+
+# clean rule for target.
+algorithms/CMakeFiles/search2D.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/clean
+.PHONY : algorithms/CMakeFiles/search2D.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/search2D.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target algorithms/CMakeFiles/aglorithm.dir
@@ -158,13 +209,87 @@ clean: algorithms/CMakeFiles/all_subsets.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target algorithms/CMakeFiles/nqueens.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/nqueens.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=26,27 "Built target nqueens"
+.PHONY : algorithms/CMakeFiles/nqueens.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/nqueens.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/nqueens.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/nqueens.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/nqueens.dir/rule
+
+# Convenience name for target.
+nqueens: algorithms/CMakeFiles/nqueens.dir/rule
+
+.PHONY : nqueens
+
+# clean rule for target.
+algorithms/CMakeFiles/nqueens.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/clean
+.PHONY : algorithms/CMakeFiles/nqueens.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/nqueens.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/CMakeFiles/level_order_bst.dir
+
+# All Build rule for target.
+algorithms/CMakeFiles/level_order_bst.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/CMakeFiles/level_order_bst.dir/build.make algorithms/CMakeFiles/level_order_bst.dir/depend
+	$(MAKE) -f algorithms/CMakeFiles/level_order_bst.dir/build.make algorithms/CMakeFiles/level_order_bst.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=24,25 "Built target level_order_bst"
+.PHONY : algorithms/CMakeFiles/level_order_bst.dir/all
+
+# Include target in all.
+all: algorithms/CMakeFiles/level_order_bst.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/CMakeFiles/level_order_bst.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/level_order_bst.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/CMakeFiles/level_order_bst.dir/rule
+
+# Convenience name for target.
+level_order_bst: algorithms/CMakeFiles/level_order_bst.dir/rule
+
+.PHONY : level_order_bst
+
+# clean rule for target.
+algorithms/CMakeFiles/level_order_bst.dir/clean:
+	$(MAKE) -f algorithms/CMakeFiles/level_order_bst.dir/build.make algorithms/CMakeFiles/level_order_bst.dir/clean
+.PHONY : algorithms/CMakeFiles/level_order_bst.dir/clean
+
+# clean rule for target.
+clean: algorithms/CMakeFiles/level_order_bst.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target algorithms/CMakeFiles/lca.dir
 
 # All Build rule for target.
 algorithms/CMakeFiles/lca.dir/all: containers/CMakeFiles/container.dir/all
 	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/depend
 	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=10,11 "Built target lca"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=20,21 "Built target lca"
 .PHONY : algorithms/CMakeFiles/lca.dir/all
 
 # Include target in all.
@@ -195,6 +320,405 @@ clean: algorithms/CMakeFiles/lca.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory algorithms/interview
+
+# Convenience name for "all" pass in the directory.
+algorithms/interview/all: algorithms/interview/CMakeFiles/nthstair.dir/all
+
+.PHONY : algorithms/interview/all
+
+# Convenience name for "clean" pass in the directory.
+algorithms/interview/clean: algorithms/interview/CMakeFiles/nthstair.dir/clean
+
+.PHONY : algorithms/interview/clean
+
+# Convenience name for "preinstall" pass in the directory.
+algorithms/interview/preinstall:
+
+.PHONY : algorithms/interview/preinstall
+
+#=============================================================================
+# Target rules for target algorithms/interview/CMakeFiles/nthstair.dir
+
+# All Build rule for target.
+algorithms/interview/CMakeFiles/nthstair.dir/all: containers/CMakeFiles/container.dir/all
+	$(MAKE) -f algorithms/interview/CMakeFiles/nthstair.dir/build.make algorithms/interview/CMakeFiles/nthstair.dir/depend
+	$(MAKE) -f algorithms/interview/CMakeFiles/nthstair.dir/build.make algorithms/interview/CMakeFiles/nthstair.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=28,29 "Built target nthstair"
+.PHONY : algorithms/interview/CMakeFiles/nthstair.dir/all
+
+# Include target in all.
+all: algorithms/interview/CMakeFiles/nthstair.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/interview/CMakeFiles/nthstair.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/interview/CMakeFiles/nthstair.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/interview/CMakeFiles/nthstair.dir/rule
+
+# Convenience name for target.
+nthstair: algorithms/interview/CMakeFiles/nthstair.dir/rule
+
+.PHONY : nthstair
+
+# clean rule for target.
+algorithms/interview/CMakeFiles/nthstair.dir/clean:
+	$(MAKE) -f algorithms/interview/CMakeFiles/nthstair.dir/build.make algorithms/interview/CMakeFiles/nthstair.dir/clean
+.PHONY : algorithms/interview/CMakeFiles/nthstair.dir/clean
+
+# clean rule for target.
+clean: algorithms/interview/CMakeFiles/nthstair.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory algorithms/dynamic
+
+# Convenience name for "all" pass in the directory.
+algorithms/dynamic/all: algorithms/dynamic/CMakeFiles/largest_square.dir/all
+
+.PHONY : algorithms/dynamic/all
+
+# Convenience name for "clean" pass in the directory.
+algorithms/dynamic/clean: algorithms/dynamic/CMakeFiles/largest_square.dir/clean
+
+.PHONY : algorithms/dynamic/clean
+
+# Convenience name for "preinstall" pass in the directory.
+algorithms/dynamic/preinstall:
+
+.PHONY : algorithms/dynamic/preinstall
+
+#=============================================================================
+# Target rules for target algorithms/dynamic/CMakeFiles/largest_square.dir
+
+# All Build rule for target.
+algorithms/dynamic/CMakeFiles/largest_square.dir/all:
+	$(MAKE) -f algorithms/dynamic/CMakeFiles/largest_square.dir/build.make algorithms/dynamic/CMakeFiles/largest_square.dir/depend
+	$(MAKE) -f algorithms/dynamic/CMakeFiles/largest_square.dir/build.make algorithms/dynamic/CMakeFiles/largest_square.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=18,19 "Built target largest_square"
+.PHONY : algorithms/dynamic/CMakeFiles/largest_square.dir/all
+
+# Include target in all.
+all: algorithms/dynamic/CMakeFiles/largest_square.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/dynamic/CMakeFiles/largest_square.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/dynamic/CMakeFiles/largest_square.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/dynamic/CMakeFiles/largest_square.dir/rule
+
+# Convenience name for target.
+largest_square: algorithms/dynamic/CMakeFiles/largest_square.dir/rule
+
+.PHONY : largest_square
+
+# clean rule for target.
+algorithms/dynamic/CMakeFiles/largest_square.dir/clean:
+	$(MAKE) -f algorithms/dynamic/CMakeFiles/largest_square.dir/build.make algorithms/dynamic/CMakeFiles/largest_square.dir/clean
+.PHONY : algorithms/dynamic/CMakeFiles/largest_square.dir/clean
+
+# clean rule for target.
+clean: algorithms/dynamic/CMakeFiles/largest_square.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory algorithms/arrays
+
+# Convenience name for "all" pass in the directory.
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/repeating_numbers.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/lcs.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/inplace_manipulation.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/find_cycle_array.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/king_queen.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/intersection.dir/all
+algorithms/arrays/all: algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/all
+
+.PHONY : algorithms/arrays/all
+
+# Convenience name for "clean" pass in the directory.
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/repeating_numbers.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/lcs.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/inplace_manipulation.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/find_cycle_array.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/king_queen.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/intersection.dir/clean
+algorithms/arrays/clean: algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/clean
+
+.PHONY : algorithms/arrays/clean
+
+# Convenience name for "preinstall" pass in the directory.
+algorithms/arrays/preinstall:
+
+.PHONY : algorithms/arrays/preinstall
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/repeating_numbers.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/repeating_numbers.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/repeating_numbers.dir/build.make algorithms/arrays/CMakeFiles/repeating_numbers.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/repeating_numbers.dir/build.make algorithms/arrays/CMakeFiles/repeating_numbers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=32,33 "Built target repeating_numbers"
+.PHONY : algorithms/arrays/CMakeFiles/repeating_numbers.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/repeating_numbers.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/repeating_numbers.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/repeating_numbers.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/repeating_numbers.dir/rule
+
+# Convenience name for target.
+repeating_numbers: algorithms/arrays/CMakeFiles/repeating_numbers.dir/rule
+
+.PHONY : repeating_numbers
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/repeating_numbers.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/repeating_numbers.dir/build.make algorithms/arrays/CMakeFiles/repeating_numbers.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/repeating_numbers.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/repeating_numbers.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/lcs.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/lcs.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/lcs.dir/build.make algorithms/arrays/CMakeFiles/lcs.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/lcs.dir/build.make algorithms/arrays/CMakeFiles/lcs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=22,23 "Built target lcs"
+.PHONY : algorithms/arrays/CMakeFiles/lcs.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/lcs.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/lcs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/lcs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/lcs.dir/rule
+
+# Convenience name for target.
+lcs: algorithms/arrays/CMakeFiles/lcs.dir/rule
+
+.PHONY : lcs
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/lcs.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/lcs.dir/build.make algorithms/arrays/CMakeFiles/lcs.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/lcs.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/lcs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/inplace_manipulation.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/inplace_manipulation.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build.make algorithms/arrays/CMakeFiles/inplace_manipulation.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build.make algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=12,13 "Built target inplace_manipulation"
+.PHONY : algorithms/arrays/CMakeFiles/inplace_manipulation.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/inplace_manipulation.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/inplace_manipulation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/inplace_manipulation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/inplace_manipulation.dir/rule
+
+# Convenience name for target.
+inplace_manipulation: algorithms/arrays/CMakeFiles/inplace_manipulation.dir/rule
+
+.PHONY : inplace_manipulation
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/inplace_manipulation.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/inplace_manipulation.dir/build.make algorithms/arrays/CMakeFiles/inplace_manipulation.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/inplace_manipulation.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/inplace_manipulation.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/find_cycle_array.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/find_cycle_array.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/find_cycle_array.dir/build.make algorithms/arrays/CMakeFiles/find_cycle_array.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/find_cycle_array.dir/build.make algorithms/arrays/CMakeFiles/find_cycle_array.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=7,8 "Built target find_cycle_array"
+.PHONY : algorithms/arrays/CMakeFiles/find_cycle_array.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/find_cycle_array.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/find_cycle_array.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/find_cycle_array.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/find_cycle_array.dir/rule
+
+# Convenience name for target.
+find_cycle_array: algorithms/arrays/CMakeFiles/find_cycle_array.dir/rule
+
+.PHONY : find_cycle_array
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/find_cycle_array.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/find_cycle_array.dir/build.make algorithms/arrays/CMakeFiles/find_cycle_array.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/find_cycle_array.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/find_cycle_array.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/king_queen.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/king_queen.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/king_queen.dir/build.make algorithms/arrays/CMakeFiles/king_queen.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/king_queen.dir/build.make algorithms/arrays/CMakeFiles/king_queen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=16,17 "Built target king_queen"
+.PHONY : algorithms/arrays/CMakeFiles/king_queen.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/king_queen.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/king_queen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/king_queen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/king_queen.dir/rule
+
+# Convenience name for target.
+king_queen: algorithms/arrays/CMakeFiles/king_queen.dir/rule
+
+.PHONY : king_queen
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/king_queen.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/king_queen.dir/build.make algorithms/arrays/CMakeFiles/king_queen.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/king_queen.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/king_queen.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/intersection.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/intersection.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/intersection.dir/build.make algorithms/arrays/CMakeFiles/intersection.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/intersection.dir/build.make algorithms/arrays/CMakeFiles/intersection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=14,15 "Built target intersection"
+.PHONY : algorithms/arrays/CMakeFiles/intersection.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/intersection.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/intersection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/intersection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/intersection.dir/rule
+
+# Convenience name for target.
+intersection: algorithms/arrays/CMakeFiles/intersection.dir/rule
+
+.PHONY : intersection
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/intersection.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/intersection.dir/build.make algorithms/arrays/CMakeFiles/intersection.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/intersection.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/intersection.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target algorithms/arrays/CMakeFiles/overlapping_rectangles.dir
+
+# All Build rule for target.
+algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/all:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build.make algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/depend
+	$(MAKE) -f algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build.make algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=30,31 "Built target overlapping_rectangles"
+.PHONY : algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/all
+
+# Include target in all.
+all: algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mddarr/projects/data_structures/CMakeFiles 0
+.PHONY : algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/rule
+
+# Convenience name for target.
+overlapping_rectangles: algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/rule
+
+.PHONY : overlapping_rectangles
+
+# clean rule for target.
+algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/clean:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/build.make algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/clean
+.PHONY : algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/clean
+
+# clean rule for target.
+clean: algorithms/arrays/CMakeFiles/overlapping_rectangles.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory graphs
 
 # Convenience name for "all" pass in the directory.
@@ -219,7 +743,7 @@ graphs/preinstall:
 graphs/CMakeFiles/graph.dir/all: containers/CMakeFiles/container.dir/all
 	$(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/depend
 	$(MAKE) -f graphs/CMakeFiles/graph.dir/build.make graphs/CMakeFiles/graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=7,8,9 "Built target graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=9,10,11 "Built target graph"
 .PHONY : graphs/CMakeFiles/graph.dir/all
 
 # Include target in all.
