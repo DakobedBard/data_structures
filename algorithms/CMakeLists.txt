@@ -37,6 +37,20 @@ set(level_order_bst level_order_bst.cpp)
 ADD_EXECUTABLE(level_order_bst ${level_order_bst})
 target_link_libraries(level_order_bst  container)
 
+set(icecream icecream.cpp)
+ADD_EXECUTABLE(icecream ${icecream})
+target_link_libraries(icecream  container)
+
+set(twostackqueue twostack_queue.cpp)
+ADD_EXECUTABLE(twostackqueue ${twostackqueue})
+target_link_libraries(twostackqueue  container)
+
+set(running_median running_median.cpp)
+ADD_EXECUTABLE(running_median ${running_median})
+target_link_libraries(running_median  container)
+
+
+
 
 add_subdirectory(interview)
 add_subdirectory(dynamic)

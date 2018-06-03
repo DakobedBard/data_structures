@@ -122,17 +122,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named search2D
+# Target rules for targets named lca
 
 # Build rule for target.
-search2D: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 search2D
-.PHONY : search2D
+lca: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lca
+.PHONY : lca
 
 # fast build rule for target.
-search2D/fast:
-	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
-.PHONY : search2D/fast
+lca/fast:
+	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
+.PHONY : lca/fast
+
+#=============================================================================
+# Target rules for targets named twostackqueue
+
+# Build rule for target.
+twostackqueue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twostackqueue
+.PHONY : twostackqueue
+
+# fast build rule for target.
+twostackqueue/fast:
+	$(MAKE) -f algorithms/CMakeFiles/twostackqueue.dir/build.make algorithms/CMakeFiles/twostackqueue.dir/build
+.PHONY : twostackqueue/fast
 
 #=============================================================================
 # Target rules for targets named aglorithm
@@ -148,6 +161,32 @@ aglorithm/fast:
 .PHONY : aglorithm/fast
 
 #=============================================================================
+# Target rules for targets named nqueens
+
+# Build rule for target.
+nqueens: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nqueens
+.PHONY : nqueens
+
+# fast build rule for target.
+nqueens/fast:
+	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
+.PHONY : nqueens/fast
+
+#=============================================================================
+# Target rules for targets named search2D
+
+# Build rule for target.
+search2D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 search2D
+.PHONY : search2D
+
+# fast build rule for target.
+search2D/fast:
+	$(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
+.PHONY : search2D/fast
+
+#=============================================================================
 # Target rules for targets named all_subsets
 
 # Build rule for target.
@@ -161,17 +200,17 @@ all_subsets/fast:
 .PHONY : all_subsets/fast
 
 #=============================================================================
-# Target rules for targets named nqueens
+# Target rules for targets named icecream
 
 # Build rule for target.
-nqueens: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nqueens
-.PHONY : nqueens
+icecream: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icecream
+.PHONY : icecream
 
 # fast build rule for target.
-nqueens/fast:
-	$(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
-.PHONY : nqueens/fast
+icecream/fast:
+	$(MAKE) -f algorithms/CMakeFiles/icecream.dir/build.make algorithms/CMakeFiles/icecream.dir/build
+.PHONY : icecream/fast
 
 #=============================================================================
 # Target rules for targets named level_order_bst
@@ -187,17 +226,17 @@ level_order_bst/fast:
 .PHONY : level_order_bst/fast
 
 #=============================================================================
-# Target rules for targets named lca
+# Target rules for targets named running_median
 
 # Build rule for target.
-lca: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lca
-.PHONY : lca
+running_median: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 running_median
+.PHONY : running_median
 
 # fast build rule for target.
-lca/fast:
-	$(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
-.PHONY : lca/fast
+running_median/fast:
+	$(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/build
+.PHONY : running_median/fast
 
 #=============================================================================
 # Target rules for targets named nthstair
@@ -351,12 +390,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... search2D"
-	@echo "... aglorithm"
-	@echo "... all_subsets"
-	@echo "... nqueens"
-	@echo "... level_order_bst"
 	@echo "... lca"
+	@echo "... twostackqueue"
+	@echo "... aglorithm"
+	@echo "... nqueens"
+	@echo "... search2D"
+	@echo "... all_subsets"
+	@echo "... icecream"
+	@echo "... level_order_bst"
+	@echo "... running_median"
 	@echo "... nthstair"
 	@echo "... largest_square"
 	@echo "... repeating_numbers"

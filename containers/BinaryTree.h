@@ -2,7 +2,9 @@
 
 It would be cool if the BinarySearchTree inherited from the BinaryTree class at some point...
 
+Also implement Binary search given an array.  
 
+That sounds like kind of a pain in the ass though... but I will do it eventually.
 
 */
 

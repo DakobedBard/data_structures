@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/mddarr/projects/data_structures
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,17 +88,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,19 +122,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-algorithms/CMakeFiles/search2D.dir/rule:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/search2D.dir/rule
-.PHONY : algorithms/CMakeFiles/search2D.dir/rule
+algorithms/CMakeFiles/lca.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/lca.dir/rule
+.PHONY : algorithms/CMakeFiles/lca.dir/rule
 
 # Convenience name for target.
-search2D: algorithms/CMakeFiles/search2D.dir/rule
+lca: algorithms/CMakeFiles/lca.dir/rule
 
-.PHONY : search2D
+.PHONY : lca
 
 # fast build rule for target.
-search2D/fast:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
-.PHONY : search2D/fast
+lca/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
+.PHONY : lca/fast
+
+# Convenience name for target.
+algorithms/CMakeFiles/twostackqueue.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/twostackqueue.dir/rule
+.PHONY : algorithms/CMakeFiles/twostackqueue.dir/rule
+
+# Convenience name for target.
+twostackqueue: algorithms/CMakeFiles/twostackqueue.dir/rule
+
+.PHONY : twostackqueue
+
+# fast build rule for target.
+twostackqueue/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/twostackqueue.dir/build.make algorithms/CMakeFiles/twostackqueue.dir/build
+.PHONY : twostackqueue/fast
 
 # Convenience name for target.
 algorithms/CMakeFiles/aglorithm.dir/rule:
@@ -152,6 +167,36 @@ aglorithm/fast:
 .PHONY : aglorithm/fast
 
 # Convenience name for target.
+algorithms/CMakeFiles/nqueens.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/nqueens.dir/rule
+.PHONY : algorithms/CMakeFiles/nqueens.dir/rule
+
+# Convenience name for target.
+nqueens: algorithms/CMakeFiles/nqueens.dir/rule
+
+.PHONY : nqueens
+
+# fast build rule for target.
+nqueens/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
+.PHONY : nqueens/fast
+
+# Convenience name for target.
+algorithms/CMakeFiles/search2D.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/search2D.dir/rule
+.PHONY : algorithms/CMakeFiles/search2D.dir/rule
+
+# Convenience name for target.
+search2D: algorithms/CMakeFiles/search2D.dir/rule
+
+.PHONY : search2D
+
+# fast build rule for target.
+search2D/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/search2D.dir/build.make algorithms/CMakeFiles/search2D.dir/build
+.PHONY : search2D/fast
+
+# Convenience name for target.
 algorithms/CMakeFiles/all_subsets.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/all_subsets.dir/rule
 .PHONY : algorithms/CMakeFiles/all_subsets.dir/rule
@@ -167,19 +212,19 @@ all_subsets/fast:
 .PHONY : all_subsets/fast
 
 # Convenience name for target.
-algorithms/CMakeFiles/nqueens.dir/rule:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/nqueens.dir/rule
-.PHONY : algorithms/CMakeFiles/nqueens.dir/rule
+algorithms/CMakeFiles/icecream.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/icecream.dir/rule
+.PHONY : algorithms/CMakeFiles/icecream.dir/rule
 
 # Convenience name for target.
-nqueens: algorithms/CMakeFiles/nqueens.dir/rule
+icecream: algorithms/CMakeFiles/icecream.dir/rule
 
-.PHONY : nqueens
+.PHONY : icecream
 
 # fast build rule for target.
-nqueens/fast:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/build
-.PHONY : nqueens/fast
+icecream/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/icecream.dir/build.make algorithms/CMakeFiles/icecream.dir/build
+.PHONY : icecream/fast
 
 # Convenience name for target.
 algorithms/CMakeFiles/level_order_bst.dir/rule:
@@ -197,19 +242,19 @@ level_order_bst/fast:
 .PHONY : level_order_bst/fast
 
 # Convenience name for target.
-algorithms/CMakeFiles/lca.dir/rule:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/lca.dir/rule
-.PHONY : algorithms/CMakeFiles/lca.dir/rule
+algorithms/CMakeFiles/running_median.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/running_median.dir/rule
+.PHONY : algorithms/CMakeFiles/running_median.dir/rule
 
 # Convenience name for target.
-lca: algorithms/CMakeFiles/lca.dir/rule
+running_median: algorithms/CMakeFiles/running_median.dir/rule
 
-.PHONY : lca
+.PHONY : running_median
 
 # fast build rule for target.
-lca/fast:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lca.dir/build.make algorithms/CMakeFiles/lca.dir/build
-.PHONY : lca/fast
+running_median/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/build
+.PHONY : running_median/fast
 
 all_subsets.o: all_subsets.cpp.o
 
@@ -237,6 +282,33 @@ all_subsets.s: all_subsets.cpp.s
 all_subsets.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/all_subsets.cpp.s
 .PHONY : all_subsets.cpp.s
+
+icecream.o: icecream.cpp.o
+
+.PHONY : icecream.o
+
+# target to build an object file
+icecream.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/icecream.dir/build.make algorithms/CMakeFiles/icecream.dir/icecream.cpp.o
+.PHONY : icecream.cpp.o
+
+icecream.i: icecream.cpp.i
+
+.PHONY : icecream.i
+
+# target to preprocess a source file
+icecream.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/icecream.dir/build.make algorithms/CMakeFiles/icecream.dir/icecream.cpp.i
+.PHONY : icecream.cpp.i
+
+icecream.s: icecream.cpp.s
+
+.PHONY : icecream.s
+
+# target to generate assembly for a file
+icecream.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/icecream.dir/build.make algorithms/CMakeFiles/icecream.dir/icecream.cpp.s
+.PHONY : icecream.cpp.s
 
 lca.o: lca.cpp.o
 
@@ -319,6 +391,33 @@ nqueens.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/nqueens.dir/build.make algorithms/CMakeFiles/nqueens.dir/nqueens.cpp.s
 .PHONY : nqueens.cpp.s
 
+running_median.o: running_median.cpp.o
+
+.PHONY : running_median.o
+
+# target to build an object file
+running_median.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/running_median.cpp.o
+.PHONY : running_median.cpp.o
+
+running_median.i: running_median.cpp.i
+
+.PHONY : running_median.i
+
+# target to preprocess a source file
+running_median.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/running_median.cpp.i
+.PHONY : running_median.cpp.i
+
+running_median.s: running_median.cpp.s
+
+.PHONY : running_median.s
+
+# target to generate assembly for a file
+running_median.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/running_median.cpp.s
+.PHONY : running_median.cpp.s
+
 search2D.o: search2D.cpp.o
 
 .PHONY : search2D.o
@@ -373,24 +472,57 @@ stack_test.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/aglorithm.dir/build.make algorithms/CMakeFiles/aglorithm.dir/stack_test.cpp.s
 .PHONY : stack_test.cpp.s
 
+twostack_queue.o: twostack_queue.cpp.o
+
+.PHONY : twostack_queue.o
+
+# target to build an object file
+twostack_queue.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/twostackqueue.dir/build.make algorithms/CMakeFiles/twostackqueue.dir/twostack_queue.cpp.o
+.PHONY : twostack_queue.cpp.o
+
+twostack_queue.i: twostack_queue.cpp.i
+
+.PHONY : twostack_queue.i
+
+# target to preprocess a source file
+twostack_queue.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/twostackqueue.dir/build.make algorithms/CMakeFiles/twostackqueue.dir/twostack_queue.cpp.i
+.PHONY : twostack_queue.cpp.i
+
+twostack_queue.s: twostack_queue.cpp.s
+
+.PHONY : twostack_queue.s
+
+# target to generate assembly for a file
+twostack_queue.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/twostackqueue.dir/build.make algorithms/CMakeFiles/twostackqueue.dir/twostack_queue.cpp.s
+.PHONY : twostack_queue.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... search2D"
-	@echo "... aglorithm"
-	@echo "... all_subsets"
 	@echo "... edit_cache"
-	@echo "... nqueens"
-	@echo "... level_order_bst"
 	@echo "... lca"
+	@echo "... rebuild_cache"
+	@echo "... twostackqueue"
+	@echo "... aglorithm"
+	@echo "... nqueens"
+	@echo "... search2D"
+	@echo "... all_subsets"
+	@echo "... icecream"
+	@echo "... level_order_bst"
+	@echo "... running_median"
+	@echo "... test"
 	@echo "... all_subsets.o"
 	@echo "... all_subsets.i"
 	@echo "... all_subsets.s"
+	@echo "... icecream.o"
+	@echo "... icecream.i"
+	@echo "... icecream.s"
 	@echo "... lca.o"
 	@echo "... lca.i"
 	@echo "... lca.s"
@@ -400,12 +532,18 @@ help:
 	@echo "... nqueens.o"
 	@echo "... nqueens.i"
 	@echo "... nqueens.s"
+	@echo "... running_median.o"
+	@echo "... running_median.i"
+	@echo "... running_median.s"
 	@echo "... search2D.o"
 	@echo "... search2D.i"
 	@echo "... search2D.s"
 	@echo "... stack_test.o"
 	@echo "... stack_test.i"
 	@echo "... stack_test.s"
+	@echo "... twostack_queue.o"
+	@echo "... twostack_queue.i"
+	@echo "... twostack_queue.s"
 .PHONY : help
 
 

@@ -55,12 +55,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "algorithms/CMakeFiles/search2D.dir/DependInfo.cmake"
-  "algorithms/CMakeFiles/aglorithm.dir/DependInfo.cmake"
-  "algorithms/CMakeFiles/all_subsets.dir/DependInfo.cmake"
-  "algorithms/CMakeFiles/nqueens.dir/DependInfo.cmake"
-  "algorithms/CMakeFiles/level_order_bst.dir/DependInfo.cmake"
   "algorithms/CMakeFiles/lca.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/twostackqueue.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/aglorithm.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/nqueens.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/search2D.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/all_subsets.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/icecream.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/level_order_bst.dir/DependInfo.cmake"
+  "algorithms/CMakeFiles/running_median.dir/DependInfo.cmake"
   "algorithms/interview/CMakeFiles/nthstair.dir/DependInfo.cmake"
   "algorithms/dynamic/CMakeFiles/largest_square.dir/DependInfo.cmake"
   "algorithms/arrays/CMakeFiles/repeating_numbers.dir/DependInfo.cmake"

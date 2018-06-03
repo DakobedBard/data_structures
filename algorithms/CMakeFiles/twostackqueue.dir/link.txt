@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/twostackqueue.dir/twostack_queue.cpp.o  -o twostackqueue ../containers/libcontainer.a 

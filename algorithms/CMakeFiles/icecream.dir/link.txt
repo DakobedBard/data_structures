@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/icecream.dir/icecream.cpp.o  -o icecream ../containers/libcontainer.a 
