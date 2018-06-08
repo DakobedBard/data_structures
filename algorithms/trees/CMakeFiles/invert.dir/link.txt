@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/invert.dir/invert_binary_tree.cpp.o  -o invert 

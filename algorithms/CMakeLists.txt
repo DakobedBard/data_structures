@@ -49,9 +49,18 @@ set(running_median running_median.cpp)
 ADD_EXECUTABLE(running_median ${running_median})
 target_link_libraries(running_median  container)
 
+set(lonely_integer lonely_integer.cpp)
+ADD_EXECUTABLE(lonely_integer ${lonely_integer})
 
+set(makeChange makeChange.cpp)
+ADD_EXECUTABLE(makeChange ${makeChange})
 
+set(histogram histogram.cpp)
+ADD_EXECUTABLE(histogram ${histogram})
 
 add_subdirectory(interview)
 add_subdirectory(dynamic)
 add_subdirectory(arrays)
+add_subdirectory(graphs)
+add_subdirectory(trees)
+add_subdirectory(leet_code)

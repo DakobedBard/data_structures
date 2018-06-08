@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named histogram
+
+# Build rule for target.
+histogram: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 histogram
+.PHONY : histogram
+
+# fast build rule for target.
+histogram/fast:
+	$(MAKE) -f algorithms/CMakeFiles/histogram.dir/build.make algorithms/CMakeFiles/histogram.dir/build
+.PHONY : histogram/fast
+
+#=============================================================================
 # Target rules for targets named lca
 
 # Build rule for target.
@@ -213,6 +226,19 @@ icecream/fast:
 .PHONY : icecream/fast
 
 #=============================================================================
+# Target rules for targets named makeChange
+
+# Build rule for target.
+makeChange: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 makeChange
+.PHONY : makeChange
+
+# fast build rule for target.
+makeChange/fast:
+	$(MAKE) -f algorithms/CMakeFiles/makeChange.dir/build.make algorithms/CMakeFiles/makeChange.dir/build
+.PHONY : makeChange/fast
+
+#=============================================================================
 # Target rules for targets named level_order_bst
 
 # Build rule for target.
@@ -237,6 +263,19 @@ running_median: cmake_check_build_system
 running_median/fast:
 	$(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/build
 .PHONY : running_median/fast
+
+#=============================================================================
+# Target rules for targets named lonely_integer
+
+# Build rule for target.
+lonely_integer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lonely_integer
+.PHONY : lonely_integer
+
+# fast build rule for target.
+lonely_integer/fast:
+	$(MAKE) -f algorithms/CMakeFiles/lonely_integer.dir/build.make algorithms/CMakeFiles/lonely_integer.dir/build
+.PHONY : lonely_integer/fast
 
 #=============================================================================
 # Target rules for targets named nthstair
@@ -356,6 +395,97 @@ overlapping_rectangles/fast:
 .PHONY : overlapping_rectangles/fast
 
 #=============================================================================
+# Target rules for targets named bfs
+
+# Build rule for target.
+bfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bfs
+.PHONY : bfs
+
+# fast build rule for target.
+bfs/fast:
+	$(MAKE) -f algorithms/graphs/CMakeFiles/bfs.dir/build.make algorithms/graphs/CMakeFiles/bfs.dir/build
+.PHONY : bfs/fast
+
+#=============================================================================
+# Target rules for targets named connected_cells
+
+# Build rule for target.
+connected_cells: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 connected_cells
+.PHONY : connected_cells
+
+# fast build rule for target.
+connected_cells/fast:
+	$(MAKE) -f algorithms/graphs/CMakeFiles/connected_cells.dir/build.make algorithms/graphs/CMakeFiles/connected_cells.dir/build
+.PHONY : connected_cells/fast
+
+#=============================================================================
+# Target rules for targets named AdjList
+
+# Build rule for target.
+AdjList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AdjList
+.PHONY : AdjList
+
+# fast build rule for target.
+AdjList/fast:
+	$(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/build
+.PHONY : AdjList/fast
+
+#=============================================================================
+# Target rules for targets named AdjMatrix
+
+# Build rule for target.
+AdjMatrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AdjMatrix
+.PHONY : AdjMatrix
+
+# fast build rule for target.
+AdjMatrix/fast:
+	$(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/build
+.PHONY : AdjMatrix/fast
+
+#=============================================================================
+# Target rules for targets named levelorder
+
+# Build rule for target.
+levelorder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 levelorder
+.PHONY : levelorder
+
+# fast build rule for target.
+levelorder/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/levelorder.dir/build.make algorithms/trees/CMakeFiles/levelorder.dir/build
+.PHONY : levelorder/fast
+
+#=============================================================================
+# Target rules for targets named invert
+
+# Build rule for target.
+invert: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 invert
+.PHONY : invert
+
+# fast build rule for target.
+invert/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/invert.dir/build.make algorithms/trees/CMakeFiles/invert.dir/build
+.PHONY : invert/fast
+
+#=============================================================================
+# Target rules for targets named happy_number
+
+# Build rule for target.
+happy_number: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 happy_number
+.PHONY : happy_number
+
+# fast build rule for target.
+happy_number/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/build
+.PHONY : happy_number/fast
+
+#=============================================================================
 # Target rules for targets named graph
 
 # Build rule for target.
@@ -390,6 +520,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... histogram"
 	@echo "... lca"
 	@echo "... twostackqueue"
 	@echo "... aglorithm"
@@ -397,8 +528,10 @@ help:
 	@echo "... search2D"
 	@echo "... all_subsets"
 	@echo "... icecream"
+	@echo "... makeChange"
 	@echo "... level_order_bst"
 	@echo "... running_median"
+	@echo "... lonely_integer"
 	@echo "... nthstair"
 	@echo "... largest_square"
 	@echo "... repeating_numbers"
@@ -408,6 +541,13 @@ help:
 	@echo "... king_queen"
 	@echo "... intersection"
 	@echo "... overlapping_rectangles"
+	@echo "... bfs"
+	@echo "... connected_cells"
+	@echo "... AdjList"
+	@echo "... AdjMatrix"
+	@echo "... levelorder"
+	@echo "... invert"
+	@echo "... happy_number"
 	@echo "... graph"
 	@echo "... container"
 .PHONY : help

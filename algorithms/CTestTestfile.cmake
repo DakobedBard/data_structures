@@ -7,3 +7,6 @@
 subdirs("interview")
 subdirs("dynamic")
 subdirs("arrays")
+subdirs("graphs")
+subdirs("trees")
+subdirs("leet_code")

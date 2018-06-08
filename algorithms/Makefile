@@ -67,17 +67,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -120,6 +120,21 @@ preinstall/fast:
 depend:
 	cd /home/mddarr/projects/data_structures && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+algorithms/CMakeFiles/histogram.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/histogram.dir/rule
+.PHONY : algorithms/CMakeFiles/histogram.dir/rule
+
+# Convenience name for target.
+histogram: algorithms/CMakeFiles/histogram.dir/rule
+
+.PHONY : histogram
+
+# fast build rule for target.
+histogram/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/histogram.dir/build.make algorithms/CMakeFiles/histogram.dir/build
+.PHONY : histogram/fast
 
 # Convenience name for target.
 algorithms/CMakeFiles/lca.dir/rule:
@@ -227,6 +242,21 @@ icecream/fast:
 .PHONY : icecream/fast
 
 # Convenience name for target.
+algorithms/CMakeFiles/makeChange.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/makeChange.dir/rule
+.PHONY : algorithms/CMakeFiles/makeChange.dir/rule
+
+# Convenience name for target.
+makeChange: algorithms/CMakeFiles/makeChange.dir/rule
+
+.PHONY : makeChange
+
+# fast build rule for target.
+makeChange/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/makeChange.dir/build.make algorithms/CMakeFiles/makeChange.dir/build
+.PHONY : makeChange/fast
+
+# Convenience name for target.
 algorithms/CMakeFiles/level_order_bst.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/level_order_bst.dir/rule
 .PHONY : algorithms/CMakeFiles/level_order_bst.dir/rule
@@ -256,6 +286,21 @@ running_median/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/running_median.dir/build.make algorithms/CMakeFiles/running_median.dir/build
 .PHONY : running_median/fast
 
+# Convenience name for target.
+algorithms/CMakeFiles/lonely_integer.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/lonely_integer.dir/rule
+.PHONY : algorithms/CMakeFiles/lonely_integer.dir/rule
+
+# Convenience name for target.
+lonely_integer: algorithms/CMakeFiles/lonely_integer.dir/rule
+
+.PHONY : lonely_integer
+
+# fast build rule for target.
+lonely_integer/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lonely_integer.dir/build.make algorithms/CMakeFiles/lonely_integer.dir/build
+.PHONY : lonely_integer/fast
+
 all_subsets.o: all_subsets.cpp.o
 
 .PHONY : all_subsets.o
@@ -282,6 +327,33 @@ all_subsets.s: all_subsets.cpp.s
 all_subsets.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/all_subsets.dir/build.make algorithms/CMakeFiles/all_subsets.dir/all_subsets.cpp.s
 .PHONY : all_subsets.cpp.s
+
+histogram.o: histogram.cpp.o
+
+.PHONY : histogram.o
+
+# target to build an object file
+histogram.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/histogram.dir/build.make algorithms/CMakeFiles/histogram.dir/histogram.cpp.o
+.PHONY : histogram.cpp.o
+
+histogram.i: histogram.cpp.i
+
+.PHONY : histogram.i
+
+# target to preprocess a source file
+histogram.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/histogram.dir/build.make algorithms/CMakeFiles/histogram.dir/histogram.cpp.i
+.PHONY : histogram.cpp.i
+
+histogram.s: histogram.cpp.s
+
+.PHONY : histogram.s
+
+# target to generate assembly for a file
+histogram.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/histogram.dir/build.make algorithms/CMakeFiles/histogram.dir/histogram.cpp.s
+.PHONY : histogram.cpp.s
 
 icecream.o: icecream.cpp.o
 
@@ -363,6 +435,60 @@ level_order_bst.s: level_order_bst.cpp.s
 level_order_bst.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/level_order_bst.dir/build.make algorithms/CMakeFiles/level_order_bst.dir/level_order_bst.cpp.s
 .PHONY : level_order_bst.cpp.s
+
+lonely_integer.o: lonely_integer.cpp.o
+
+.PHONY : lonely_integer.o
+
+# target to build an object file
+lonely_integer.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lonely_integer.dir/build.make algorithms/CMakeFiles/lonely_integer.dir/lonely_integer.cpp.o
+.PHONY : lonely_integer.cpp.o
+
+lonely_integer.i: lonely_integer.cpp.i
+
+.PHONY : lonely_integer.i
+
+# target to preprocess a source file
+lonely_integer.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lonely_integer.dir/build.make algorithms/CMakeFiles/lonely_integer.dir/lonely_integer.cpp.i
+.PHONY : lonely_integer.cpp.i
+
+lonely_integer.s: lonely_integer.cpp.s
+
+.PHONY : lonely_integer.s
+
+# target to generate assembly for a file
+lonely_integer.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/lonely_integer.dir/build.make algorithms/CMakeFiles/lonely_integer.dir/lonely_integer.cpp.s
+.PHONY : lonely_integer.cpp.s
+
+makeChange.o: makeChange.cpp.o
+
+.PHONY : makeChange.o
+
+# target to build an object file
+makeChange.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/makeChange.dir/build.make algorithms/CMakeFiles/makeChange.dir/makeChange.cpp.o
+.PHONY : makeChange.cpp.o
+
+makeChange.i: makeChange.cpp.i
+
+.PHONY : makeChange.i
+
+# target to preprocess a source file
+makeChange.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/makeChange.dir/build.make algorithms/CMakeFiles/makeChange.dir/makeChange.cpp.i
+.PHONY : makeChange.cpp.i
+
+makeChange.s: makeChange.cpp.s
+
+.PHONY : makeChange.s
+
+# target to generate assembly for a file
+makeChange.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/CMakeFiles/makeChange.dir/build.make algorithms/CMakeFiles/makeChange.dir/makeChange.cpp.s
+.PHONY : makeChange.cpp.s
 
 nqueens.o: nqueens.cpp.o
 
@@ -506,6 +632,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... histogram"
 	@echo "... lca"
 	@echo "... rebuild_cache"
 	@echo "... twostackqueue"
@@ -514,12 +642,16 @@ help:
 	@echo "... search2D"
 	@echo "... all_subsets"
 	@echo "... icecream"
+	@echo "... makeChange"
 	@echo "... level_order_bst"
 	@echo "... running_median"
-	@echo "... test"
+	@echo "... lonely_integer"
 	@echo "... all_subsets.o"
 	@echo "... all_subsets.i"
 	@echo "... all_subsets.s"
+	@echo "... histogram.o"
+	@echo "... histogram.i"
+	@echo "... histogram.s"
 	@echo "... icecream.o"
 	@echo "... icecream.i"
 	@echo "... icecream.s"
@@ -529,6 +661,12 @@ help:
 	@echo "... level_order_bst.o"
 	@echo "... level_order_bst.i"
 	@echo "... level_order_bst.s"
+	@echo "... lonely_integer.o"
+	@echo "... lonely_integer.i"
+	@echo "... lonely_integer.s"
+	@echo "... makeChange.o"
+	@echo "... makeChange.i"
+	@echo "... makeChange.s"
 	@echo "... nqueens.o"
 	@echo "... nqueens.i"
 	@echo "... nqueens.s"
