@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/mddarr/projects/data_structures
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -152,21 +152,6 @@ connected_cells/fast:
 .PHONY : connected_cells/fast
 
 # Convenience name for target.
-algorithms/graphs/CMakeFiles/AdjList.dir/rule:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/graphs/CMakeFiles/AdjList.dir/rule
-.PHONY : algorithms/graphs/CMakeFiles/AdjList.dir/rule
-
-# Convenience name for target.
-AdjList: algorithms/graphs/CMakeFiles/AdjList.dir/rule
-
-.PHONY : AdjList
-
-# fast build rule for target.
-AdjList/fast:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/build
-.PHONY : AdjList/fast
-
-# Convenience name for target.
 algorithms/graphs/CMakeFiles/AdjMatrix.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/graphs/CMakeFiles/AdjMatrix.dir/rule
 .PHONY : algorithms/graphs/CMakeFiles/AdjMatrix.dir/rule
@@ -181,32 +166,20 @@ AdjMatrix/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/build
 .PHONY : AdjMatrix/fast
 
-AdjList.o: AdjList.cpp.o
+# Convenience name for target.
+algorithms/graphs/CMakeFiles/adjlist.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/graphs/CMakeFiles/adjlist.dir/rule
+.PHONY : algorithms/graphs/CMakeFiles/adjlist.dir/rule
 
-.PHONY : AdjList.o
+# Convenience name for target.
+adjlist: algorithms/graphs/CMakeFiles/adjlist.dir/rule
 
-# target to build an object file
-AdjList.cpp.o:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/AdjList.cpp.o
-.PHONY : AdjList.cpp.o
+.PHONY : adjlist
 
-AdjList.i: AdjList.cpp.i
-
-.PHONY : AdjList.i
-
-# target to preprocess a source file
-AdjList.cpp.i:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/AdjList.cpp.i
-.PHONY : AdjList.cpp.i
-
-AdjList.s: AdjList.cpp.s
-
-.PHONY : AdjList.s
-
-# target to generate assembly for a file
-AdjList.cpp.s:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/AdjList.cpp.s
-.PHONY : AdjList.cpp.s
+# fast build rule for target.
+adjlist/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/adjlist.dir/build.make algorithms/graphs/CMakeFiles/adjlist.dir/build
+.PHONY : adjlist/fast
 
 AdjMatrix.o: AdjMatrix.cpp.o
 
@@ -215,6 +188,7 @@ AdjMatrix.o: AdjMatrix.cpp.o
 # target to build an object file
 AdjMatrix.cpp.o:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/AdjMatrix.cpp.o
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/adjlist.dir/build.make algorithms/graphs/CMakeFiles/adjlist.dir/AdjMatrix.cpp.o
 .PHONY : AdjMatrix.cpp.o
 
 AdjMatrix.i: AdjMatrix.cpp.i
@@ -224,6 +198,7 @@ AdjMatrix.i: AdjMatrix.cpp.i
 # target to preprocess a source file
 AdjMatrix.cpp.i:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/AdjMatrix.cpp.i
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/adjlist.dir/build.make algorithms/graphs/CMakeFiles/adjlist.dir/AdjMatrix.cpp.i
 .PHONY : AdjMatrix.cpp.i
 
 AdjMatrix.s: AdjMatrix.cpp.s
@@ -233,6 +208,7 @@ AdjMatrix.s: AdjMatrix.cpp.s
 # target to generate assembly for a file
 AdjMatrix.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/AdjMatrix.cpp.s
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/graphs/CMakeFiles/adjlist.dir/build.make algorithms/graphs/CMakeFiles/adjlist.dir/AdjMatrix.cpp.s
 .PHONY : AdjMatrix.cpp.s
 
 bfs.o: bfs.cpp.o
@@ -295,16 +271,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... bfs"
 	@echo "... connected_cells"
-	@echo "... test"
-	@echo "... AdjList"
 	@echo "... AdjMatrix"
-	@echo "... AdjList.o"
-	@echo "... AdjList.i"
-	@echo "... AdjList.s"
+	@echo "... rebuild_cache"
+	@echo "... adjlist"
 	@echo "... AdjMatrix.o"
 	@echo "... AdjMatrix.i"
 	@echo "... AdjMatrix.s"

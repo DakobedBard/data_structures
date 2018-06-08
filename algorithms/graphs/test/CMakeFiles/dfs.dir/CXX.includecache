@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/graphs/test/dfs.cpp
+iostream
+-
+AdjList.h
+/home/mddarr/projects/data_structures/algorithms/graphs/test/AdjList.h
+string
+-
+
+graphs/AdjList.h
+vector
+-
+iostream
+-
+unordered_map
+-
+set
+-
+list
+-
+

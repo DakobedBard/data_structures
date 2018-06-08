@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/dfs.dir/dfs.cpp.o  -o dfs ../../../graphs/libgraph.a ../../../containers/libcontainer.a 

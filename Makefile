@@ -421,19 +421,6 @@ connected_cells/fast:
 .PHONY : connected_cells/fast
 
 #=============================================================================
-# Target rules for targets named AdjList
-
-# Build rule for target.
-AdjList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AdjList
-.PHONY : AdjList
-
-# fast build rule for target.
-AdjList/fast:
-	$(MAKE) -f algorithms/graphs/CMakeFiles/AdjList.dir/build.make algorithms/graphs/CMakeFiles/AdjList.dir/build
-.PHONY : AdjList/fast
-
-#=============================================================================
 # Target rules for targets named AdjMatrix
 
 # Build rule for target.
@@ -445,6 +432,32 @@ AdjMatrix: cmake_check_build_system
 AdjMatrix/fast:
 	$(MAKE) -f algorithms/graphs/CMakeFiles/AdjMatrix.dir/build.make algorithms/graphs/CMakeFiles/AdjMatrix.dir/build
 .PHONY : AdjMatrix/fast
+
+#=============================================================================
+# Target rules for targets named adjlist
+
+# Build rule for target.
+adjlist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 adjlist
+.PHONY : adjlist
+
+# fast build rule for target.
+adjlist/fast:
+	$(MAKE) -f algorithms/graphs/CMakeFiles/adjlist.dir/build.make algorithms/graphs/CMakeFiles/adjlist.dir/build
+.PHONY : adjlist/fast
+
+#=============================================================================
+# Target rules for targets named dfs
+
+# Build rule for target.
+dfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dfs
+.PHONY : dfs
+
+# fast build rule for target.
+dfs/fast:
+	$(MAKE) -f algorithms/graphs/test/CMakeFiles/dfs.dir/build.make algorithms/graphs/test/CMakeFiles/dfs.dir/build
+.PHONY : dfs/fast
 
 #=============================================================================
 # Target rules for targets named levelorder
@@ -543,8 +556,9 @@ help:
 	@echo "... overlapping_rectangles"
 	@echo "... bfs"
 	@echo "... connected_cells"
-	@echo "... AdjList"
 	@echo "... AdjMatrix"
+	@echo "... adjlist"
+	@echo "... dfs"
 	@echo "... levelorder"
 	@echo "... invert"
 	@echo "... happy_number"
