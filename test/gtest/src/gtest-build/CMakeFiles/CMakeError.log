@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_7b601/fast"
-gmake[3]: Entering directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-/usr/bin/gmake -f CMakeFiles/cmTC_7b601.dir/build.make CMakeFiles/cmTC_7b601.dir/build
-gmake[4]: Entering directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7b601.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_7b601.dir/CheckSymbolExists.c.o   -c /home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_7b601
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b601.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7b601.dir/CheckSymbolExists.c.o  -o cmTC_7b601 
-CMakeFiles/cmTC_7b601.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_43658/fast"
+make[3]: Entering directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_43658.dir/build.make CMakeFiles/cmTC_43658.dir/build
+make[4]: Entering directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43658.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_43658.dir/CheckSymbolExists.c.o   -c /home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_43658
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43658.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_43658.dir/CheckSymbolExists.c.o  -o cmTC_43658 
+CMakeFiles/cmTC_43658.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_7b601.dir/build.make:86: recipe for target 'cmTC_7b601' failed
-gmake[4]: *** [cmTC_7b601] Error 1
-gmake[4]: Leaving directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_7b601/fast' failed
-gmake[3]: *** [cmTC_7b601/fast] Error 2
-gmake[3]: Leaving directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_43658.dir/build.make:97: recipe for target 'cmTC_43658' failed
+make[4]: *** [cmTC_43658] Error 1
+make[4]: Leaving directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_43658/fast' failed
+make[3]: *** [cmTC_43658/fast] Error 2
+make[3]: Leaving directory '/home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
 
 File /home/mddarr/projects/data_structures/test/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */

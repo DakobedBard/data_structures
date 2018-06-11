@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/traversal.dir/traversal.cpp.o  -o traversal ../../../graphs/libgraph.a ../../../containers/libcontainer.a 

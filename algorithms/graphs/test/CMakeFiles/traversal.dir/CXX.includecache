@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/graphs/test/traversal.cpp
+AdjList.h
+/home/mddarr/projects/data_structures/algorithms/graphs/test/AdjList.h
+set
+-
+unordered_map
+-
+iostream
+-
+
+graphs/AdjList.h
+vector
+-
+iostream
+-
+unordered_map
+-
+set
+-
+list
+-
+

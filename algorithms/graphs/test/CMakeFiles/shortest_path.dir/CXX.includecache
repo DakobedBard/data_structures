@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/graphs/test/shortest_path.cpp
+Heap.h
+/home/mddarr/projects/data_structures/algorithms/graphs/test/Heap.h
+ShortestPaths.h
+/home/mddarr/projects/data_structures/algorithms/graphs/test/ShortestPaths.h
+
+containers/Heap.h
+functional
+-
+vector
+-
+iostream
+-
+
+graphs/AdjList.h
+vector
+-
+iostream
+-
+unordered_map
+-
+set
+-
+list
+-
+
+graphs/ShortestPaths.h
+AdjList.h
+graphs/AdjList.h
+vector
+-
+unordered_map
+-
+iostream
+-
+
