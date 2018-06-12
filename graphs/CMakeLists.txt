@@ -3,7 +3,9 @@ set(libbar_SRCS
     	lltest.cpp
 	Graph.h
 	Graph.cpp
-
+	MST.h
+	AdjList.h
+	Coloring.h
 
 )
 

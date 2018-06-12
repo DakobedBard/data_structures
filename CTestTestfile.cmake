@@ -7,3 +7,4 @@
 subdirs("algorithms")
 subdirs("graphs")
 subdirs("containers")
+subdirs("test")

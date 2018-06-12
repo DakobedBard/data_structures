@@ -39,7 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mddarr/projects/data_structures/test/testfoo/cmake_install.cmake")
+  include("/home/mddarr/projects/data_structures/test/testcontainers/cmake_install.cmake")
+  include("/home/mddarr/projects/data_structures/test/testgraphs/cmake_install.cmake")
 
 endif()
 

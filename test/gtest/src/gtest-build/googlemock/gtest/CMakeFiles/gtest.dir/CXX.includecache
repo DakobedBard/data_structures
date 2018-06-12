@@ -335,9 +335,11 @@ sys/wait.h
 -
 spawn.h
 -
-fdio/io.h
+lib/fdio/io.h
 -
-launchpad/launchpad.h
+lib/fdio/spawn.h
+-
+zircon/processargs.h
 -
 zircon/syscalls.h
 -

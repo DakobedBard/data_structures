@@ -14,7 +14,18 @@ That sounds like kind of a pain in the ass though... but I will do it eventually
 
 #include <iostream>
 
+
+
+
 namespace DTL{
+
+
+template<class T>
+class BinaryTree{
+
+
+};
+
 
 
 
