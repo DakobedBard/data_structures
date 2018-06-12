@@ -190,6 +190,33 @@ testheap.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.s
 .PHONY : testheap.cpp.s
 
+testintervals.o: testintervals.cpp.o
+
+.PHONY : testintervals.o
+
+# target to build an object file
+testintervals.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o
+.PHONY : testintervals.cpp.o
+
+testintervals.i: testintervals.cpp.i
+
+.PHONY : testintervals.i
+
+# target to preprocess a source file
+testintervals.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.i
+.PHONY : testintervals.cpp.i
+
+testintervals.s: testintervals.cpp.s
+
+.PHONY : testintervals.s
+
+# target to generate assembly for a file
+testintervals.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.s
+.PHONY : testintervals.cpp.s
+
 testlist.o: testlist.cpp.o
 
 .PHONY : testlist.o
@@ -260,6 +287,9 @@ help:
 	@echo "... testheap.o"
 	@echo "... testheap.i"
 	@echo "... testheap.s"
+	@echo "... testintervals.o"
+	@echo "... testintervals.i"
+	@echo "... testintervals.s"
 	@echo "... testlist.o"
 	@echo "... testlist.i"
 	@echo "... testlist.s"

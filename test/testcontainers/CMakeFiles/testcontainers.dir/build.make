@@ -105,9 +105,33 @@ test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o.provides: test/
 test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o.provides.build: test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o
 
 
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o: test/testcontainers/CMakeFiles/testcontainers.dir/flags.make
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o: test/testcontainers/testintervals.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testcontainers.dir/testintervals.cpp.o -c /home/mddarr/projects/data_structures/test/testcontainers/testintervals.cpp
+
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testcontainers.dir/testintervals.cpp.i"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testcontainers/testintervals.cpp > CMakeFiles/testcontainers.dir/testintervals.cpp.i
+
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testcontainers.dir/testintervals.cpp.s"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testcontainers/testintervals.cpp -o CMakeFiles/testcontainers.dir/testintervals.cpp.s
+
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.requires:
+
+.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.requires
+
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.provides: test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.requires
+	$(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.provides.build
+.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.provides
+
+test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.provides.build: test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o
+
+
 test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o: test/testcontainers/CMakeFiles/testcontainers.dir/flags.make
 test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o: test/testcontainers/testlist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o"
 	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testcontainers.dir/testlist.cpp.o -c /home/mddarr/projects/data_structures/test/testcontainers/testlist.cpp
 
 test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.i: cmake_force
@@ -131,7 +155,7 @@ test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o.provides.build:
 
 test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o: test/testcontainers/CMakeFiles/testcontainers.dir/flags.make
 test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o: test/testcontainers/testtree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o"
 	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testcontainers.dir/testtree.cpp.o -c /home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp
 
 test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.i: cmake_force
@@ -157,6 +181,7 @@ test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.provides.build:
 testcontainers_OBJECTS = \
 "CMakeFiles/testcontainers.dir/main.cpp.o" \
 "CMakeFiles/testcontainers.dir/testheap.cpp.o" \
+"CMakeFiles/testcontainers.dir/testintervals.cpp.o" \
 "CMakeFiles/testcontainers.dir/testlist.cpp.o" \
 "CMakeFiles/testcontainers.dir/testtree.cpp.o"
 
@@ -165,6 +190,7 @@ testcontainers_EXTERNAL_OBJECTS =
 
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/main.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o
+test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/build.make
@@ -174,7 +200,7 @@ test/testcontainers/testcontainers: test/gtest/src/gtest-build/googlemock/gtest/
 test/testcontainers/testcontainers: test/gtest/src/gtest-build/googlemock/libgmock.a
 test/testcontainers/testcontainers: containers/libcontainer.a
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable testcontainers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable testcontainers"
 	cd /home/mddarr/projects/data_structures/test/testcontainers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testcontainers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -184,6 +210,7 @@ test/testcontainers/CMakeFiles/testcontainers.dir/build: test/testcontainers/tes
 
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/main.cpp.o.requires
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o.requires
+test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testintervals.cpp.o.requires
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o.requires
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.requires
 

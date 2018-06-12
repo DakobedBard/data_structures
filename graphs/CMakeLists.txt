@@ -1,11 +1,13 @@
-set(libbar_SRCS
+set(libgraph_SRCS
    
     	lltest.cpp
 	Graph.h
 	Graph.cpp
 	MST.h
 	AdjList.h
+	AdjMatrix
 	Coloring.h
+	
 
 )
 
@@ -17,7 +19,7 @@ ADD_DEFINITIONS(
 
 # Declare the library
 add_library(graph STATIC
-    ${libbar_SRCS}
+    ${libgraph_SRCS}
 )
 
 target_link_libraries(graph

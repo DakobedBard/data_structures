@@ -5,3 +5,4 @@ algorithms/graphs/test/CMakeFiles/dfs.dir/dfs.cpp.o
  /home/mddarr/projects/data_structures/algorithms/graphs/test/dfs.cpp
  containers/UnionFind.h
  graphs/AdjList.h
+ graphs/AdjMatrix.h

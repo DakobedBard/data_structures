@@ -7,6 +7,7 @@
 #include <set>
 #include <list>
 #include "UnionFind.h"
+#include "AdjMatrix.h"
 
 /*
 

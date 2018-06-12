@@ -4,4 +4,5 @@
 algorithms/graphs/test/CMakeFiles/traversal.dir/traversal.cpp.o: algorithms/graphs/test/traversal.cpp
 algorithms/graphs/test/CMakeFiles/traversal.dir/traversal.cpp.o: containers/UnionFind.h
 algorithms/graphs/test/CMakeFiles/traversal.dir/traversal.cpp.o: graphs/AdjList.h
+algorithms/graphs/test/CMakeFiles/traversal.dir/traversal.cpp.o: graphs/AdjMatrix.h
 

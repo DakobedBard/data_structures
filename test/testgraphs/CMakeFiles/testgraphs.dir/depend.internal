@@ -32,6 +32,7 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
  containers/UnionFind.h
  containers/ibar.h
  graphs/AdjList.h
+ graphs/AdjMatrix.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-cardinalities.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-generated-actions.h
