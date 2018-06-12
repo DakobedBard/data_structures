@@ -5,6 +5,7 @@ set(libbar_SRCS
 	Graph.cpp
 	MST.h
 	AdjList.h
+	Coloring.h
 
 )
 

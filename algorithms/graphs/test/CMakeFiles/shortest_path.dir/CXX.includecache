@@ -20,6 +20,10 @@ vector
 iostream
 -
 
+containers/UnionFind.h
+vector
+-
+
 graphs/AdjList.h
 vector
 -
@@ -31,6 +35,8 @@ set
 -
 list
 -
+UnionFind.h
+graphs/UnionFind.h
 
 graphs/ShortestPaths.h
 AdjList.h

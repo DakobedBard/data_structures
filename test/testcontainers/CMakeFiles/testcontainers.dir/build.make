@@ -129,28 +129,28 @@ test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o.provides: test/
 test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o.provides.build: test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o
 
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o: test/testcontainers/CMakeFiles/testcontainers.dir/flags.make
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o: test/testcontainers/teststack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o"
-	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testcontainers.dir/teststack.cpp.o -c /home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o: test/testcontainers/CMakeFiles/testcontainers.dir/flags.make
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o: test/testcontainers/testtree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testcontainers.dir/testtree.cpp.o -c /home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testcontainers.dir/teststack.cpp.i"
-	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp > CMakeFiles/testcontainers.dir/teststack.cpp.i
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testcontainers.dir/testtree.cpp.i"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp > CMakeFiles/testcontainers.dir/testtree.cpp.i
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testcontainers.dir/teststack.cpp.s"
-	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp -o CMakeFiles/testcontainers.dir/teststack.cpp.s
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testcontainers.dir/testtree.cpp.s"
+	cd /home/mddarr/projects/data_structures/test/testcontainers && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp -o CMakeFiles/testcontainers.dir/testtree.cpp.s
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.requires:
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.requires:
 
-.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.requires
+.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.requires
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.provides: test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.requires
-	$(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.provides.build
-.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.provides
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.provides: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.requires
+	$(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.provides.build
+.PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.provides
 
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.provides.build: test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.provides.build: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o
 
 
 # Object files for target testcontainers
@@ -158,7 +158,7 @@ testcontainers_OBJECTS = \
 "CMakeFiles/testcontainers.dir/main.cpp.o" \
 "CMakeFiles/testcontainers.dir/testheap.cpp.o" \
 "CMakeFiles/testcontainers.dir/testlist.cpp.o" \
-"CMakeFiles/testcontainers.dir/teststack.cpp.o"
+"CMakeFiles/testcontainers.dir/testtree.cpp.o"
 
 # External object files for target testcontainers
 testcontainers_EXTERNAL_OBJECTS =
@@ -166,7 +166,7 @@ testcontainers_EXTERNAL_OBJECTS =
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/main.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o
-test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o
+test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o
 test/testcontainers/testcontainers: test/testcontainers/CMakeFiles/testcontainers.dir/build.make
 test/testcontainers/testcontainers: containers/libcontainer.a
 test/testcontainers/testcontainers: graphs/libgraph.a
@@ -185,7 +185,7 @@ test/testcontainers/CMakeFiles/testcontainers.dir/build: test/testcontainers/tes
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/main.cpp.o.requires
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o.requires
 test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o.requires
-test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o.requires
+test/testcontainers/CMakeFiles/testcontainers.dir/requires: test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o.requires
 
 .PHONY : test/testcontainers/CMakeFiles/testcontainers.dir/requires
 

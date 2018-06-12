@@ -32,17 +32,32 @@ void ListTest::SetUp() {};
 
 void ListTest::TearDown() {};
 
-TEST_F(ListTest, ReverseList) {
+/*
 
+How do I test the functionality of the LinkedList ?? 
+Insert elements and then check that the head and tail elements are what they should be 
 
-	
-}
+Delete elements in the Linked List... 
+
+*/
+
 
 TEST_F(ListTest, InsertionTest) {
 	LinkedList<int> list;
-	list.insert_tail(5);
-	std::cout << " I am in the list test " << std::endl;  
-	ASSERT_EQ(0,1);
+	std::cout << " i see this " << std::endl;
+
+	list.InsertTail(4);
+	list.InsertTail(8);
+	list.InsertTail(12);
+	list.InsertTail(11);
+	list.InsertTail(7);
+	list.print();
+	// I should have 4 at the front...
+	ASSERT_EQ(list.front(),4);
+	ASSERT_EQ(list.end(),7);
+
+	list.remove(4);
+	ASSERT_EQ(list.front(),7);
 }
 
 TEST_F(ListTest, DeleteNodeTest) {

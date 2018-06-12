@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mddarr/projects/data_structures/test/testcontainers/main.cpp" "/home/mddarr/projects/data_structures/test/testcontainers/CMakeFiles/testcontainers.dir/main.cpp.o"
   "/home/mddarr/projects/data_structures/test/testcontainers/testheap.cpp" "/home/mddarr/projects/data_structures/test/testcontainers/CMakeFiles/testcontainers.dir/testheap.cpp.o"
   "/home/mddarr/projects/data_structures/test/testcontainers/testlist.cpp" "/home/mddarr/projects/data_structures/test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o"
-  "/home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp" "/home/mddarr/projects/data_structures/test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o"
+  "/home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp" "/home/mddarr/projects/data_structures/test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

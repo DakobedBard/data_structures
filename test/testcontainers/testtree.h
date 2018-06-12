@@ -2,15 +2,15 @@
 #include "mockbar.h"
 
 // The fixture for testing class Foo.
-class StackTest : public ::testing::Test {
+class TreeTest : public ::testing::Test {
 
 protected:
 
     // You can do set-up work for each test here.
-    StackTest();
+    TreeTest();
 
     // You can do clean-up work that doesn't throw exceptions here.
-    virtual ~StackTest();
+    virtual ~TreeTest();
 
     // If the constructor and destructor are not enough for setting up
     // and cleaning up each test, you can define the following methods:

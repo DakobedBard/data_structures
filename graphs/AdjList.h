@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <set>
 #include <list>
+#include "UnionFind.h"
 
 /*
 
@@ -26,7 +27,7 @@ IMPLEMENT INSERTION OF UNDIRECTED EDGES...
 
 Hey goodjob you implemented DFS and BFS.... 
 
-
+Is there no way to determine the the number of vertices in our graph??
 
 
 */
@@ -60,17 +61,18 @@ class AdjList{
 	void addEdge(T src, T dest, int w);
 	void addUndirectedEdge(T src, T dest);
 	void addUndirectedEdge(T src, T dest, int w);
-
 	void printEdges(T src);
 	void print(T src);
+	bool isCyclic();
 	void print(Vertex<T> src);
 	bool hasPathDFS(T src, T dest);
 	bool hasPathDFS(Vertex<T> src, Vertex<T> dest, std::set<T> &visited);
 	bool hasPathBFS(T src, T dest);
 	bool hasPathBFS(Vertex<T> src, Vertex<T> dest);
-	void DFS(T src);
+	std::unordered_map<T,T> DFS(T src);
 	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, std::unordered_map<T, int> &exit, int& time);
 	std::unordered_map<T, int> dijikstra(T src);
+	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
 };
 
 
@@ -112,71 +114,128 @@ void AdjList<T>::print(Vertex<T> src){
 
 I am passing around ALOT of things by reference.... should time be one of them??
 
-I am receiving a BAD ALLOC
+I am receiving a BAD ALLOC  Resolved...
+
+
+Who is an ancestor... suppose that x is an an ancestor of y in the DFS.  THis implies that we must enter x before y, sincethere is no way we can be born before our own father or grandfather!  We also must exit y before we exit x because the mechancs of DFS ensure we cannot exit x until after we have back up from the search of all its descendants.  THus the time interval of y must be proerly nested within ancestor x.  
+
+-How many descendants?  The difference between the exit and entry tims for v tells us how many descendents v has in the DFS tree.  The clock gets incremented on each vertex entry and vertex exit, so half the time differences denots the number of descendents of v.  
+
+We will use entry and exit times in several applications of DFS, particularly topological sorting and biconnected/strongly connected components.  
+
+The other important property of a depth-first search is that it partitions the
+edges of an undirected graph into exactly two classes: tree edges and back edges. The
+tree edges discover new vertices, and are those encoded in the parent relation. Back
+edges are those whose other endpoint is an ancestor of the vertex being expanded,
+so they point back into the tree.
+
 
 
 */
 
+
+/*
+
+We will use UnionFind to determine if there is a cycle present in this graph... 
+
+Iterate through all edges of graph, find subset of both vertices of every edge, if both subsets are same then there is a cycle in graph
+
+
+*/
+
+
+template <class T>
+bool AdjList<T>::isCyclic(){
+	std::vector<int> parent(vertexLookup.size());
+	std::cout << "The number of elements in this graph is .. " << std::endl;
+}
+
+
+
+
+template <class T>
+void AdjList<T>::process_edge(T x, T y, std::unordered_map<T,T> &p, bool &iscyclic){
+
+	if(p[x] != y){			//We found edge
+		std::cout<<"We found a cycle from "  << x << "to "  << y <<std::endl; 
+		
+	}
+
+
+}
+
+/*
+
+My DFS
+
+
+
+
+*/
+
+
+/*
+
+This seems to work fine except for I get  segmentation fault at the very end...
+
+
+*/
 template <class T>
 void AdjList<T>::DFS(T src, std::unordered_map<T, std::string> &state,std::unordered_map<T, T> &p, std::unordered_map<T, int> &entry, std::unordered_map<T, int> &exit, int &time){
 	
+	std::string st = state[src];
+	std::cout << "The state of source is " << st << std::endl;
 	state[src] = "discovered";
 	time ++;
 	Vertex<T> s = getVertex(src);
 	//std::cout << "THe src is " << std::
-	std::cout << " I am at vertex: " << src <<std::endl; 
-	// Now for each edge in the adjacenct edge...
+	std::cout << " I am at vertex: " << src << " And I a adjacent to " << std::endl;
+	printEdges(src); 
+	std::cout<< " My adjlist has size "  << s.adjacent.size() << std::endl;
+
 	for(int i =0; i < s.adjacent.size(); i++){
+		
 		Vertex<T> vertex = s.adjacent[i];
+		std::cout << "Vertex.getLabel() " << vertex.getLabel() << std::endl; 
 		if(state[vertex.getLabel()] == "undiscovered"){
 			state[vertex.getLabel()] = "discovered";
 			p[vertex.getLabel()] = s.getLabel();
 			DFS(vertex.getLabel(), state, p, entry, exit, time);
-		} 
+		} else{
+			//std::cout << " I have allready seen this vertex " << vertex.getLabel() << std::endl;
+		}
 
 	}
 	
 }
 
+
+/*
+
+I believe my segmentation faults are being cause my not initializing correctly.  
+
+*/
+
 template <class T>
-void AdjList<T>::DFS(T src){
+std::unordered_map<T,T> AdjList<T>::DFS(T src){
 
 	std::unordered_map<T, std::string> state;
 	std::unordered_map<T, T> p;
 	std::unordered_map<T, int> entry;
 	std::unordered_map<T, int> exit;
+	bool iscyclic;
 	// Initialize all vertices as undiscovered. 
 	for(auto vertex : vertexLookup){
 		Vertex<T> v = vertex.second; 
 		state[v.getLabel()] = "undiscovered";
+		entry[v.getLabel()] = 0;
+		exit[v.getLabel()] = 0;
 	}
 	
 	int time =0;
 
 	DFS(src, state, p, entry, exit, time);
-
-
-/*
-	entry[src] = time;
-	time++;
-	Vertex<T> s = getVertex(src);
-	//std::cout << "THe src is " << std::
-	std::cout << " I am at vertex: " << src <<std::endl; 
-	// Now for each edge in the adjacenct edge...
-	for(int i =0; s.adjacent.size(); i++){
-		Vertex<T> vertex = s.adjacent[i];
-		if(state[vertex.getLabel()] == "undiscovered"){
-			state[vertex.getLabel()] = "discovered";
-			p[vertex.getLabel()] = s.getLabel();
-			DFS(vertex.getLabel());
-		} 
-
-	}
-	state[s.getLabel()] = "processed";
-	exit[s.getLabel()] = time;
-	time++;
-
-*/
+	std::cout << "I don't get here" << std::endl;
 }
 
 
@@ -398,6 +457,9 @@ void AdjList<T>::addUndirectedEdge(T src, T dest, int w){
 	d.adjacent_weights.push_back(1);
 			// by default we wil keep an array of 
 	vertexLookup[dest] = d;
+
+	
+
 }
 
 

@@ -3,6 +3,7 @@
 
 algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o: algorithms/graphs/test/shortest_path.cpp
 algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o: containers/Heap.h
+algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o: containers/UnionFind.h
 algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o: graphs/AdjList.h
 algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o: graphs/ShortestPaths.h
 

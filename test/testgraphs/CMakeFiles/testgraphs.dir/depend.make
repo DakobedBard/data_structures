@@ -28,6 +28,7 @@ test/testgraphs/CMakeFiles/testgraphs.dir/main.cpp.o: test/gtest/src/gtest/googl
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/testgraphs/mockbar.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/testgraphs/testadjlist.cpp
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/testgraphs/testadjlist.h
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: containers/UnionFind.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: containers/ibar.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/AdjList.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h

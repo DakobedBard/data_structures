@@ -29,6 +29,7 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
  /home/mddarr/projects/data_structures/test/testgraphs/mockbar.h
  /home/mddarr/projects/data_structures/test/testgraphs/testadjlist.cpp
  /home/mddarr/projects/data_structures/test/testgraphs/testadjlist.h
+ containers/UnionFind.h
  containers/ibar.h
  graphs/AdjList.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h

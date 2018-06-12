@@ -21,6 +21,8 @@ AdjList.h
 /home/mddarr/projects/data_structures/test/testgraphs/AdjList.h
 testadjlist.h
 /home/mddarr/projects/data_structures/test/testgraphs/testadjlist.h
+UnionFind.h
+/home/mddarr/projects/data_structures/test/testgraphs/UnionFind.h
 
 /home/mddarr/projects/data_structures/test/testgraphs/testadjlist.h
 gtest/gtest.h
@@ -60,6 +62,10 @@ vector
 iostream
 -
 
+containers/UnionFind.h
+vector
+-
+
 containers/ibar.h
 
 graphs/AdjList.h
@@ -73,6 +79,8 @@ set
 -
 list
 -
+UnionFind.h
+graphs/UnionFind.h
 
 test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
 errno.h

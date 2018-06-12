@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/testcontainers.dir/main.cpp.o"
   "CMakeFiles/testcontainers.dir/testheap.cpp.o"
   "CMakeFiles/testcontainers.dir/testlist.cpp.o"
-  "CMakeFiles/testcontainers.dir/teststack.cpp.o"
+  "CMakeFiles/testcontainers.dir/testtree.cpp.o"
   "testcontainers.pdb"
   "testcontainers"
 )

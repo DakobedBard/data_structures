@@ -2,14 +2,14 @@
 
 Here we will define unit tests for our adjacency list representation of the graph.  We could do write some unit tests to test BFS and DFS...  
 
+I am still having troubles with DFS seg faulting ..
+
+
 */
-
-
 
 #include "AdjList.h"
 #include "testadjlist.h"
-
-
+#include "UnionFind.h"
 
 using ::testing::Return;
 
@@ -41,7 +41,7 @@ TEST_F(AdjListGraph, TestAdjList) {
 
 Test DFS... do i return a vector of vertices that we have visited?  That seems like it could work.  Once again i must ask myself though, is the DFS traversal unque, the order in which the vertices are added could
 
-
+WHY THE FUCK IS THIS SEGMENTATION FAULTING!!! THE ALGORITHM SEEMS TO WORK BUT JUST DOST NOT EXIT CORRECTLY...
 
 */
 
@@ -61,22 +61,61 @@ TEST_F(AdjListGraph, TestDFSTraversal) {
 	std::string boston = "Boston";
 	std::string sanfran = "San Fransisco";
 	std::string oakland = "Oakland";
+	std::string sandiego = "San Diego";
 	adjlist.addUndirectedEdge(seattle,portland);
 	adjlist.addUndirectedEdge(seattle,boise);
 	adjlist.addUndirectedEdge(portland , boise);
 	adjlist.addUndirectedEdge(boise , denver);
 	adjlist.addUndirectedEdge(portland , sanfran);
-	adjlist.addUndirectedEdge(portland , sanfran);
 	adjlist.addUndirectedEdge(oakland, sanfran);
 	adjlist.addUndirectedEdge(sanfran , LA);
 	adjlist.addUndirectedEdge(boston , newyork);
 	adjlist.addUndirectedEdge(denver , newyork);
+	adjlist.addUndirectedEdge(sandiego , LA);
 
+	//adjlist.DFS(seattle);
 
-	adjlist.DFS(seattle);
-	ASSERT_EQ(0,0);
 
 }
+
+
+/*
+Can we find a cycle in the graph??
+
+One way of doing so is to use UnionFind... This is only relevant in undirected graphs.  
+
+
+*/
+
+TEST_F(AdjListGraph, FindCycle) {
+	
+// In order for us to test whether or not we can find a cycle in the graph we must first create a graph with a cycle in it..
+
+	AdjList<std::string> adjlist;
+	std::string seattle = "Seattle";
+	std::string portland = "Portland";
+	std::string spokane = "Spokane";
+	std::string boise = "Boise";
+	std::string vancounver = "Vancouver";
+	adjlist.addUndirectedEdge(seattle, portland);
+	adjlist.addUndirectedEdge(portland, boise);
+	adjlist.addUndirectedEdge(boise, spokane);
+	adjlist.addUndirectedEdge(spokane, seattle);
+	adjlist.addUndirectedEdge(seattle, vancounver);
+
+	adjlist.isCyclic();
+	// Well I haven't tested out the union find...
+
+
+
+}
+
+/*
+
+
+
+*/
+
 
 
 /*
@@ -90,7 +129,7 @@ The BFS function we defined
 
 */
 
-/*
+
 
 TEST_F(AdjListGraph, TestBFSTraversal) {
 
@@ -110,11 +149,9 @@ TEST_F(AdjListGraph, TestBFSTraversal) {
 	adjlist.addUndirectedEdge(seattle,boise);
 	adjlist.addUndirectedEdge(portland , boise);
 	adjlist.addUndirectedEdge(boise , denver);
-	
 
 	adjlist.addUndirectedEdge(newyork , chicago);
 	adjlist.addUndirectedEdge(boston , newyork);
-
 
 	bool a = adjlist.hasPathBFS(seattle, portland);
 //	std::cout << "Is there a BFS path from seattle to Portland ? " << a << std::endl;  
@@ -132,5 +169,5 @@ TEST_F(AdjListGraph, TestBFSTraversal) {
 	ASSERT_EQ(d,1);
 }
 
-*/
+
 

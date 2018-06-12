@@ -40,17 +40,21 @@ gtest/gtest.h
 mockbar.h
 /home/mddarr/projects/data_structures/test/testcontainers/mockbar.h
 
-/home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp
-Heap.h
-/home/mddarr/projects/data_structures/test/testcontainers/Heap.h
-teststack.h
-/home/mddarr/projects/data_structures/test/testcontainers/teststack.h
+/home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp
+BinaryTree.h
+/home/mddarr/projects/data_structures/test/testcontainers/BinaryTree.h
+testtree.h
+/home/mddarr/projects/data_structures/test/testcontainers/testtree.h
 
-/home/mddarr/projects/data_structures/test/testcontainers/teststack.h
+/home/mddarr/projects/data_structures/test/testcontainers/testtree.h
 gtest/gtest.h
 /home/mddarr/projects/data_structures/test/testcontainers/gtest/gtest.h
 mockbar.h
 /home/mddarr/projects/data_structures/test/testcontainers/mockbar.h
+
+containers/BinaryTree.h
+iostream
+-
 
 containers/Heap.h
 functional
@@ -61,6 +65,10 @@ iostream
 -
 
 containers/LinkedList.h
+iostream
+-
+vector
+-
 
 containers/ibar.h
 

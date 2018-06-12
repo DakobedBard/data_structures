@@ -115,11 +115,11 @@ test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.o
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-string.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-tuple.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-type-util.h
-test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o
+test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o
  /home/mddarr/projects/data_structures/test/testcontainers/mockbar.h
- /home/mddarr/projects/data_structures/test/testcontainers/teststack.cpp
- /home/mddarr/projects/data_structures/test/testcontainers/teststack.h
- containers/Heap.h
+ /home/mddarr/projects/data_structures/test/testcontainers/testtree.cpp
+ /home/mddarr/projects/data_structures/test/testcontainers/testtree.h
+ containers/BinaryTree.h
  containers/ibar.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-cardinalities.h

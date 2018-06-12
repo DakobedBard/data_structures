@@ -12,6 +12,15 @@ SetUp the test framework....
 
 having problems with seg faults of course on my heap.  
 
+haing problems seg faults with the DFS... god damit 
+
+
+
+
+Linked Lists...
+
+- I inserted Values into the linked List
+- Is there a deletion > 
 
 
 

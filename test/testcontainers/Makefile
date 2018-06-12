@@ -217,32 +217,32 @@ testlist.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testlist.cpp.s
 .PHONY : testlist.cpp.s
 
-teststack.o: teststack.cpp.o
+testtree.o: testtree.cpp.o
 
-.PHONY : teststack.o
+.PHONY : testtree.o
 
 # target to build an object file
-teststack.cpp.o:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.o
-.PHONY : teststack.cpp.o
+testtree.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.o
+.PHONY : testtree.cpp.o
 
-teststack.i: teststack.cpp.i
+testtree.i: testtree.cpp.i
 
-.PHONY : teststack.i
+.PHONY : testtree.i
 
 # target to preprocess a source file
-teststack.cpp.i:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.i
-.PHONY : teststack.cpp.i
+testtree.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.i
+.PHONY : testtree.cpp.i
 
-teststack.s: teststack.cpp.s
+testtree.s: testtree.cpp.s
 
-.PHONY : teststack.s
+.PHONY : testtree.s
 
 # target to generate assembly for a file
-teststack.cpp.s:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/teststack.cpp.s
-.PHONY : teststack.cpp.s
+testtree.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testcontainers/CMakeFiles/testcontainers.dir/build.make test/testcontainers/CMakeFiles/testcontainers.dir/testtree.cpp.s
+.PHONY : testtree.cpp.s
 
 # Help Target
 help:
@@ -263,9 +263,9 @@ help:
 	@echo "... testlist.o"
 	@echo "... testlist.i"
 	@echo "... testlist.s"
-	@echo "... teststack.o"
-	@echo "... teststack.i"
-	@echo "... teststack.s"
+	@echo "... testtree.o"
+	@echo "... testtree.i"
+	@echo "... testtree.s"
 .PHONY : help
 
 
