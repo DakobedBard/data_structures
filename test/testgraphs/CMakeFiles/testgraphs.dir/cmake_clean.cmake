@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/testgraphs.dir/main.cpp.o"
   "CMakeFiles/testgraphs.dir/testadjlist.cpp.o"
-  "CMakeFiles/testgraphs.dir/testheap.cpp.o"
-  "CMakeFiles/testgraphs.dir/testlist.cpp.o"
+  "CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o"
+  "CMakeFiles/testgraphs.dir/testflow.cpp.o"
   "testgraphs.pdb"
   "testgraphs"
 )

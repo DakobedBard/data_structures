@@ -13,26 +13,20 @@ I am still having troubles with DFS seg faulting ..
 
 using ::testing::Return;
 
-AdjListGraph::AdjListGraph() {
-    // Have qux return true by default
-    ON_CALL(m_bar,qux()).WillByDefault(Return(true));
-    // Have norf return false by default
-    ON_CALL(m_bar,norf()).WillByDefault(Return(false));
+AdjListTest::AdjListTest() {
+
 }
 
-AdjListGraph::~AdjListGraph() {};
+AdjListTest::~AdjListTest() {};
 
-void AdjListGraph::SetUp() {};
 
-void AdjListGraph::TearDown() {};
-
-TEST_F(AdjListGraph, SimpleListTest) {
+TEST_F(AdjListTest, SimpleListTest) {
 
 
 
 }
 
-TEST_F(AdjListGraph, TestAdjList) {
+TEST_F(AdjListTest, TestAdjList) {
 
 }
 
@@ -46,7 +40,7 @@ WHY THE FUCK IS THIS SEGMENTATION FAULTING!!! THE ALGORITHM SEEMS TO WORK BUT JU
 */
 
 
-TEST_F(AdjListGraph, TestDFSTraversal) {
+TEST_F(AdjListTest, TestDFSTraversal) {
 	std::cout << "Is this working " << std::endl; 
 	AdjList<std::string> adjlist; 
 	std::string seattle = "Seattle";
@@ -86,7 +80,7 @@ One way of doing so is to use UnionFind... This is only relevant in undirected g
 
 
 */
-
+/*
 TEST_F(AdjListGraph, FindCycle) {
 	
 // In order for us to test whether or not we can find a cycle in the graph we must first create a graph with a cycle in it..
@@ -131,7 +125,7 @@ The BFS function we defined
 
 
 
-TEST_F(AdjListGraph, TestBFSTraversal) {
+TEST_F(AdjListTest, TestBFSTraversal) {
 
 	AdjList<std::string> adjlist;
 

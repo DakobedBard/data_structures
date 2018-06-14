@@ -72,12 +72,12 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-string.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-tuple.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-type-util.h
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o
  /home/mddarr/projects/data_structures/test/testgraphs/mockbar.h
- /home/mddarr/projects/data_structures/test/testgraphs/testheap.cpp
- /home/mddarr/projects/data_structures/test/testgraphs/testheap.h
- containers/Heap.h
+ /home/mddarr/projects/data_structures/test/testgraphs/testadjmatrix.cpp
+ /home/mddarr/projects/data_structures/test/testgraphs/testadjmatrix.h
  containers/ibar.h
+ graphs/AdjMatrix.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-cardinalities.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-generated-actions.h
@@ -117,10 +117,10 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-string.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-tuple.h
  test/gtest/src/gtest/googletest/include/gtest/internal/gtest-type-util.h
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o
  /home/mddarr/projects/data_structures/test/testgraphs/mockbar.h
- /home/mddarr/projects/data_structures/test/testgraphs/testlist.cpp
- /home/mddarr/projects/data_structures/test/testgraphs/testlist.h
+ /home/mddarr/projects/data_structures/test/testgraphs/testflow.cpp
+ /home/mddarr/projects/data_structures/test/testgraphs/testflow.h
  containers/Heap.h
  containers/ibar.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h

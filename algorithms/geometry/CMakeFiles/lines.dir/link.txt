@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/lines.dir/lines.cpp.o  -o lines ../../containers/libcontainer.a 

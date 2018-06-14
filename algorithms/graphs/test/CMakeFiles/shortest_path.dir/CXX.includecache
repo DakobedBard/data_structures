@@ -40,6 +40,12 @@ graphs/UnionFind.h
 AdjMatrix.h
 graphs/AdjMatrix.h
 
+graphs/AdjMatrix.h
+vector
+-
+iostream
+-
+
 graphs/ShortestPaths.h
 AdjList.h
 graphs/AdjList.h

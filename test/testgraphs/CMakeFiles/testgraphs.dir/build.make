@@ -105,68 +105,68 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o.provides: test/testg
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o.provides.build: test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
 
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o: test/testgraphs/CMakeFiles/testgraphs.dir/flags.make
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o: test/testgraphs/testheap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testgraphs.dir/testheap.cpp.o -c /home/mddarr/projects/data_structures/test/testgraphs/testheap.cpp
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o: test/testgraphs/CMakeFiles/testgraphs.dir/flags.make
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o: test/testgraphs/testadjmatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o -c /home/mddarr/projects/data_structures/test/testgraphs/testadjmatrix.cpp
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testgraphs.dir/testheap.cpp.i"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testgraphs/testheap.cpp > CMakeFiles/testgraphs.dir/testheap.cpp.i
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testgraphs.dir/testadjmatrix.cpp.i"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testgraphs/testadjmatrix.cpp > CMakeFiles/testgraphs.dir/testadjmatrix.cpp.i
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testgraphs.dir/testheap.cpp.s"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testgraphs/testheap.cpp -o CMakeFiles/testgraphs.dir/testheap.cpp.s
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testgraphs.dir/testadjmatrix.cpp.s"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testgraphs/testadjmatrix.cpp -o CMakeFiles/testgraphs.dir/testadjmatrix.cpp.s
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.requires:
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.requires:
 
-.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.requires
+.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.requires
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.provides: test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.requires
-	$(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.provides.build
-.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.provides
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.provides: test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.requires
+	$(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.provides.build
+.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.provides
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.provides.build: test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.provides.build: test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o
 
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o: test/testgraphs/CMakeFiles/testgraphs.dir/flags.make
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o: test/testgraphs/testlist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testgraphs.dir/testlist.cpp.o -c /home/mddarr/projects/data_structures/test/testgraphs/testlist.cpp
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o: test/testgraphs/CMakeFiles/testgraphs.dir/flags.make
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o: test/testgraphs/testflow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mddarr/projects/data_structures/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testgraphs.dir/testflow.cpp.o -c /home/mddarr/projects/data_structures/test/testgraphs/testflow.cpp
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testgraphs.dir/testlist.cpp.i"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testgraphs/testlist.cpp > CMakeFiles/testgraphs.dir/testlist.cpp.i
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testgraphs.dir/testflow.cpp.i"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mddarr/projects/data_structures/test/testgraphs/testflow.cpp > CMakeFiles/testgraphs.dir/testflow.cpp.i
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testgraphs.dir/testlist.cpp.s"
-	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testgraphs/testlist.cpp -o CMakeFiles/testgraphs.dir/testlist.cpp.s
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testgraphs.dir/testflow.cpp.s"
+	cd /home/mddarr/projects/data_structures/test/testgraphs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mddarr/projects/data_structures/test/testgraphs/testflow.cpp -o CMakeFiles/testgraphs.dir/testflow.cpp.s
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.requires:
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.requires:
 
-.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.requires
+.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.requires
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.provides: test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.requires
-	$(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.provides.build
-.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.provides
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.provides: test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.requires
+	$(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.provides.build
+.PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.provides
 
-test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.provides.build: test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o
+test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.provides.build: test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o
 
 
 # Object files for target testgraphs
 testgraphs_OBJECTS = \
 "CMakeFiles/testgraphs.dir/main.cpp.o" \
 "CMakeFiles/testgraphs.dir/testadjlist.cpp.o" \
-"CMakeFiles/testgraphs.dir/testheap.cpp.o" \
-"CMakeFiles/testgraphs.dir/testlist.cpp.o"
+"CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o" \
+"CMakeFiles/testgraphs.dir/testflow.cpp.o"
 
 # External object files for target testgraphs
 testgraphs_EXTERNAL_OBJECTS =
 
 test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/main.cpp.o
 test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
-test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o
-test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o
+test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o
+test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o
 test/testgraphs/testgraphs: test/testgraphs/CMakeFiles/testgraphs.dir/build.make
 test/testgraphs/testgraphs: containers/libcontainer.a
 test/testgraphs/testgraphs: graphs/libgraph.a
@@ -184,8 +184,8 @@ test/testgraphs/CMakeFiles/testgraphs.dir/build: test/testgraphs/testgraphs
 
 test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/main.cpp.o.requires
 test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o.requires
-test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o.requires
-test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o.requires
+test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o.requires
+test/testgraphs/CMakeFiles/testgraphs.dir/requires: test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o.requires
 
 .PHONY : test/testgraphs/CMakeFiles/testgraphs.dir/requires
 

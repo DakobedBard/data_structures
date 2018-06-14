@@ -122,6 +122,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+algorithms/trees/CMakeFiles/invert.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/invert.dir/rule
+.PHONY : algorithms/trees/CMakeFiles/invert.dir/rule
+
+# Convenience name for target.
+invert: algorithms/trees/CMakeFiles/invert.dir/rule
+
+.PHONY : invert
+
+# fast build rule for target.
+invert/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/invert.dir/build.make algorithms/trees/CMakeFiles/invert.dir/build
+.PHONY : invert/fast
+
+# Convenience name for target.
+algorithms/trees/CMakeFiles/minheight.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/minheight.dir/rule
+.PHONY : algorithms/trees/CMakeFiles/minheight.dir/rule
+
+# Convenience name for target.
+minheight: algorithms/trees/CMakeFiles/minheight.dir/rule
+
+.PHONY : minheight
+
+# fast build rule for target.
+minheight/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/minheight.dir/build.make algorithms/trees/CMakeFiles/minheight.dir/build
+.PHONY : minheight/fast
+
+# Convenience name for target.
+algorithms/trees/CMakeFiles/sumklargest.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/sumklargest.dir/rule
+.PHONY : algorithms/trees/CMakeFiles/sumklargest.dir/rule
+
+# Convenience name for target.
+sumklargest: algorithms/trees/CMakeFiles/sumklargest.dir/rule
+
+.PHONY : sumklargest
+
+# fast build rule for target.
+sumklargest/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/sumklargest.dir/build.make algorithms/trees/CMakeFiles/sumklargest.dir/build
+.PHONY : sumklargest/fast
+
+# Convenience name for target.
 algorithms/trees/CMakeFiles/levelorder.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/levelorder.dir/rule
 .PHONY : algorithms/trees/CMakeFiles/levelorder.dir/rule
@@ -137,19 +182,19 @@ levelorder/fast:
 .PHONY : levelorder/fast
 
 # Convenience name for target.
-algorithms/trees/CMakeFiles/invert.dir/rule:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/invert.dir/rule
-.PHONY : algorithms/trees/CMakeFiles/invert.dir/rule
+algorithms/trees/CMakeFiles/ksmallest.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/trees/CMakeFiles/ksmallest.dir/rule
+.PHONY : algorithms/trees/CMakeFiles/ksmallest.dir/rule
 
 # Convenience name for target.
-invert: algorithms/trees/CMakeFiles/invert.dir/rule
+ksmallest: algorithms/trees/CMakeFiles/ksmallest.dir/rule
 
-.PHONY : invert
+.PHONY : ksmallest
 
 # fast build rule for target.
-invert/fast:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/invert.dir/build.make algorithms/trees/CMakeFiles/invert.dir/build
-.PHONY : invert/fast
+ksmallest/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/ksmallest.dir/build.make algorithms/trees/CMakeFiles/ksmallest.dir/build
+.PHONY : ksmallest/fast
 
 invert_binary_tree.o: invert_binary_tree.cpp.o
 
@@ -178,6 +223,33 @@ invert_binary_tree.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/invert.dir/build.make algorithms/trees/CMakeFiles/invert.dir/invert_binary_tree.cpp.s
 .PHONY : invert_binary_tree.cpp.s
 
+ksmallest.o: ksmallest.cpp.o
+
+.PHONY : ksmallest.o
+
+# target to build an object file
+ksmallest.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/ksmallest.dir/build.make algorithms/trees/CMakeFiles/ksmallest.dir/ksmallest.cpp.o
+.PHONY : ksmallest.cpp.o
+
+ksmallest.i: ksmallest.cpp.i
+
+.PHONY : ksmallest.i
+
+# target to preprocess a source file
+ksmallest.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/ksmallest.dir/build.make algorithms/trees/CMakeFiles/ksmallest.dir/ksmallest.cpp.i
+.PHONY : ksmallest.cpp.i
+
+ksmallest.s: ksmallest.cpp.s
+
+.PHONY : ksmallest.s
+
+# target to generate assembly for a file
+ksmallest.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/ksmallest.dir/build.make algorithms/trees/CMakeFiles/ksmallest.dir/ksmallest.cpp.s
+.PHONY : ksmallest.cpp.s
+
 levelorder.o: levelorder.cpp.o
 
 .PHONY : levelorder.o
@@ -205,6 +277,60 @@ levelorder.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/levelorder.dir/build.make algorithms/trees/CMakeFiles/levelorder.dir/levelorder.cpp.s
 .PHONY : levelorder.cpp.s
 
+minheight.o: minheight.cpp.o
+
+.PHONY : minheight.o
+
+# target to build an object file
+minheight.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/minheight.dir/build.make algorithms/trees/CMakeFiles/minheight.dir/minheight.cpp.o
+.PHONY : minheight.cpp.o
+
+minheight.i: minheight.cpp.i
+
+.PHONY : minheight.i
+
+# target to preprocess a source file
+minheight.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/minheight.dir/build.make algorithms/trees/CMakeFiles/minheight.dir/minheight.cpp.i
+.PHONY : minheight.cpp.i
+
+minheight.s: minheight.cpp.s
+
+.PHONY : minheight.s
+
+# target to generate assembly for a file
+minheight.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/minheight.dir/build.make algorithms/trees/CMakeFiles/minheight.dir/minheight.cpp.s
+.PHONY : minheight.cpp.s
+
+sumklargest.o: sumklargest.cpp.o
+
+.PHONY : sumklargest.o
+
+# target to build an object file
+sumklargest.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/sumklargest.dir/build.make algorithms/trees/CMakeFiles/sumklargest.dir/sumklargest.cpp.o
+.PHONY : sumklargest.cpp.o
+
+sumklargest.i: sumklargest.cpp.i
+
+.PHONY : sumklargest.i
+
+# target to preprocess a source file
+sumklargest.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/sumklargest.dir/build.make algorithms/trees/CMakeFiles/sumklargest.dir/sumklargest.cpp.i
+.PHONY : sumklargest.cpp.i
+
+sumklargest.s: sumklargest.cpp.s
+
+.PHONY : sumklargest.s
+
+# target to generate assembly for a file
+sumklargest.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/trees/CMakeFiles/sumklargest.dir/build.make algorithms/trees/CMakeFiles/sumklargest.dir/sumklargest.cpp.s
+.PHONY : sumklargest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,15 +339,27 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... levelorder"
-	@echo "... test"
 	@echo "... invert"
+	@echo "... minheight"
+	@echo "... sumklargest"
+	@echo "... test"
+	@echo "... levelorder"
+	@echo "... ksmallest"
 	@echo "... invert_binary_tree.o"
 	@echo "... invert_binary_tree.i"
 	@echo "... invert_binary_tree.s"
+	@echo "... ksmallest.o"
+	@echo "... ksmallest.i"
+	@echo "... ksmallest.s"
 	@echo "... levelorder.o"
 	@echo "... levelorder.i"
 	@echo "... levelorder.s"
+	@echo "... minheight.o"
+	@echo "... minheight.i"
+	@echo "... minheight.s"
+	@echo "... sumklargest.o"
+	@echo "... sumklargest.i"
+	@echo "... sumklargest.s"
 .PHONY : help
 
 

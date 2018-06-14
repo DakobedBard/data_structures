@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/closest_product.dir/closest_product.cpp.o  -o closest_product 

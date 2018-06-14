@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/ksmallest.dir/ksmallest.cpp.o  -o ksmallest ../../containers/libcontainer.a 

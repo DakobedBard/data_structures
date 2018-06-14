@@ -190,59 +190,59 @@ testadjlist.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.s
 .PHONY : testadjlist.cpp.s
 
-testheap.o: testheap.cpp.o
+testadjmatrix.o: testadjmatrix.cpp.o
 
-.PHONY : testheap.o
-
-# target to build an object file
-testheap.cpp.o:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.o
-.PHONY : testheap.cpp.o
-
-testheap.i: testheap.cpp.i
-
-.PHONY : testheap.i
-
-# target to preprocess a source file
-testheap.cpp.i:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.i
-.PHONY : testheap.cpp.i
-
-testheap.s: testheap.cpp.s
-
-.PHONY : testheap.s
-
-# target to generate assembly for a file
-testheap.cpp.s:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testheap.cpp.s
-.PHONY : testheap.cpp.s
-
-testlist.o: testlist.cpp.o
-
-.PHONY : testlist.o
+.PHONY : testadjmatrix.o
 
 # target to build an object file
-testlist.cpp.o:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.o
-.PHONY : testlist.cpp.o
+testadjmatrix.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.o
+.PHONY : testadjmatrix.cpp.o
 
-testlist.i: testlist.cpp.i
+testadjmatrix.i: testadjmatrix.cpp.i
 
-.PHONY : testlist.i
+.PHONY : testadjmatrix.i
 
 # target to preprocess a source file
-testlist.cpp.i:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.i
-.PHONY : testlist.cpp.i
+testadjmatrix.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.i
+.PHONY : testadjmatrix.cpp.i
 
-testlist.s: testlist.cpp.s
+testadjmatrix.s: testadjmatrix.cpp.s
 
-.PHONY : testlist.s
+.PHONY : testadjmatrix.s
 
 # target to generate assembly for a file
-testlist.cpp.s:
-	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testlist.cpp.s
-.PHONY : testlist.cpp.s
+testadjmatrix.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testadjmatrix.cpp.s
+.PHONY : testadjmatrix.cpp.s
+
+testflow.o: testflow.cpp.o
+
+.PHONY : testflow.o
+
+# target to build an object file
+testflow.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.o
+.PHONY : testflow.cpp.o
+
+testflow.i: testflow.cpp.i
+
+.PHONY : testflow.i
+
+# target to preprocess a source file
+testflow.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.i
+.PHONY : testflow.cpp.i
+
+testflow.s: testflow.cpp.s
+
+.PHONY : testflow.s
+
+# target to generate assembly for a file
+testflow.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f test/testgraphs/CMakeFiles/testgraphs.dir/build.make test/testgraphs/CMakeFiles/testgraphs.dir/testflow.cpp.s
+.PHONY : testflow.cpp.s
 
 # Help Target
 help:
@@ -260,12 +260,12 @@ help:
 	@echo "... testadjlist.o"
 	@echo "... testadjlist.i"
 	@echo "... testadjlist.s"
-	@echo "... testheap.o"
-	@echo "... testheap.i"
-	@echo "... testheap.s"
-	@echo "... testlist.o"
-	@echo "... testlist.i"
-	@echo "... testlist.s"
+	@echo "... testadjmatrix.o"
+	@echo "... testadjmatrix.i"
+	@echo "... testadjmatrix.s"
+	@echo "... testflow.o"
+	@echo "... testflow.i"
+	@echo "... testflow.s"
 .PHONY : help
 
 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/zero_out.dir/zero_out.cpp.o  -o zero_out 

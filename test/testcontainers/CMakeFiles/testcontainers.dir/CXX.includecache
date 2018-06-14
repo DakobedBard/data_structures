@@ -59,6 +59,8 @@ BinaryTree.h
 /home/mddarr/projects/data_structures/test/testcontainers/BinaryTree.h
 testtree.h
 /home/mddarr/projects/data_structures/test/testcontainers/testtree.h
+Trees.h
+/home/mddarr/projects/data_structures/test/testcontainers/Trees.h
 
 /home/mddarr/projects/data_structures/test/testcontainers/testtree.h
 gtest/gtest.h
@@ -68,6 +70,8 @@ mockbar.h
 
 containers/BinaryTree.h
 iostream
+-
+vector
 -
 
 containers/Heap.h
@@ -85,6 +89,8 @@ iostream
 -
 vector
 -
+
+containers/Trees.h
 
 containers/ibar.h
 

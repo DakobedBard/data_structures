@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/trees/ksmallest.cpp
+vector
+-
+iostream
+-
+BinaryTree.h
+/home/mddarr/projects/data_structures/algorithms/trees/BinaryTree.h
+
+containers/BinaryTree.h
+iostream
+-
+vector
+-
+

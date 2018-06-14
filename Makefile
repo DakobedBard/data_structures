@@ -291,6 +291,19 @@ nthstair/fast:
 .PHONY : nthstair/fast
 
 #=============================================================================
+# Target rules for targets named compress
+
+# Build rule for target.
+compress: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compress
+.PHONY : compress
+
+# fast build rule for target.
+compress/fast:
+	$(MAKE) -f algorithms/interview/CMakeFiles/compress.dir/build.make algorithms/interview/CMakeFiles/compress.dir/build
+.PHONY : compress/fast
+
+#=============================================================================
 # Target rules for targets named largest_square
 
 # Build rule for target.
@@ -302,6 +315,19 @@ largest_square: cmake_check_build_system
 largest_square/fast:
 	$(MAKE) -f algorithms/dynamic/CMakeFiles/largest_square.dir/build.make algorithms/dynamic/CMakeFiles/largest_square.dir/build
 .PHONY : largest_square/fast
+
+#=============================================================================
+# Target rules for targets named closest_product
+
+# Build rule for target.
+closest_product: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 closest_product
+.PHONY : closest_product
+
+# fast build rule for target.
+closest_product/fast:
+	$(MAKE) -f algorithms/arrays/CMakeFiles/closest_product.dir/build.make algorithms/arrays/CMakeFiles/closest_product.dir/build
+.PHONY : closest_product/fast
 
 #=============================================================================
 # Target rules for targets named lcs
@@ -486,19 +512,6 @@ traversal/fast:
 .PHONY : traversal/fast
 
 #=============================================================================
-# Target rules for targets named levelorder
-
-# Build rule for target.
-levelorder: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 levelorder
-.PHONY : levelorder
-
-# fast build rule for target.
-levelorder/fast:
-	$(MAKE) -f algorithms/trees/CMakeFiles/levelorder.dir/build.make algorithms/trees/CMakeFiles/levelorder.dir/build
-.PHONY : levelorder/fast
-
-#=============================================================================
 # Target rules for targets named invert
 
 # Build rule for target.
@@ -512,6 +525,71 @@ invert/fast:
 .PHONY : invert/fast
 
 #=============================================================================
+# Target rules for targets named minheight
+
+# Build rule for target.
+minheight: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minheight
+.PHONY : minheight
+
+# fast build rule for target.
+minheight/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/minheight.dir/build.make algorithms/trees/CMakeFiles/minheight.dir/build
+.PHONY : minheight/fast
+
+#=============================================================================
+# Target rules for targets named sumklargest
+
+# Build rule for target.
+sumklargest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sumklargest
+.PHONY : sumklargest
+
+# fast build rule for target.
+sumklargest/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/sumklargest.dir/build.make algorithms/trees/CMakeFiles/sumklargest.dir/build
+.PHONY : sumklargest/fast
+
+#=============================================================================
+# Target rules for targets named levelorder
+
+# Build rule for target.
+levelorder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 levelorder
+.PHONY : levelorder
+
+# fast build rule for target.
+levelorder/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/levelorder.dir/build.make algorithms/trees/CMakeFiles/levelorder.dir/build
+.PHONY : levelorder/fast
+
+#=============================================================================
+# Target rules for targets named ksmallest
+
+# Build rule for target.
+ksmallest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ksmallest
+.PHONY : ksmallest
+
+# fast build rule for target.
+ksmallest/fast:
+	$(MAKE) -f algorithms/trees/CMakeFiles/ksmallest.dir/build.make algorithms/trees/CMakeFiles/ksmallest.dir/build
+.PHONY : ksmallest/fast
+
+#=============================================================================
+# Target rules for targets named rotate_image
+
+# Build rule for target.
+rotate_image: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotate_image
+.PHONY : rotate_image
+
+# fast build rule for target.
+rotate_image/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/rotate_image.dir/build.make algorithms/leet_code/CMakeFiles/rotate_image.dir/build
+.PHONY : rotate_image/fast
+
+#=============================================================================
 # Target rules for targets named happy_number
 
 # Build rule for target.
@@ -523,6 +601,71 @@ happy_number: cmake_check_build_system
 happy_number/fast:
 	$(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/build
 .PHONY : happy_number/fast
+
+#=============================================================================
+# Target rules for targets named medianofarrays
+
+# Build rule for target.
+medianofarrays: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 medianofarrays
+.PHONY : medianofarrays
+
+# fast build rule for target.
+medianofarrays/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/medianofarrays.dir/build.make algorithms/leet_code/CMakeFiles/medianofarrays.dir/build
+.PHONY : medianofarrays/fast
+
+#=============================================================================
+# Target rules for targets named convexhull
+
+# Build rule for target.
+convexhull: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convexhull
+.PHONY : convexhull
+
+# fast build rule for target.
+convexhull/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/build
+.PHONY : convexhull/fast
+
+#=============================================================================
+# Target rules for targets named zero_out
+
+# Build rule for target.
+zero_out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zero_out
+.PHONY : zero_out
+
+# fast build rule for target.
+zero_out/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/build
+.PHONY : zero_out/fast
+
+#=============================================================================
+# Target rules for targets named rotatestring
+
+# Build rule for target.
+rotatestring: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rotatestring
+.PHONY : rotatestring
+
+# fast build rule for target.
+rotatestring/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/build
+.PHONY : rotatestring/fast
+
+#=============================================================================
+# Target rules for targets named lines
+
+# Build rule for target.
+lines: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lines
+.PHONY : lines
+
+# fast build rule for target.
+lines/fast:
+	$(MAKE) -f algorithms/geometry/CMakeFiles/lines.dir/build.make algorithms/geometry/CMakeFiles/lines.dir/build
+.PHONY : lines/fast
 
 #=============================================================================
 # Target rules for targets named graph
@@ -611,7 +754,9 @@ help:
 	@echo "... search2D"
 	@echo "... level_order_bst"
 	@echo "... nthstair"
+	@echo "... compress"
 	@echo "... largest_square"
+	@echo "... closest_product"
 	@echo "... lcs"
 	@echo "... find_cycle_array"
 	@echo "... intersection"
@@ -626,9 +771,18 @@ help:
 	@echo "... shortest_path"
 	@echo "... dfs"
 	@echo "... traversal"
-	@echo "... levelorder"
 	@echo "... invert"
+	@echo "... minheight"
+	@echo "... sumklargest"
+	@echo "... levelorder"
+	@echo "... ksmallest"
+	@echo "... rotate_image"
 	@echo "... happy_number"
+	@echo "... medianofarrays"
+	@echo "... convexhull"
+	@echo "... zero_out"
+	@echo "... rotatestring"
+	@echo "... lines"
 	@echo "... graph"
 	@echo "... container"
 	@echo "... gtest"

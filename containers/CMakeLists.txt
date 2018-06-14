@@ -9,6 +9,7 @@ set(Container_SRCS
 	Vector.cpp
 	BinaryTree.h
 	DoubleArray.h
+	Trees.h
 )
 
 

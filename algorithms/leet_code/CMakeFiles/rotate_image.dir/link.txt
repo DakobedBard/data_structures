@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/rotate_image.dir/rotate_image.cpp.o  -o rotate_image 

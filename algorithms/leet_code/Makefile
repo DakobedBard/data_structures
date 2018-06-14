@@ -67,17 +67,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -88,6 +77,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +122,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+algorithms/leet_code/CMakeFiles/rotate_image.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/rotate_image.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/rotate_image.dir/rule
+
+# Convenience name for target.
+rotate_image: algorithms/leet_code/CMakeFiles/rotate_image.dir/rule
+
+.PHONY : rotate_image
+
+# fast build rule for target.
+rotate_image/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotate_image.dir/build.make algorithms/leet_code/CMakeFiles/rotate_image.dir/build
+.PHONY : rotate_image/fast
+
+# Convenience name for target.
 algorithms/leet_code/CMakeFiles/happy_number.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/happy_number.dir/rule
 .PHONY : algorithms/leet_code/CMakeFiles/happy_number.dir/rule
@@ -135,6 +150,93 @@ happy_number: algorithms/leet_code/CMakeFiles/happy_number.dir/rule
 happy_number/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/build
 .PHONY : happy_number/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/medianofarrays.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/medianofarrays.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/medianofarrays.dir/rule
+
+# Convenience name for target.
+medianofarrays: algorithms/leet_code/CMakeFiles/medianofarrays.dir/rule
+
+.PHONY : medianofarrays
+
+# fast build rule for target.
+medianofarrays/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/medianofarrays.dir/build.make algorithms/leet_code/CMakeFiles/medianofarrays.dir/build
+.PHONY : medianofarrays/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/convexhull.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/convexhull.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/convexhull.dir/rule
+
+# Convenience name for target.
+convexhull: algorithms/leet_code/CMakeFiles/convexhull.dir/rule
+
+.PHONY : convexhull
+
+# fast build rule for target.
+convexhull/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/build
+.PHONY : convexhull/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/zero_out.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/zero_out.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/zero_out.dir/rule
+
+# Convenience name for target.
+zero_out: algorithms/leet_code/CMakeFiles/zero_out.dir/rule
+
+.PHONY : zero_out
+
+# fast build rule for target.
+zero_out/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/build
+.PHONY : zero_out/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/rotatestring.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
+
+# Convenience name for target.
+rotatestring: algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
+
+.PHONY : rotatestring
+
+# fast build rule for target.
+rotatestring/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/build
+.PHONY : rotatestring/fast
+
+convexhull.o: convexhull.cpp.o
+
+.PHONY : convexhull.o
+
+# target to build an object file
+convexhull.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/convexhull.cpp.o
+.PHONY : convexhull.cpp.o
+
+convexhull.i: convexhull.cpp.i
+
+.PHONY : convexhull.i
+
+# target to preprocess a source file
+convexhull.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/convexhull.cpp.i
+.PHONY : convexhull.cpp.i
+
+convexhull.s: convexhull.cpp.s
+
+.PHONY : convexhull.s
+
+# target to generate assembly for a file
+convexhull.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/convexhull.cpp.s
+.PHONY : convexhull.cpp.s
 
 happy_number.o: happy_number.cpp.o
 
@@ -163,6 +265,114 @@ happy_number.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/happy_number.cpp.s
 .PHONY : happy_number.cpp.s
 
+medianofarrays.o: medianofarrays.cpp.o
+
+.PHONY : medianofarrays.o
+
+# target to build an object file
+medianofarrays.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/medianofarrays.dir/build.make algorithms/leet_code/CMakeFiles/medianofarrays.dir/medianofarrays.cpp.o
+.PHONY : medianofarrays.cpp.o
+
+medianofarrays.i: medianofarrays.cpp.i
+
+.PHONY : medianofarrays.i
+
+# target to preprocess a source file
+medianofarrays.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/medianofarrays.dir/build.make algorithms/leet_code/CMakeFiles/medianofarrays.dir/medianofarrays.cpp.i
+.PHONY : medianofarrays.cpp.i
+
+medianofarrays.s: medianofarrays.cpp.s
+
+.PHONY : medianofarrays.s
+
+# target to generate assembly for a file
+medianofarrays.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/medianofarrays.dir/build.make algorithms/leet_code/CMakeFiles/medianofarrays.dir/medianofarrays.cpp.s
+.PHONY : medianofarrays.cpp.s
+
+rotate_image.o: rotate_image.cpp.o
+
+.PHONY : rotate_image.o
+
+# target to build an object file
+rotate_image.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotate_image.dir/build.make algorithms/leet_code/CMakeFiles/rotate_image.dir/rotate_image.cpp.o
+.PHONY : rotate_image.cpp.o
+
+rotate_image.i: rotate_image.cpp.i
+
+.PHONY : rotate_image.i
+
+# target to preprocess a source file
+rotate_image.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotate_image.dir/build.make algorithms/leet_code/CMakeFiles/rotate_image.dir/rotate_image.cpp.i
+.PHONY : rotate_image.cpp.i
+
+rotate_image.s: rotate_image.cpp.s
+
+.PHONY : rotate_image.s
+
+# target to generate assembly for a file
+rotate_image.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotate_image.dir/build.make algorithms/leet_code/CMakeFiles/rotate_image.dir/rotate_image.cpp.s
+.PHONY : rotate_image.cpp.s
+
+rotatestring.o: rotatestring.cpp.o
+
+.PHONY : rotatestring.o
+
+# target to build an object file
+rotatestring.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/rotatestring.cpp.o
+.PHONY : rotatestring.cpp.o
+
+rotatestring.i: rotatestring.cpp.i
+
+.PHONY : rotatestring.i
+
+# target to preprocess a source file
+rotatestring.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/rotatestring.cpp.i
+.PHONY : rotatestring.cpp.i
+
+rotatestring.s: rotatestring.cpp.s
+
+.PHONY : rotatestring.s
+
+# target to generate assembly for a file
+rotatestring.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/rotatestring.cpp.s
+.PHONY : rotatestring.cpp.s
+
+zero_out.o: zero_out.cpp.o
+
+.PHONY : zero_out.o
+
+# target to build an object file
+zero_out.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/zero_out.cpp.o
+.PHONY : zero_out.cpp.o
+
+zero_out.i: zero_out.cpp.i
+
+.PHONY : zero_out.i
+
+# target to preprocess a source file
+zero_out.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/zero_out.cpp.i
+.PHONY : zero_out.cpp.i
+
+zero_out.s: zero_out.cpp.s
+
+.PHONY : zero_out.s
+
+# target to generate assembly for a file
+zero_out.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/zero_out.cpp.s
+.PHONY : zero_out.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,12 +380,32 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... happy_number"
 	@echo "... test"
+	@echo "... rotate_image"
+	@echo "... happy_number"
+	@echo "... medianofarrays"
+	@echo "... convexhull"
+	@echo "... edit_cache"
+	@echo "... zero_out"
+	@echo "... rotatestring"
+	@echo "... convexhull.o"
+	@echo "... convexhull.i"
+	@echo "... convexhull.s"
 	@echo "... happy_number.o"
 	@echo "... happy_number.i"
 	@echo "... happy_number.s"
+	@echo "... medianofarrays.o"
+	@echo "... medianofarrays.i"
+	@echo "... medianofarrays.s"
+	@echo "... rotate_image.o"
+	@echo "... rotate_image.i"
+	@echo "... rotate_image.s"
+	@echo "... rotatestring.o"
+	@echo "... rotatestring.i"
+	@echo "... rotatestring.s"
+	@echo "... zero_out.o"
+	@echo "... zero_out.i"
+	@echo "... zero_out.s"
 .PHONY : help
 
 

@@ -32,3 +32,5 @@ ADD_EXECUTABLE(inplace_manipulation ${inplace_manipulation})
 set(lcs lcs.cpp)
 ADD_EXECUTABLE(lcs ${lcs})
 
+set(closest_product closest_product.cpp)
+ADD_EXECUTABLE(closest_product ${closest_product})

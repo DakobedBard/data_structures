@@ -136,6 +136,48 @@ nthstair/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/interview/CMakeFiles/nthstair.dir/build.make algorithms/interview/CMakeFiles/nthstair.dir/build
 .PHONY : nthstair/fast
 
+# Convenience name for target.
+algorithms/interview/CMakeFiles/compress.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/interview/CMakeFiles/compress.dir/rule
+.PHONY : algorithms/interview/CMakeFiles/compress.dir/rule
+
+# Convenience name for target.
+compress: algorithms/interview/CMakeFiles/compress.dir/rule
+
+.PHONY : compress
+
+# fast build rule for target.
+compress/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/interview/CMakeFiles/compress.dir/build.make algorithms/interview/CMakeFiles/compress.dir/build
+.PHONY : compress/fast
+
+compress.o: compress.cpp.o
+
+.PHONY : compress.o
+
+# target to build an object file
+compress.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/interview/CMakeFiles/compress.dir/build.make algorithms/interview/CMakeFiles/compress.dir/compress.cpp.o
+.PHONY : compress.cpp.o
+
+compress.i: compress.cpp.i
+
+.PHONY : compress.i
+
+# target to preprocess a source file
+compress.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/interview/CMakeFiles/compress.dir/build.make algorithms/interview/CMakeFiles/compress.dir/compress.cpp.i
+.PHONY : compress.cpp.i
+
+compress.s: compress.cpp.s
+
+.PHONY : compress.s
+
+# target to generate assembly for a file
+compress.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/interview/CMakeFiles/compress.dir/build.make algorithms/interview/CMakeFiles/compress.dir/compress.cpp.s
+.PHONY : compress.cpp.s
+
 nthstair.o: nthstair.cpp.o
 
 .PHONY : nthstair.o
@@ -171,8 +213,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... nthstair"
 	@echo "... test"
+	@echo "... nthstair"
+	@echo "... compress"
+	@echo "... compress.o"
+	@echo "... compress.i"
+	@echo "... compress.s"
 	@echo "... nthstair.o"
 	@echo "... nthstair.i"
 	@echo "... nthstair.s"

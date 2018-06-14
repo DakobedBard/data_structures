@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/trees/minheight.cpp
+vector
+-
+BinaryTree.h
+/home/mddarr/projects/data_structures/algorithms/trees/BinaryTree.h
+
+containers/BinaryTree.h
+iostream
+-
+vector
+-
+

@@ -122,6 +122,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+algorithms/arrays/CMakeFiles/closest_product.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/closest_product.dir/rule
+.PHONY : algorithms/arrays/CMakeFiles/closest_product.dir/rule
+
+# Convenience name for target.
+closest_product: algorithms/arrays/CMakeFiles/closest_product.dir/rule
+
+.PHONY : closest_product
+
+# fast build rule for target.
+closest_product/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/arrays/CMakeFiles/closest_product.dir/build.make algorithms/arrays/CMakeFiles/closest_product.dir/build
+.PHONY : closest_product/fast
+
+# Convenience name for target.
 algorithms/arrays/CMakeFiles/lcs.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/arrays/CMakeFiles/lcs.dir/rule
 .PHONY : algorithms/arrays/CMakeFiles/lcs.dir/rule
@@ -225,6 +240,33 @@ repeating_numbers: algorithms/arrays/CMakeFiles/repeating_numbers.dir/rule
 repeating_numbers/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/arrays/CMakeFiles/repeating_numbers.dir/build.make algorithms/arrays/CMakeFiles/repeating_numbers.dir/build
 .PHONY : repeating_numbers/fast
+
+closest_product.o: closest_product.cpp.o
+
+.PHONY : closest_product.o
+
+# target to build an object file
+closest_product.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/arrays/CMakeFiles/closest_product.dir/build.make algorithms/arrays/CMakeFiles/closest_product.dir/closest_product.cpp.o
+.PHONY : closest_product.cpp.o
+
+closest_product.i: closest_product.cpp.i
+
+.PHONY : closest_product.i
+
+# target to preprocess a source file
+closest_product.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/arrays/CMakeFiles/closest_product.dir/build.make algorithms/arrays/CMakeFiles/closest_product.dir/closest_product.cpp.i
+.PHONY : closest_product.cpp.i
+
+closest_product.s: closest_product.cpp.s
+
+.PHONY : closest_product.s
+
+# target to generate assembly for a file
+closest_product.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/arrays/CMakeFiles/closest_product.dir/build.make algorithms/arrays/CMakeFiles/closest_product.dir/closest_product.cpp.s
+.PHONY : closest_product.cpp.s
 
 find_cycle_array.o: find_cycle_array.cpp.o
 
@@ -423,6 +465,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... closest_product"
 	@echo "... edit_cache"
 	@echo "... lcs"
 	@echo "... find_cycle_array"
@@ -431,6 +474,9 @@ help:
 	@echo "... overlapping_rectangles"
 	@echo "... inplace_manipulation"
 	@echo "... repeating_numbers"
+	@echo "... closest_product.o"
+	@echo "... closest_product.i"
+	@echo "... closest_product.s"
 	@echo "... find_cycle_array.o"
 	@echo "... find_cycle_array.i"
 	@echo "... find_cycle_array.s"

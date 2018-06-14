@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mddarr/projects/data_structures/algorithms/trees/sumklargest.cpp
+BinaryTree.h
+/home/mddarr/projects/data_structures/algorithms/trees/BinaryTree.h
+
+containers/BinaryTree.h
+iostream
+-
+vector
+-
+

@@ -45,6 +45,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/mddarr/projects/data_structures/algorithms/graphs/cmake_install.cmake")
   include("/home/mddarr/projects/data_structures/algorithms/trees/cmake_install.cmake")
   include("/home/mddarr/projects/data_structures/algorithms/leet_code/cmake_install.cmake")
+  include("/home/mddarr/projects/data_structures/algorithms/geometry/cmake_install.cmake")
 
 endif()
 
