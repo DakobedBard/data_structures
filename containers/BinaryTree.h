@@ -9,6 +9,8 @@ That sounds like kind of a pain in the ass though... but I will do it eventually
 
 I NEED TO WRITE A FUNCTION THAT DELETES AN ELEMENT FROM THE BST
 
+Can i search the fucking tree for an element ??
+
 */
 
 

@@ -9,7 +9,7 @@ Well my priority queue is broken... i need to figure out why.
 
 */
 int main(){
-	Heap<int, std::less<int>> minheap(10);
+	/*Heap<int, std::less<int>> minheap(10);
 
 	minheap.insertKey(3);
 	minheap.insertKey(5);

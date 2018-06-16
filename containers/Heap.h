@@ -5,18 +5,153 @@
 #include <iostream>
 
 /*
-A heap is a binary tree that is complteey filled with the possible exception of the bottom level.  
 
-We saw heaps being used in the running medians problem... I should use this to implementation of it.  
+WOW!! never omit the virtual destructor.. I was receiving a pernicious segmentation fault due to not having a virtual destructor defined in my class.  While running the test cases, the first test case involving the Heap would pass, however the second would always fail.  This problem was resolved by defining (an empty) destructor.  I do not think that i need to explicitly define a better destructor than this because I do not make any calls to new.  
 
-Implement a decrease Key operation...
-
-Can I test this with a max heap THis doesn't work... 
-
-Now use this in djiksta...	3
 
 
 */
+
+
+template <typename T>
+class Heap{
+  public:
+	Heap(){}
+	Heap(int capacity_):capacity(capacity_), array(capacity_){}
+	virtual ~Heap(){}
+	void insert(T key);
+	static int left_child(int index){return 2*index;}
+	static int right_child(int index){return 2*index +1;}
+	static int parent(int index){return index/2;}
+	T min(){
+		return array[0];
+	}
+	T extractmin();
+	void decreaseKeyIndex(int i, T newval);
+	void decreaseKey(T oldval, T newval);
+	int index(T t);
+  private:
+	std::vector<T> array;
+	int capacity;
+	int size;
+	void MinHeapify(int i);
+
+
+};
+
+template <typename T>
+void Heap<T>::MinHeapify(int i){
+	int l = left_child(i);
+	int r = right_child(i);
+	int smallest = i;
+	if(l < size && array[l] < array[i])
+		smallest = r;
+	if(r<size && array[r] < array[smallest])
+		smallest = r;
+	if(smallest != i){
+		std::swap(array[i], array[smallest]);
+		MinHeapify(smallest);
+	}
+
+}
+
+
+template<typename T>
+void Heap<T>::insert(T key){
+	if(size == capacity){
+		std::cout << "Overflow could not insert key" << std::endl;
+		return;
+	}
+	size++;
+	int i = size -1;
+	array[i]  = key;
+	while(i != 0 && array[parent(i)]>array[i]){
+		std::swap(array[i], array[parent(i)]);
+		i = parent(i);
+	}
+}
+
+// A hole is created at the first index of the array.  We move the last element in the heap to index 0.  Now when we
+// remove an element from the heap we can either use recursion or a loop to percolate the hole down..
+template<typename T>
+T Heap<T>::extractmin(){
+	
+	if(size == 0){
+		std::cout << "The heap is empty" <<std::endl;
+		return NULL;
+	}
+
+
+	if(size == 1){
+		size--;
+		return array[0];
+	}
+	
+	T returnvalue = array[0];
+	std::swap(array[0] ,array[size-1]);
+	size--;
+	MinHeapify(0);
+	return returnvalue;
+
+}
+
+
+
+template <typename T >
+void Heap<T>::decreaseKeyIndex(int i, T newval){
+	array[i] = newval;
+	while(i != 0 && array[parent(i)] > array[i]){
+		std::swap(array[i], array[parent(i)]);
+		i = parent(i);
+	}
+
+}
+
+template <typename T >
+void Heap<T>::decreaseKey(T oldval, T newval){
+
+	int i = index(oldval);
+	decreaseKeyIndex(i, newval);
+}
+
+template<typename T>
+int Heap<T>::index(T t){
+	
+	// WHat do I return if the value is outof bounds ?? NULL
+	
+	for(int i =0; i < array.size(); i++){
+		if (array[i] == t){
+			return i;
+		}
+	}
+}
+
+
+
+/*
+
+template<typename T, typename C >
+void Heap<T, C>::insertKey(T key){
+	//std::cout << " I am inserting " << key << std::endl; 
+	if(heapSize == capacity){
+		std::cout << "Overflow COuld not insert Key " << std::endl;
+	}
+	heapSize++;
+	int i = heapSize-1;
+	array[i] = key;
+	while(i != 0 && array[parent(i)]> array[i]){
+		std::cout << "array[parent(i) " << array[parent(i)] << " parent(i) " << parent(i) << std::endl;
+		std::swap(array[i], array[parent(i)]);
+		i = parent(i);
+	}
+}
+
+
+
+
+
+
+
 
 template <typename T, typename C = std::less<T>>
 class Heap{
@@ -40,9 +175,9 @@ class Heap{
 	void insertKey(T key);
 	int index(T t);
 
-	/*
-Decrease key decreases the value of a key at index 'i' to new_val.  It is assumd that new_val is smaller than array[i]
-	*/
+
+//Decrease key decreases the value of a key at index 'i' to new_val.  It is assumd that new_val is smaller than array[i]
+	
 	void decreaseKeyIndex(int i, T new_val);
 	void decreaseKey(T oldval, T newval);	
 	T getMin(){
@@ -63,37 +198,7 @@ Decrease key decreases the value of a key at index 'i' to new_val.  It is assumd
 
 };
 
-template<typename T, typename C>
-int Heap<T, C>::index(T t){
-	
-	// WHat do I return if the value is outof bounds ?? NULL
-	
-	
-	for(int i =0; i < array.size(); i++){
-		if (array[i] == t){
-			return i;
-		}
-	}
-	
 
-}
-
-template<typename T, typename C >
-void Heap<T, C>::decreaseKeyIndex(int i, T newval){
-	array[i] = newval;
-	while(i != 0 && array[parent(i)] > array[i]){
-		std::swap(array[i], array[parent(i)]);
-		i = parent(i);
-	}
-
-}
-
-template<typename T, typename C >
-void Heap<T, C>::decreaseKey(T oldval, T newval){
-
-	int i = index(oldval);
-	decreaseKeyIndex(i, newval);
-}
 
 
 template<typename T, typename C>
@@ -121,27 +226,8 @@ T Heap<T, C>::extractMin(){
 
 
 
-template<typename T, typename C >
-void Heap<T, C>::insertKey(T key){
-	//std::cout << " I am inserting " << key << std::endl; 
-	if(heapSize == capacity){
-		std::cout << "Overflow COuld not insert Key " << std::endl;
-	}
-	heapSize++;
-	int i = heapSize-1;
-	array[i] = key;
-	while(i != 0 && array[parent(i)]> array[i]){
-		std::cout << "array[parent(i) " << array[parent(i)] << " parent(i) " << parent(i) << std::endl;
-		std::swap(array[i], array[parent(i)]);
-		i = parent(i);
-	}
-}
 
 
-/*
-
-We will recursively MinHeapify...
-*/
 template<typename T, typename C>
 void Heap<T, C>::MinHeapify(int i){
 	int l = left_child(i);
@@ -157,6 +243,6 @@ void Heap<T, C>::MinHeapify(int i){
 	}
 }
 
-
+*/
 
 #endif

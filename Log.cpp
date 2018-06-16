@@ -181,7 +181,26 @@ Maximum flow
 - Learn about the formulation of the maximum flow proble
 - connected components.  Perform BFS and DFS to identify the different components of G. m
 
+Finally got my lazy ass to campus.. 
 
+Write some test cases for the LinkedList
+- search for item, remove item.  
+- We can do both of these operations recursively and iteratively. 
+
+
+Binary Search Trees
+- Have good performance when they are balanced... whey they are not??
+- I might have to implement a balanced binary tree.  
+
+Work on heap sort.  
+
+6/16/2018
+
+- Work on your heap implementation.  
+- Heap sort.  
+
+
+YOU IMPLEMENTED A HEAP WITH DECREASE KEY GOOD JOB YOU DUMB ASS NOW ITS TIME... to commit to github.. work on dijikstra..
 
 
 

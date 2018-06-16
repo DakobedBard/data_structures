@@ -2,6 +2,8 @@
 
 Here we will define unit tests for our BinaryTree and BinarySearchTree.  
 
+Write unit tests for the BST search method...
+
 
 
 */
@@ -79,7 +81,7 @@ Test that the tree is empty after inserting and then deleting elements..
 */
 TEST_F(TreeTest, TestDeletion) {
 
-		BinarySearchTree<int> bst;
+	BinarySearchTree<int> bst;
 	bst.insert(6);
 	bst.insert(3);
 	
@@ -174,6 +176,32 @@ TEST_F(TreeTest, SumKLargestTest) {
 	ASSERT_EQ(sum3,23);
 	int sum4 = bst.klargestElementSum(bst2.root, 4);
 	ASSERT_EQ(sum4,40);
+
+}
+
+/*
+
+This test case will test the search function  
+
+*/
+
+TEST_F(TreeTest, searchBST) {
+
+
+	BinarySearchTree<int> bst;
+	bst.insert(6);
+	bst.insert(3);
+	
+	bst.insert(14);
+	bst.insert(2);
+	bst.insert(23);
+
+
+	bool a = bst.search(2);
+	ASSERT_EQ(a, true);
+
+	bool b = bst.search(22);
+	ASSERT_EQ(b, false);
 
 }
 

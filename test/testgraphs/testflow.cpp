@@ -30,10 +30,7 @@ void FlowTest::TearDown() {};
 
 TEST_F(FlowTest, SimpleHeapTest) {
 
-	Heap<int, std::less<int>> minheap(10);
-//	minheap.insertKey(3);
-//	minheap.insertKey(5);
-//	minheap.insertKey(1);
+	
 
 
 }

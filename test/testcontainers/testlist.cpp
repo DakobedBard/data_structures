@@ -14,6 +14,7 @@ Reverse... Test these out
 
 #include "LinkedList.h"
 #include "testlist.h"
+#include  <string>
 
 
 
@@ -63,4 +64,18 @@ TEST_F(ListTest, InsertionTest) {
 TEST_F(ListTest, DeleteNodeTest) {
 
 }
+
+TEST_F(ListTest, SearchTest) {
+	LinkedList<std::string> list;
+	list.InsertTail("charles");
+	list.InsertTail("marvin");
+	list.InsertTail("Amari");
+	std::string amari = "Amari";
+	bool a = list.search(amari);
+	std::cout<< "is Amari in the list.."  << a << std::endl;
+	ASSERT_EQ(a,true);
+
+}
+
+
 

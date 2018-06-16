@@ -13,6 +13,13 @@ Currently, while dope it is kind of stupid that my nodes are an external class b
 -- Remove an element, Remove all elements with value..
 
 
+-- Search for an element... 
+	I was able to do this easily with recursion... But I had a little difficuly getting this to work correctly returning bools and instead opted to return an int of value 0 or 1 depending on wether or not the item is in the list.  
+
+Should I return a pointer to the node itself... ?? 
+
+Need to write a destructor method for this linked list.  We have alloated memorory to new nodes using new, must use delete.  
+
 
 */
 
@@ -55,6 +62,10 @@ class LinkedList{
 		return (*tail).data;
 	}
 	void remove(T val);
+	int search(T val);
+	int search(T val, Node<T>* node);
+	bool deletion(T val);
+	bool deletion(T val, Node<T>* node);
 };
 /*
 In order to remove an element from the Linked List we will have to find that value, and then change the previous nodes pointer
@@ -65,12 +76,56 @@ Can we assume that the values in the linked list are unique?  Because if so we c
 
 
 */
+
+/*
+Recursively search the linked list
+
+*/
+
+
+template <class T>
+int LinkedList<T>::search(T val){
+
+	 return search(val, head);
+}	
+
+
+template <class T>
+int LinkedList<T>::search(T val, Node<T>* node){
+	
+	if(node == NULL){
+		return 0;
+	}
+
+	std::cout << "I get called and the heads data is " << node->data << std::endl;
+	if(node->data == val){
+		std::cout << "I am here and the nodes data is " << node->data << " and the value is " << val << std::endl;
+		return 1;
+	}
+	search(val, node->next);
+}
+
+/*
+
+
+*/
+
+template <class T>
+bool LinkedList<T>::deletion(T val){
+	return deletion(val, head);
+}
+
+template <class T>
+bool LinkedList<T>::deletion(T val, Node<T>* node){
+
+}
+
+
+
 template <class T>
 void LinkedList<T>::remove(T val){
-	
 	Node<T> * node = head;
 	Node<T> * prev = head;		// Iterate through the linked list...
-
 	while(node !=NULL){
 		std::cout << "I am at " << node->data << std::endl;
 		node = node->next;
@@ -79,13 +134,6 @@ void LinkedList<T>::remove(T val){
 
 		}
 	}
-	
-
-		
-
-	
-
-
 }
 
 
