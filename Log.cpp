@@ -199,11 +199,26 @@ Work on heap sort.
 - Work on your heap implementation.  
 - Heap sort.  
 
+okay do heap sort.  Can i do this inplace or do I have to return a new array?
+Okay implemented heap sort that was easy... Now... I seem to have needed a priority queue for several Graph Algorithms... dijikstra and i think Prim's MST
+
 
 YOU IMPLEMENTED A HEAP WITH DECREASE KEY GOOD JOB YOU DUMB ASS NOW ITS TIME... to commit to github.. work on dijikstra..
 
 
+Start with the test cases... 
 
+
+- Determine if a graph has a cycle
+- Determine if a graph is connected etc.  
+
+6/18/2018
+
+- Finish Dijkstra... having a little trouble with this at the moment!
+- Work on Bellman Ford, Prim & Kruskall.
+- Work on some Leet_Code problems
+	- 852 Peak Index in a Mountain.  The provided Binary Search algorithm loops infintly!
+	- 453 Minimum Moves to equal array elements	
 
 
 */

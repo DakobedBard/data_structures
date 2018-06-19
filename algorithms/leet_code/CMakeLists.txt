@@ -21,3 +21,20 @@ ADD_EXECUTABLE(medianofarrays ${medianofarrays})
 
 set(convexhull convexhull.cpp)
 ADD_EXECUTABLE(convexhull ${convexhull})
+
+set(examroom examroom.cpp)
+ADD_EXECUTABLE(examroom ${examroom})
+
+set(PeakIndex PeakIndex.cpp)
+ADD_EXECUTABLE(PeakIndex ${PeakIndex})
+
+set(MinimumMoves MinimumMoves.cpp)
+ADD_EXECUTABLE(MinimumMoves ${MinimumMoves})
+
+set(handofstraights handofstraights.cpp)
+ADD_EXECUTABLE(handofstraights ${handofstraights})
+
+set(utf8validation utf8validation.cpp)
+ADD_EXECUTABLE(utf8validation ${utf8validation})
+
+

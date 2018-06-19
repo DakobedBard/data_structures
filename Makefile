@@ -577,6 +577,45 @@ ksmallest/fast:
 .PHONY : ksmallest/fast
 
 #=============================================================================
+# Target rules for targets named utf8validation
+
+# Build rule for target.
+utf8validation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 utf8validation
+.PHONY : utf8validation
+
+# fast build rule for target.
+utf8validation/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/utf8validation.dir/build.make algorithms/leet_code/CMakeFiles/utf8validation.dir/build
+.PHONY : utf8validation/fast
+
+#=============================================================================
+# Target rules for targets named MinimumMoves
+
+# Build rule for target.
+MinimumMoves: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MinimumMoves
+.PHONY : MinimumMoves
+
+# fast build rule for target.
+MinimumMoves/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build.make algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build
+.PHONY : MinimumMoves/fast
+
+#=============================================================================
+# Target rules for targets named examroom
+
+# Build rule for target.
+examroom: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 examroom
+.PHONY : examroom
+
+# fast build rule for target.
+examroom/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/examroom.dir/build.make algorithms/leet_code/CMakeFiles/examroom.dir/build
+.PHONY : examroom/fast
+
+#=============================================================================
 # Target rules for targets named rotate_image
 
 # Build rule for target.
@@ -601,6 +640,19 @@ happy_number: cmake_check_build_system
 happy_number/fast:
 	$(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/build
 .PHONY : happy_number/fast
+
+#=============================================================================
+# Target rules for targets named PeakIndex
+
+# Build rule for target.
+PeakIndex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PeakIndex
+.PHONY : PeakIndex
+
+# fast build rule for target.
+PeakIndex/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/PeakIndex.dir/build.make algorithms/leet_code/CMakeFiles/PeakIndex.dir/build
+.PHONY : PeakIndex/fast
 
 #=============================================================================
 # Target rules for targets named medianofarrays
@@ -640,6 +692,19 @@ zero_out: cmake_check_build_system
 zero_out/fast:
 	$(MAKE) -f algorithms/leet_code/CMakeFiles/zero_out.dir/build.make algorithms/leet_code/CMakeFiles/zero_out.dir/build
 .PHONY : zero_out/fast
+
+#=============================================================================
+# Target rules for targets named handofstraights
+
+# Build rule for target.
+handofstraights: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 handofstraights
+.PHONY : handofstraights
+
+# fast build rule for target.
+handofstraights/fast:
+	$(MAKE) -f algorithms/leet_code/CMakeFiles/handofstraights.dir/build.make algorithms/leet_code/CMakeFiles/handofstraights.dir/build
+.PHONY : handofstraights/fast
 
 #=============================================================================
 # Target rules for targets named rotatestring
@@ -776,11 +841,16 @@ help:
 	@echo "... sumklargest"
 	@echo "... levelorder"
 	@echo "... ksmallest"
+	@echo "... utf8validation"
+	@echo "... MinimumMoves"
+	@echo "... examroom"
 	@echo "... rotate_image"
 	@echo "... happy_number"
+	@echo "... PeakIndex"
 	@echo "... medianofarrays"
 	@echo "... convexhull"
 	@echo "... zero_out"
+	@echo "... handofstraights"
 	@echo "... rotatestring"
 	@echo "... lines"
 	@echo "... graph"

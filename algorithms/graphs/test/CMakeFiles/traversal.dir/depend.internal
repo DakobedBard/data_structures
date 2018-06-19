@@ -3,6 +3,5 @@
 
 algorithms/graphs/test/CMakeFiles/traversal.dir/traversal.cpp.o
  /home/mddarr/projects/data_structures/algorithms/graphs/test/traversal.cpp
- containers/UnionFind.h
  graphs/AdjList.h
  graphs/AdjMatrix.h

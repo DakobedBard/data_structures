@@ -6,7 +6,6 @@
 #include <unordered_map>
 #include <set>
 #include <list>
-#include "UnionFind.h"
 #include "AdjMatrix.h"
 
 /*
@@ -33,6 +32,15 @@ Is there no way to determine the the number of vertices in our graph??
 
 */
 
+template <class T>
+struct Edge{
+	T src;
+	T dist;
+	int w;
+	Edge(T src_, T dist_, int w_):src(src_), dist(dist_), w(w_){}
+};
+
+
 
 template <class T>
 class AdjList{
@@ -51,7 +59,6 @@ class AdjList{
 
 	};
 
-
 	std::unordered_map<T, Vertex<T>> vertexLookup;
 
  public:
@@ -65,14 +72,19 @@ class AdjList{
 	void printEdges(T src);
 	void print(T src);
 	bool isCyclic();
+	int size(){
+		return vertexLookup.size();
+	}
 	void print(Vertex<T> src);
 	bool hasPathDFS(T src, T dest);
 	bool hasPathDFS(Vertex<T> src, Vertex<T> dest, std::set<T> &visited);
 	bool hasPathBFS(T src, T dest);
 	bool hasPathBFS(Vertex<T> src, Vertex<T> dest);
 	std::unordered_map<T,T> DFS(T src);
-	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, std::unordered_map<T, int> &exit, int& time);
-	std::unordered_map<T, int> dijikstra(T src);
+	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, 	  std::unordered_map<T, int> &exit, int& time);
+	std::unordered_map<T, int> dijkstra(T src);
+	std::vector<Edge<T>> prim();
+	
 	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
 };
 
@@ -451,17 +463,51 @@ void AdjList<T>::addUndirectedEdge(T src, T dest, int w){
 	AdjList::Vertex<T> s = getVertex(src);
 	Vertex<T> d = getVertex(dest);
 	s.adjacent.push_back(d);
-	s.adjacent_weights.push_back(1);
+	s.adjacent_weights.push_back(w);
 			// by default we wil keep an array of 
 	vertexLookup[src] = s;
 	d.adjacent.push_back(s);
-	d.adjacent_weights.push_back(1);
+	d.adjacent_weights.push_back(w);
 			// by default we wil keep an array of 
 	vertexLookup[dest] = d;
 
 	
 
 }
+
+// Define a Union Find 
+
+template <class T> 
+struct subset{
+	T parent;
+	int rank;
+};
+
+
+template <class T>
+T find(std::vector<T> parent, int i){
+	
+}
+template <class T>
+void TUnion(std::vector<T> parent, T x, T y){
+	//Alocate memory for creating V subsets. 
+
+	std::vector<T> parent(); 		
+
+}
+
+template <class T>
+int isCycle(AdjList<T> &adjlist){
+
+
+}
+
+
+
+
+
+
+
 
 
 

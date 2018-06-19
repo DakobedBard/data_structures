@@ -59,12 +59,17 @@
 /home/mddarr/projects/data_structures/algorithms/trees/CMakeFiles/ksmallest.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/rebuild_cache.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/test.dir
+/home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/utf8validation.dir
+/home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/MinimumMoves.dir
+/home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/examroom.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/rotate_image.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/happy_number.dir
+/home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/PeakIndex.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/medianofarrays.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/convexhull.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/edit_cache.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/zero_out.dir
+/home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/handofstraights.dir
 /home/mddarr/projects/data_structures/algorithms/leet_code/CMakeFiles/rotatestring.dir
 /home/mddarr/projects/data_structures/algorithms/geometry/CMakeFiles/rebuild_cache.dir
 /home/mddarr/projects/data_structures/algorithms/geometry/CMakeFiles/edit_cache.dir

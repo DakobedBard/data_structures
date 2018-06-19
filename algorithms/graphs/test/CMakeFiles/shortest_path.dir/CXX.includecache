@@ -20,10 +20,6 @@ vector
 iostream
 -
 
-containers/UnionFind.h
-vector
--
-
 graphs/AdjList.h
 vector
 -
@@ -35,8 +31,6 @@ set
 -
 list
 -
-UnionFind.h
-graphs/UnionFind.h
 AdjMatrix.h
 graphs/AdjMatrix.h
 
@@ -53,6 +47,12 @@ vector
 -
 unordered_map
 -
+set
+-
 iostream
+-
+Heap.h
+graphs/Heap.h
+limits.h
 -
 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/handofstraights.dir/handofstraights.cpp.o  -o handofstraights 

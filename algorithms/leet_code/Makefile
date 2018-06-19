@@ -122,6 +122,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+algorithms/leet_code/CMakeFiles/utf8validation.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/utf8validation.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/utf8validation.dir/rule
+
+# Convenience name for target.
+utf8validation: algorithms/leet_code/CMakeFiles/utf8validation.dir/rule
+
+.PHONY : utf8validation
+
+# fast build rule for target.
+utf8validation/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/utf8validation.dir/build.make algorithms/leet_code/CMakeFiles/utf8validation.dir/build
+.PHONY : utf8validation/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/MinimumMoves.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/MinimumMoves.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/MinimumMoves.dir/rule
+
+# Convenience name for target.
+MinimumMoves: algorithms/leet_code/CMakeFiles/MinimumMoves.dir/rule
+
+.PHONY : MinimumMoves
+
+# fast build rule for target.
+MinimumMoves/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build.make algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build
+.PHONY : MinimumMoves/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/examroom.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/examroom.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/examroom.dir/rule
+
+# Convenience name for target.
+examroom: algorithms/leet_code/CMakeFiles/examroom.dir/rule
+
+.PHONY : examroom
+
+# fast build rule for target.
+examroom/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/examroom.dir/build.make algorithms/leet_code/CMakeFiles/examroom.dir/build
+.PHONY : examroom/fast
+
+# Convenience name for target.
 algorithms/leet_code/CMakeFiles/rotate_image.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/rotate_image.dir/rule
 .PHONY : algorithms/leet_code/CMakeFiles/rotate_image.dir/rule
@@ -150,6 +195,21 @@ happy_number: algorithms/leet_code/CMakeFiles/happy_number.dir/rule
 happy_number/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/happy_number.dir/build.make algorithms/leet_code/CMakeFiles/happy_number.dir/build
 .PHONY : happy_number/fast
+
+# Convenience name for target.
+algorithms/leet_code/CMakeFiles/PeakIndex.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/PeakIndex.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/PeakIndex.dir/rule
+
+# Convenience name for target.
+PeakIndex: algorithms/leet_code/CMakeFiles/PeakIndex.dir/rule
+
+.PHONY : PeakIndex
+
+# fast build rule for target.
+PeakIndex/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/PeakIndex.dir/build.make algorithms/leet_code/CMakeFiles/PeakIndex.dir/build
+.PHONY : PeakIndex/fast
 
 # Convenience name for target.
 algorithms/leet_code/CMakeFiles/medianofarrays.dir/rule:
@@ -197,6 +257,21 @@ zero_out/fast:
 .PHONY : zero_out/fast
 
 # Convenience name for target.
+algorithms/leet_code/CMakeFiles/handofstraights.dir/rule:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/handofstraights.dir/rule
+.PHONY : algorithms/leet_code/CMakeFiles/handofstraights.dir/rule
+
+# Convenience name for target.
+handofstraights: algorithms/leet_code/CMakeFiles/handofstraights.dir/rule
+
+.PHONY : handofstraights
+
+# fast build rule for target.
+handofstraights/fast:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/handofstraights.dir/build.make algorithms/leet_code/CMakeFiles/handofstraights.dir/build
+.PHONY : handofstraights/fast
+
+# Convenience name for target.
 algorithms/leet_code/CMakeFiles/rotatestring.dir/rule:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f CMakeFiles/Makefile2 algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
 .PHONY : algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
@@ -210,6 +285,60 @@ rotatestring: algorithms/leet_code/CMakeFiles/rotatestring.dir/rule
 rotatestring/fast:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/build
 .PHONY : rotatestring/fast
+
+MinimumMoves.o: MinimumMoves.cpp.o
+
+.PHONY : MinimumMoves.o
+
+# target to build an object file
+MinimumMoves.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build.make algorithms/leet_code/CMakeFiles/MinimumMoves.dir/MinimumMoves.cpp.o
+.PHONY : MinimumMoves.cpp.o
+
+MinimumMoves.i: MinimumMoves.cpp.i
+
+.PHONY : MinimumMoves.i
+
+# target to preprocess a source file
+MinimumMoves.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build.make algorithms/leet_code/CMakeFiles/MinimumMoves.dir/MinimumMoves.cpp.i
+.PHONY : MinimumMoves.cpp.i
+
+MinimumMoves.s: MinimumMoves.cpp.s
+
+.PHONY : MinimumMoves.s
+
+# target to generate assembly for a file
+MinimumMoves.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/MinimumMoves.dir/build.make algorithms/leet_code/CMakeFiles/MinimumMoves.dir/MinimumMoves.cpp.s
+.PHONY : MinimumMoves.cpp.s
+
+PeakIndex.o: PeakIndex.cpp.o
+
+.PHONY : PeakIndex.o
+
+# target to build an object file
+PeakIndex.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/PeakIndex.dir/build.make algorithms/leet_code/CMakeFiles/PeakIndex.dir/PeakIndex.cpp.o
+.PHONY : PeakIndex.cpp.o
+
+PeakIndex.i: PeakIndex.cpp.i
+
+.PHONY : PeakIndex.i
+
+# target to preprocess a source file
+PeakIndex.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/PeakIndex.dir/build.make algorithms/leet_code/CMakeFiles/PeakIndex.dir/PeakIndex.cpp.i
+.PHONY : PeakIndex.cpp.i
+
+PeakIndex.s: PeakIndex.cpp.s
+
+.PHONY : PeakIndex.s
+
+# target to generate assembly for a file
+PeakIndex.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/PeakIndex.dir/build.make algorithms/leet_code/CMakeFiles/PeakIndex.dir/PeakIndex.cpp.s
+.PHONY : PeakIndex.cpp.s
 
 convexhull.o: convexhull.cpp.o
 
@@ -237,6 +366,60 @@ convexhull.s: convexhull.cpp.s
 convexhull.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/convexhull.dir/build.make algorithms/leet_code/CMakeFiles/convexhull.dir/convexhull.cpp.s
 .PHONY : convexhull.cpp.s
+
+examroom.o: examroom.cpp.o
+
+.PHONY : examroom.o
+
+# target to build an object file
+examroom.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/examroom.dir/build.make algorithms/leet_code/CMakeFiles/examroom.dir/examroom.cpp.o
+.PHONY : examroom.cpp.o
+
+examroom.i: examroom.cpp.i
+
+.PHONY : examroom.i
+
+# target to preprocess a source file
+examroom.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/examroom.dir/build.make algorithms/leet_code/CMakeFiles/examroom.dir/examroom.cpp.i
+.PHONY : examroom.cpp.i
+
+examroom.s: examroom.cpp.s
+
+.PHONY : examroom.s
+
+# target to generate assembly for a file
+examroom.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/examroom.dir/build.make algorithms/leet_code/CMakeFiles/examroom.dir/examroom.cpp.s
+.PHONY : examroom.cpp.s
+
+handofstraights.o: handofstraights.cpp.o
+
+.PHONY : handofstraights.o
+
+# target to build an object file
+handofstraights.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/handofstraights.dir/build.make algorithms/leet_code/CMakeFiles/handofstraights.dir/handofstraights.cpp.o
+.PHONY : handofstraights.cpp.o
+
+handofstraights.i: handofstraights.cpp.i
+
+.PHONY : handofstraights.i
+
+# target to preprocess a source file
+handofstraights.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/handofstraights.dir/build.make algorithms/leet_code/CMakeFiles/handofstraights.dir/handofstraights.cpp.i
+.PHONY : handofstraights.cpp.i
+
+handofstraights.s: handofstraights.cpp.s
+
+.PHONY : handofstraights.s
+
+# target to generate assembly for a file
+handofstraights.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/handofstraights.dir/build.make algorithms/leet_code/CMakeFiles/handofstraights.dir/handofstraights.cpp.s
+.PHONY : handofstraights.cpp.s
 
 happy_number.o: happy_number.cpp.o
 
@@ -346,6 +529,33 @@ rotatestring.cpp.s:
 	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/rotatestring.dir/build.make algorithms/leet_code/CMakeFiles/rotatestring.dir/rotatestring.cpp.s
 .PHONY : rotatestring.cpp.s
 
+utf8validation.o: utf8validation.cpp.o
+
+.PHONY : utf8validation.o
+
+# target to build an object file
+utf8validation.cpp.o:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/utf8validation.dir/build.make algorithms/leet_code/CMakeFiles/utf8validation.dir/utf8validation.cpp.o
+.PHONY : utf8validation.cpp.o
+
+utf8validation.i: utf8validation.cpp.i
+
+.PHONY : utf8validation.i
+
+# target to preprocess a source file
+utf8validation.cpp.i:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/utf8validation.dir/build.make algorithms/leet_code/CMakeFiles/utf8validation.dir/utf8validation.cpp.i
+.PHONY : utf8validation.cpp.i
+
+utf8validation.s: utf8validation.cpp.s
+
+.PHONY : utf8validation.s
+
+# target to generate assembly for a file
+utf8validation.cpp.s:
+	cd /home/mddarr/projects/data_structures && $(MAKE) -f algorithms/leet_code/CMakeFiles/utf8validation.dir/build.make algorithms/leet_code/CMakeFiles/utf8validation.dir/utf8validation.cpp.s
+.PHONY : utf8validation.cpp.s
+
 zero_out.o: zero_out.cpp.o
 
 .PHONY : zero_out.o
@@ -381,16 +591,33 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... utf8validation"
+	@echo "... MinimumMoves"
+	@echo "... examroom"
 	@echo "... rotate_image"
 	@echo "... happy_number"
+	@echo "... PeakIndex"
 	@echo "... medianofarrays"
 	@echo "... convexhull"
 	@echo "... edit_cache"
 	@echo "... zero_out"
+	@echo "... handofstraights"
 	@echo "... rotatestring"
+	@echo "... MinimumMoves.o"
+	@echo "... MinimumMoves.i"
+	@echo "... MinimumMoves.s"
+	@echo "... PeakIndex.o"
+	@echo "... PeakIndex.i"
+	@echo "... PeakIndex.s"
 	@echo "... convexhull.o"
 	@echo "... convexhull.i"
 	@echo "... convexhull.s"
+	@echo "... examroom.o"
+	@echo "... examroom.i"
+	@echo "... examroom.s"
+	@echo "... handofstraights.o"
+	@echo "... handofstraights.i"
+	@echo "... handofstraights.s"
 	@echo "... happy_number.o"
 	@echo "... happy_number.i"
 	@echo "... happy_number.s"
@@ -403,6 +630,9 @@ help:
 	@echo "... rotatestring.o"
 	@echo "... rotatestring.i"
 	@echo "... rotatestring.s"
+	@echo "... utf8validation.o"
+	@echo "... utf8validation.i"
+	@echo "... utf8validation.s"
 	@echo "... zero_out.o"
 	@echo "... zero_out.i"
 	@echo "... zero_out.s"

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/utf8validation.dir/utf8validation.cpp.o  -o utf8validation 

@@ -4,12 +4,16 @@ Here we will define unit tests for our adjacency list representation of the grap
 
 I am still having troubles with DFS seg faulting ..
 
+I am having a little bit of trouble with
+
 
 */
 
 #include "AdjList.h"
 #include "testadjlist.h"
 #include "UnionFind.h"
+#include "ShortestPaths.h"
+#include <limits.h>
 
 using ::testing::Return;
 
@@ -162,6 +166,104 @@ TEST_F(AdjListTest, TestBFSTraversal) {
 	//std::cout << "Is there a BFS path from newyork to boston ? " << c << std::endl;  
 	ASSERT_EQ(d,1);
 }
+
+
+/*
+Test Dijikstra's shortest path algorithm ... 
+
+
+*/
+
+TEST_F(AdjListTest, ShortestPathTest) {
+
+	AdjList<int> adjlist;
+	adjlist.addUndirectedEdge(0,7,8);
+	adjlist.addUndirectedEdge(0,1,4);
+	adjlist.addUndirectedEdge(7,1,11);
+	adjlist.addUndirectedEdge(1,2,8);
+	adjlist.addUndirectedEdge(2,3,7);
+	adjlist.addUndirectedEdge(2,5,4);
+	adjlist.addUndirectedEdge(2,8,2);
+	adjlist.addUndirectedEdge(8,6,6);
+	adjlist.addUndirectedEdge(7,8,7);
+	adjlist.addUndirectedEdge(7,6,1);
+	adjlist.addUndirectedEdge(6,5,2);
+	adjlist.addUndirectedEdge(5,4,10);
+	adjlist.addUndirectedEdge(5,3,14);
+	adjlist.addUndirectedEdge(4,3,9);
+	std::unordered_map<int, int> shortest_paths = adjlist.dijkstra(0);
+	
+	ASSERT_EQ(shortest_paths[0],0);
+	//ASSERT_EQ(shortest_paths[1],4);
+	for(auto vertex : shortest_paths){
+		std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
+	}
+	
+
+}	
+
+
+TEST_F(AdjListTest, PrimTest) {
+
+	AdjList<int> adjlist;
+	adjlist.addUndirectedEdge(0,7,8);
+	adjlist.addUndirectedEdge(0,1,4);
+	adjlist.addUndirectedEdge(7,1,11);
+	adjlist.addUndirectedEdge(1,2,8);
+	adjlist.addUndirectedEdge(2,3,7);
+	adjlist.addUndirectedEdge(2,5,4);
+	adjlist.addUndirectedEdge(2,8,2);
+	adjlist.addUndirectedEdge(8,6,6);
+	adjlist.addUndirectedEdge(7,8,7);
+	adjlist.addUndirectedEdge(7,6,1);
+	adjlist.addUndirectedEdge(6,5,2);
+	adjlist.addUndirectedEdge(5,4,10);
+	adjlist.addUndirectedEdge(5,3,14);
+	adjlist.addUndirectedEdge(4,3,9);
+}
+
+
+
+TEST_F(AdjListTest, DijikstraTest) {
+	std::string seattle = "Seattle";
+	std::string portland = "Portland";
+	std::string vancouver = "Vancouver";
+	std::string spokane = "Spokane";
+	std::string boise = "Boise";
+	std::string LA = "Los Angeles";
+	std::string chicago = "Chicago";
+	std::string newyork = "New York";
+	std::string denver = "Denver";
+	std::string boston = "Boston";
+	std::string sanfran = "San Fransisco";
+	std::string oakland = "Oakland";
+	std::string sandiego = "San Diego";
+
+	
+	AdjList<std::string> adjlist;
+	adjlist.addEdge(seattle,portland,300);
+	adjlist.addEdge(seattle,boise, 255);
+	adjlist.addEdge(portland , boise, 178);
+	adjlist.addEdge(boise , denver, 451);
+	adjlist.addEdge(portland , sanfran, 225);
+	adjlist.addEdge(oakland, sanfran, 543);
+	adjlist.addEdge(sanfran , LA, 354);
+	adjlist.addEdge(boston , newyork,63);
+	adjlist.addEdge(denver , newyork, 1400);
+	adjlist.addEdge(sandiego , LA, 120);
+
+
+
+}
+
+TEST_F(AdjListTest, UnionFindTest) {
+
+
+
+
+
+}
+
 
 
 
