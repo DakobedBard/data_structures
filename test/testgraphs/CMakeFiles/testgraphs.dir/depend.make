@@ -33,7 +33,9 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: containers/UnionFin
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: containers/ibar.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/AdjList.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/AdjMatrix.h
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/MST.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/ShortestPaths.h
+test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: graphs/mst.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/gtest/src/gtest/googlemock/include/gmock/gmock-cardinalities.h
 test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o: test/gtest/src/gtest/googlemock/include/gmock/gmock-generated-actions.h

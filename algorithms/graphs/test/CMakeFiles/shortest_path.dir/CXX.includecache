@@ -33,11 +33,23 @@ list
 -
 AdjMatrix.h
 graphs/AdjMatrix.h
+MST.h
+graphs/MST.h
 
 graphs/AdjMatrix.h
 vector
 -
 iostream
+-
+
+graphs/MST.h
+AdjList.h
+graphs/AdjList.h
+vector
+-
+unordered_map
+-
+limits.h
 -
 
 graphs/ShortestPaths.h

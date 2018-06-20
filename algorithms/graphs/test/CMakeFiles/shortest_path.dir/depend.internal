@@ -6,4 +6,5 @@ algorithms/graphs/test/CMakeFiles/shortest_path.dir/shortest_path.cpp.o
  containers/Heap.h
  graphs/AdjList.h
  graphs/AdjMatrix.h
+ graphs/MST.h
  graphs/ShortestPaths.h

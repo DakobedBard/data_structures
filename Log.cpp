@@ -218,7 +218,19 @@ Start with the test cases...
 - Work on Bellman Ford, Prim & Kruskall.
 - Work on some Leet_Code problems
 	- 852 Peak Index in a Mountain.  The provided Binary Search algorithm loops infintly!
-	- 453 Minimum Moves to equal array elements	
+	- 453 Minimum Moves to equal array elements
+
+6/19/2018
+
+- Write more code, you have been lazy as shit. 
+
+
+6/20/2018
+
+
+- YOU GOT DIJIKSTRA TO WORK FUCK YEA!!!
+
+
 
 
 */

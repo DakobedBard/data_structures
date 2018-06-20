@@ -7,6 +7,8 @@
 #include <set>
 #include <list>
 #include "AdjMatrix.h"
+#include "MST.h"
+
 
 /*
 
@@ -32,14 +34,16 @@ Is there no way to determine the the number of vertices in our graph??
 
 */
 
-template <class T>
-struct Edge{
-	T src;
-	T dist;
-	int w;
-	Edge(T src_, T dist_, int w_):src(src_), dist(dist_), w(w_){}
-};
 
+
+
+template <class T_>
+class Edge{
+		T_ src;
+		T_ dist;
+		int w;
+		Edge(T_ src_, T_ dist_, int w_):src(src_), dist(dist_), w(w_){}
+	};
 
 
 template <class T>
@@ -55,9 +59,15 @@ class AdjList{
 		Vertex<T_>():n(0){}
 		Vertex<T_>(T_ label_):label(label_){}
 		T_ getLabel(){return label;}
+		int size(){return adjacent.size();}
 		
 
 	};
+
+
+
+
+
 
 	std::unordered_map<T, Vertex<T>> vertexLookup;
 
@@ -83,7 +93,8 @@ class AdjList{
 	std::unordered_map<T,T> DFS(T src);
 	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, 	  std::unordered_map<T, int> &exit, int& time);
 	std::unordered_map<T, int> dijkstra(T src);
-	std::vector<Edge<T>> prim();
+	std::unordered_map<T, int> bellmanford(T src);
+	AdjList<T>::Vertex<T> prim(Edge<T> edge);
 	
 	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
 };

@@ -14,6 +14,8 @@ I am having a little bit of trouble with
 #include "UnionFind.h"
 #include "ShortestPaths.h"
 #include <limits.h>
+#include "mst.h"
+
 
 using ::testing::Return;
 
@@ -201,6 +203,15 @@ TEST_F(AdjListTest, ShortestPathTest) {
 	
 
 }	
+
+
+TEST_F(AdjListTest, BellmanFordTest) {
+
+	AdjList<int> adjlist;
+
+}
+
+
 
 
 TEST_F(AdjListTest, PrimTest) {

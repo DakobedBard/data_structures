@@ -5,6 +5,9 @@ Implementatin of Dijikstra and Bellman Ford...
 
 */
 
+#ifndef _DGL_SHORTESTPATHS_H_
+#define _DGL_SHORTESTPATHS_H_
+
 
 #include "AdjList.h"
 #include <vector>
@@ -57,6 +60,12 @@ class VertexDist{
 	bool operator == (const VertexDist &rhs){
 		return label == rhs.label;
 	}
+
+
+	 friend std::ostream &operator<<( std::ostream &output, const VertexDist &v ) { 
+         output << "Vertex : " << v.label << " with shortest distance to src  of " << v.dist <<  std::endl;
+         return output;            
+      }
 };
 
 
@@ -75,46 +84,81 @@ std::unordered_map<T, int> AdjList<T>::dijkstra(T src){
 			minheap.insert(v);
 		}
 	}
-	shortest_paths[src] = 0;
-	//VertexDist<T> v2(src, 0);
-	//VertexDist<T> v(src, INT_MAX);
-	// Okay... the decrease key function requires us to pass the old value and the new value... In this case we are storing
-	// a custom class VertexDist<T> in our heap.  How would I use the the decrease key operation on this... Of course inorder to
-	// do this I have to overload the comparison operator... easy!!  This is a little bit ugly though!!
-	//minheap.decreaseKey(v, v2);		
-	// We still have the source vertex...
-	
-	VertexDist<T> min = minheap.min();
 
-	// Extract the vertex with minimum distance from the Min Heap.  Let the extracted vertex be u
-	
-	while(!minheap.isEmpty()){
-		VertexDist<T> udist= minheap.extractmin();	// Extract the min distance VertexDist from the heap..
-		T ulabel = udist.getLabel();
-		Vertex<T>  u = getVertex(ulabel);
-		std::cout << "Extracting vertex " << ulabel << std::endl;
-		for(int i =0; i < u.adjacent.size(); i++){	// For every adjacent vertex of u, check if v is in 									// minheap and if its distance value is more than the weight of 
-								// u-v plus distance to u, then update the distance value of v.
-			
-			T vlabel = (u.adjacent[i]).getLabel();	
-			int weightuv = u.adjacent_weights[i];
-			std::cout << " I am vertex " << ulabel << " and I am adjacent to " << vlabel << " with weight " << weightuv << std::endl;	
-			
-// Alright now we check if the VertexDist v is in the minheap already.  To do this I wrote a function that searches the heap fo
-			
-			if(minheap.isInMinHeap(VertexDist<T>(vlabel)) && weightuv + shortest_paths[u.getLabel()] < shortest_paths[vlabel]){
-				std::cout << "DO i get here " << std::endl;
-				shortest_paths[vlabel] = shortest_paths[u.getLabel()] + weightuv;
-				VertexDist<T> olddist(vlabel, 0);
-				VertexDist<T> newdist(vlabel, shortest_paths[vlabel]);
-				minheap.decreaseKey(olddist,newdist);
-			}					
-		}
+	// I was having trouble with initialiation?? Loop through edges adjacent to the source and update their keys 
+	Vertex<T> s = getVertex(src);
+
+	for(int i=0; i < s.size(); i++){
+		VertexDist<T> newV((s.adjacent[i]).getLabel(),s.adjacent_weights[i]) ;
+		VertexDist<T> oldV(( s.adjacent[i]).getLabel(), INT_MAX);
+		minheap.decreaseKey(oldV, newV);
+		shortest_paths[(s.adjacent[i]).getLabel()] = s.adjacent_weights[i];
+
 	}
 
 
+	shortest_paths[src] = 0;
+
+	while(!minheap.isEmpty()){
+		std::cout << "print before extrat" << std::endl;
+		minheap.printHeap();
+		VertexDist<T> udist= minheap.extractmin();	// Extract the min distance VertexDist from the heap..
+		Vertex<T>  u = getVertex(udist.getLabel());
+		T ulabel = u.getLabel();
+		std::cout << "Print after we extract " << std::endl;
+		minheap.printHeap();
+		std::cout << "Extracting vertex " << ulabel << std::endl;
+		std::cout << "The number of elements in the heap is... "<< minheap.heapsize() << std::endl;
+	
+		for(int i =0; i < u.adjacent.size(); i++){	// For every adjacent vertex of u, check if v is in 									// minheap and if its distance value is more than the weight of 
+								// u-v plus distance to u, then update the distance value of v.
+			
+			T vlabel = (u.adjacent[i]).getLabel();
+			// If !minheap.isInMinHeap(vlabel), then this edge has allready been extracted and we should just skip this one
+			if(!minheap.isInMinHeap(vlabel)){
+				std::cout << " Vertex " << vlabel << " is not in the minheap and has already been extracted " << std::endl; 				
+				continue;
+			}
+			std::cout << ulabel << " has a shorest path of " << shortest_paths[ulabel] << "and is adjacent to " << vlabel << " which has a shortest_path to src of " << shortest_paths[vlabel] << std::endl;
+			int weightuv = u.adjacent_weights[i];
+			
+			std::cout << " printing inside the for loop.." << std::endl;
+			minheap.printHeap();
+
+			if(shortest_paths[vlabel] == INT_MAX){
+
+// This is our first encounter to Vertex v,
+					std::cout << vlabel << " Has a distance of INT_MAX!";  
+					shortest_paths[vlabel] = shortest_paths[ulabel] + weightuv;
+					minheap.decreaseKey(VertexDist<T>(vlabel,0),VertexDist<T>(vlabel,shortest_paths[vlabel]));
+				continue;
+			}
+
+			if( weightuv + shortest_paths[ulabel] < shortest_paths[vlabel]){
+					shortest_paths[vlabel] = shortest_paths[u.getLabel()] + weightuv;
+					minheap.decreaseKey(VertexDist<T>(vlabel,0),VertexDist<T>(vlabel,shortest_paths[vlabel]));
+			}
+		}				
+	}
 	return shortest_paths;
 }	
 
+
+template <class T>
+std::unordered_map<T, int> AdjList<T>::bellmanford(T src){
+
+
+
+
+}
+
+
+
+
+
+
+
+
+#endif
 
 

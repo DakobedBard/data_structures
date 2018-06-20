@@ -34,7 +34,9 @@ test/testgraphs/CMakeFiles/testgraphs.dir/testadjlist.cpp.o
  containers/ibar.h
  graphs/AdjList.h
  graphs/AdjMatrix.h
+ graphs/MST.h
  graphs/ShortestPaths.h
+ graphs/mst.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-cardinalities.h
  test/gtest/src/gtest/googlemock/include/gmock/gmock-generated-actions.h

@@ -4,4 +4,5 @@
 algorithms/graphs/test/CMakeFiles/dfs.dir/dfs.cpp.o: algorithms/graphs/test/dfs.cpp
 algorithms/graphs/test/CMakeFiles/dfs.dir/dfs.cpp.o: graphs/AdjList.h
 algorithms/graphs/test/CMakeFiles/dfs.dir/dfs.cpp.o: graphs/AdjMatrix.h
+algorithms/graphs/test/CMakeFiles/dfs.dir/dfs.cpp.o: graphs/MST.h
 
