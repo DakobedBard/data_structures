@@ -64,12 +64,8 @@ class AdjList{
 
 	};
 
-
-
-
-
-
 	std::unordered_map<T, Vertex<T>> vertexLookup;
+
 
  public:
 	AdjList(){
@@ -92,10 +88,13 @@ class AdjList{
 	bool hasPathBFS(Vertex<T> src, Vertex<T> dest);
 	std::unordered_map<T,T> DFS(T src);
 	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, 	  std::unordered_map<T, int> &exit, int& time);
+
+
 	std::unordered_map<T, int> dijkstra(T src);
 	std::unordered_map<T, int> bellmanford(T src);
-	AdjList<T>::Vertex<T> prim(Edge<T> edge);
-	
+	std::unordered_map<T,T> prim(T src);
+	int dumb();
+	int dumb2();
 	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
 };
 
@@ -124,7 +123,7 @@ template <class T>
 void AdjList<T>::print(T src){
 	for(auto vertex:vertexLookup){
 		Vertex<T> v = vertex.second;
-		printEdges(v);
+		printEdges(v.getLabel());
 	}
 
 }

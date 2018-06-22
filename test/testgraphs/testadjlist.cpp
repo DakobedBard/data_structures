@@ -14,7 +14,7 @@ I am having a little bit of trouble with
 #include "UnionFind.h"
 #include "ShortestPaths.h"
 #include <limits.h>
-#include "mst.h"
+
 
 
 using ::testing::Return;
@@ -193,22 +193,44 @@ TEST_F(AdjListTest, ShortestPathTest) {
 	adjlist.addUndirectedEdge(5,4,10);
 	adjlist.addUndirectedEdge(5,3,14);
 	adjlist.addUndirectedEdge(4,3,9);
-	std::unordered_map<int, int> shortest_paths = adjlist.dijkstra(0);
+	//std::unordered_map<int, int> shortest_paths = adjlist.dijkstra(0);
 	
-	ASSERT_EQ(shortest_paths[0],0);
+	//ASSERT_EQ(shortest_paths[0],0);
 	//ASSERT_EQ(shortest_paths[1],4);
-	for(auto vertex : shortest_paths){
-		std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
-	}
+	//for(auto vertex : shortest_paths){
+	//	std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
+	//}
 	
 
 }	
 
 
+/*
+
+Implement Bellman Ford..
+
+
+
+*/
+
+
+
 TEST_F(AdjListTest, BellmanFordTest) {
 
 	AdjList<int> adjlist;
-
+	adjlist.addEdge(0,1,-1);
+	adjlist.addEdge(0,2,4);
+	adjlist.addEdge(1,2,3);
+	adjlist.addEdge(1,3,2);
+	adjlist.addEdge(1,4,2);
+	adjlist.addEdge(3,2,5);
+	adjlist.addEdge(3,1,1);
+	adjlist.addEdge(4,3,-3);
+	//adjlist.print(0);
+	std::unordered_map<int, int> shortest_paths= adjlist.bellmanford(0);
+	for(auto vertex : shortest_paths){
+	//	std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
+	}
 }
 
 
@@ -231,11 +253,13 @@ TEST_F(AdjListTest, PrimTest) {
 	adjlist.addUndirectedEdge(5,4,10);
 	adjlist.addUndirectedEdge(5,3,14);
 	adjlist.addUndirectedEdge(4,3,9);
+	std::unordered_map<int,int> mst = adjlist.prim(0);
 }
 
 
 
 TEST_F(AdjListTest, DijikstraTest) {
+/*
 	std::string seattle = "Seattle";
 	std::string portland = "Portland";
 	std::string vancouver = "Vancouver";
@@ -263,7 +287,7 @@ TEST_F(AdjListTest, DijikstraTest) {
 	adjlist.addEdge(denver , newyork, 1400);
 	adjlist.addEdge(sandiego , LA, 120);
 
-
+*/
 
 }
 

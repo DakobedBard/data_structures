@@ -3,9 +3,11 @@ set(libgraph_SRCS
     	lltest.cpp
 	Graph.h
 	Graph.cpp
-	MST.h
+	
 	AdjList.h
-	AdjMatrix
+	AdjMatrix.h
+	MST.h
+	
 	Coloring.h
 	
 

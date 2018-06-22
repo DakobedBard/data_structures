@@ -35,12 +35,22 @@ Adjacency lists allow us to get O(ElogV).  Somewhat analogous to Dijkstra's algo
 #include <unordered_map>
 #include <limits.h>
 
+
+int dumb(){
+
+}
+
+
+
+
+
+
 /*
 
 We are using a class HeapNode to place into our minheap.
 
 */
-
+/*
 template<class T>
 class HeapNode{
 	T label;
@@ -55,34 +65,20 @@ public:
 	
 };
 
-
-
-/*
-template<class T>
-int AdjList<T>::prim(){
-
+int stupid_function(){
+	return 2;
 }
-
-*/
-
-/*
-template<class T>
-std::vector<Edge<T>> prim(){
-	
-	std::vector<Edge<T>> mst;
-	Heap<HeapNode<T>> minheap(size());
-}
-
-*/
-
-
-/*
+/
 template <class T>
-std::vector<AdjList<T>::Edge> AdjList<T>::prim(){
-	
-
+int AdjList<T>::dumb(){
 
 }
+
+template<class T>
+Vertex<T> AdjList<T>::prim(){
+
+}
+
 */
 
 #endif

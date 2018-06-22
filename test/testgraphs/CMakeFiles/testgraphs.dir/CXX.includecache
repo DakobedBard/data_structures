@@ -27,8 +27,6 @@ ShortestPaths.h
 /home/mddarr/projects/data_structures/test/testgraphs/ShortestPaths.h
 limits.h
 -
-mst.h
-/home/mddarr/projects/data_structures/test/testgraphs/mst.h
 
 /home/mddarr/projects/data_structures/test/testgraphs/testadjlist.h
 gtest/gtest.h
@@ -120,12 +118,6 @@ iostream
 Heap.h
 graphs/Heap.h
 limits.h
--
-
-graphs/mst.h
-AdjList.h
-graphs/AdjList.h
-vector
 -
 
 test/gtest/src/gtest/googlemock/include/gmock/gmock-actions.h
