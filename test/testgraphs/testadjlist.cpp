@@ -15,8 +15,6 @@ I am having a little bit of trouble with
 #include "ShortestPaths.h"
 #include <limits.h>
 
-
-
 using ::testing::Return;
 
 AdjListTest::AdjListTest() {
@@ -229,7 +227,7 @@ TEST_F(AdjListTest, BellmanFordTest) {
 	//adjlist.print(0);
 	std::unordered_map<int, int> shortest_paths= adjlist.bellmanford(0);
 	for(auto vertex : shortest_paths){
-	//	std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
+		std::cout<< "The shortest path to vertex " << vertex.first << " is " << shortest_paths[vertex.first] << std::endl;
 	}
 }
 
@@ -237,8 +235,8 @@ TEST_F(AdjListTest, BellmanFordTest) {
 
 
 TEST_F(AdjListTest, PrimTest) {
-
-	AdjList<int> adjlist;
+	AdjList<int> adjlist; 
+		
 	adjlist.addUndirectedEdge(0,7,8);
 	adjlist.addUndirectedEdge(0,1,4);
 	adjlist.addUndirectedEdge(7,1,11);
@@ -254,6 +252,52 @@ TEST_F(AdjListTest, PrimTest) {
 	adjlist.addUndirectedEdge(5,3,14);
 	adjlist.addUndirectedEdge(4,3,9);
 	std::unordered_map<int,int> mst = adjlist.prim(0);
+}
+
+TEST_F(AdjListTest, RemoveEdgeTest) {
+	AdjList<int> adjlist;
+	adjlist.addUndirectedEdge(0,7,8);
+	adjlist.addUndirectedEdge(0,1,4);
+	adjlist.addUndirectedEdge(7,1,11);
+	adjlist.addUndirectedEdge(1,2,8);
+	adjlist.addUndirectedEdge(2,3,7);
+	adjlist.addUndirectedEdge(2,5,4);
+	adjlist.addUndirectedEdge(2,8,2);
+	adjlist.addUndirectedEdge(8,6,6);
+	adjlist.addUndirectedEdge(7,8,7);
+	adjlist.addUndirectedEdge(7,6,1);
+	adjlist.addUndirectedEdge(6,5,2);
+	adjlist.addUndirectedEdge(5,4,10);
+	adjlist.addUndirectedEdge(5,3,14);
+	adjlist.addUndirectedEdge(4,3,9);
+	adjlist.removeEdge(4,3);
+	adjlist.removeEdge(3,4);
+}
+
+
+
+TEST_F(AdjListTest, KruskalTest) {
+	AdjList<int> adjlist; 
+		
+	adjlist.addEdge(0,1,10);
+	adjlist.addEdge(0,2,6);
+	adjlist.addEdge(0,3,5);
+	adjlist.addEdge(1,3,15);
+	adjlist.addEdge(2,3,4);
+	std::vector<Edge<int>> mst = adjlist.kruskal(0);
+}
+
+
+
+TEST_F(AdjListTest, UnionFindTEst) {
+
+	AdjList<int> adjlist;
+	adjlist.addUndirectedEdge(0,1);
+	adjlist.addUndirectedEdge(1,2);
+//	adjlist.addUndirectedEdge(2,0);
+	bool a = adjlist.isCyclic();
+	ASSERT_EQ(a, true);
+
 }
 
 
@@ -293,12 +337,47 @@ TEST_F(AdjListTest, DijikstraTest) {
 
 TEST_F(AdjListTest, UnionFindTest) {
 
+	AdjList<int> adjlist; 
+	adjlist.addEdge(0,1);
+	adjlist.addEdge(1,2);
+	adjlist.addEdge(2,3);
+	adjlist.addEdge(3,4);
+	adjlist.addEdge(4,5);
+	//adjlist.addEdge(2,0);
+	adjlist.setdefault(-1);
+	bool a = adjlist.isCyclic();
+
+	ASSERT_EQ(a, true);
+}
+
+/*
 
 
-
-
+*/
+TEST_F(AdjListTest, TestConnectivity) {
+	
+	AdjList<int> adjlist; 
+	adjlist.addEdge(0,1);
+	adjlist.addEdge(0,2);
+	adjlist.addEdge(1,2);
+	adjlist.addEdge(2,3);
+	adjlist.addEdge(3,3);
+	
+	int u =1, v = 3;
+	adjlist.isReachable(1,3);
 }
 
 
+
+
+/*
+
+Of course topolgical sorting is non unique 
+
+*/
+TEST_F(AdjListTest, TestTopologicalSort) {
+	AdjList<int> adjlist; 
+
+}
 
 

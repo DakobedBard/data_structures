@@ -166,7 +166,7 @@ Implementation of BellmanFord
 
 template <class T>
 std::unordered_map<T, int> AdjList<T>::bellmanford(T src){
-	print(src);
+	//print(src);
 	std::unordered_map<T, int> shortest_paths;
 	for(auto vertex : vertexLookup){
 		if(vertex.second.getLabel() != src){
@@ -184,10 +184,14 @@ std::unordered_map<T, int> AdjList<T>::bellmanford(T src){
 			for(int j =0; j < u.size(); j++){		
 			
 				v = u.adjacent[j];
-				int weightuv =  u.adjacent_weights[i];
+				int weightuv =  u.adjacent_weights[j];
+			//	std::cout << "Vertex " << u.getLabel() << " and vertex "<< v.getLabel() <<" have an edge weight of " << weightuv << std::endl;
 			//	std::cout << " I am vertex " << u.getLabel() << " and I am adjacent to " << v.getLabel() << std::endl;
+				//std::cout << "Vertex " << u.getLabel() << " has a shortest path distance of.." << shortest_paths[u.getLabel()] <<
+			//	" and is adjacent to Vertex " << v.getLabel() << " has a shortest path distance of.." << shortest_paths[v.getLabel()] <<std::endl;
 				if(shortest_paths[u.getLabel()] != INT_MAX && shortest_paths[u.getLabel()] + weightuv < shortest_paths[v.getLabel()] ) {
-					shortest_paths[v.getLabel()]= shortest_paths[u.getLabel()] + v.getLabel();
+					//std::cout << "Updating the shortest path to " << v.getLabel() << "with a distance of " << shortest_paths[u.getLabel()] + v.getLabel() <<std::endl;
+					shortest_paths[v.getLabel()]= shortest_paths[u.getLabel()] + weightuv;
 				}
 			}
 			std::cout <<std::endl;
@@ -311,6 +315,82 @@ std::unordered_map<T,T> AdjList<T>::prim(T src){
 
 	
 	return mst;
+}
+
+
+/*
+
+Kruskal's algorithm for minimum spanning tree
+
+1) Sort all the edges in non decreasin order of their weight..
+2) Pick the smallest edge.  Check if it forms a cycle with the spanning tree formes so far.  If cycle is not formed, inclue this edge.  Else, discard it.  
+3) Repeat step @2 until there are (V-1) edges in the spanning tree. 
+
+
+*/
+
+
+
+template <class T>
+void printedgesvector(std::vector<Edge<T>> edges){
+	std::cout << "The MST of the graph is.. " << std::endl;
+	for(int i =0; i < edges.size(); i++){
+		std::cout << edges[i];
+	}
+	std::cout << std::endl;
+
+}
+
+
+template <class T>
+std::vector<Edge<T>> AdjList<T>::kruskal(T src){
+	std::vector<Edge<T>> edges;
+	for(auto vertex:vertexLookup){
+		Vertex<T> u = vertex.second;
+		for(int i=0; i < u.adjacent.size(); i++){
+
+			Vertex<T> v = u.adjacent[i];
+			int weightuv = u.adjacent_weights[i];
+			Edge<T> edgeuv(u.getLabel(), v.getLabel(), weightuv);
+			edges.push_back(edgeuv);	
+		}
+	}
+
+	
+	std::sort(edges.begin(), edges.end());
+
+	for(int i =0; i < edges.size(); i++){
+
+		//std::cout << "The edge between " << (edges[i]).src << " and " << (edges[i]).dest << " has weight of " << (edges[i]).weight << std::endl;
+	}
+
+	
+
+
+	// Now we will loop through the edges until we have |V| -1 edges.. Add edges to the graph (which begins empty).  If the edge causes a cycle in the graph.. remove it.  If it does not cause a cycle to form we will increment the count.  
+
+	
+	std::unordered_map<T,T> mst;
+	std::vector<Edge<T>> mstedges;
+	int count =0;
+	AdjList<T> detectCycle;
+	for(int i =0; i < edges.size(); i++){
+		if(count >= vertexLookup.size()){
+			break;
+		}
+		detectCycle.addEdge(edges[i].src, edges[i].dest, edges[i].weight);
+		if(detectCycle.isCyclic()){
+			detectCycle.removeEdge(edges[i].src, edges[i].dest);
+		}else{
+			count++;
+			mst[edges[i].src] = edges[i].dest;
+			mstedges.push_back(edges[i]);
+		}
+	}
+
+	printedgesvector(mstedges);
+	return mstedges;				// Now... let's return the mst..
+
 }
 
 

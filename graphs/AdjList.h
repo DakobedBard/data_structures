@@ -16,34 +16,50 @@ Adjacency list
 
 TODO:
 
-DFS AND BFS
 
-I think that I have made some progress on the BFS but DFS remains broken
+Bellman Ford
 
+Kruskall's ALgorithm
 
-Here on the asus branch
+Vertex Coloring..
 
-Write a function that returns an iterator to all of the keys in the graph...
+Network Flow... 
 
-IMPLEMENT INSERTION OF UNDIRECTED EDGES...
-
-Hey goodjob you implemented DFS and BFS.... 
-
-Is there no way to determine the the number of vertices in our graph??
-
+Connectivity()
+	Is there a path between two vertices?
+	
 
 */
 
 
 
-
+/*
 template <class T_>
 class Edge{
 		T_ src;
 		T_ dist;
 		int w;
 		Edge(T_ src_, T_ dist_, int w_):src(src_), dist(dist_), w(w_){}
-	};
+};
+
+*/
+
+
+template <class T>
+struct Edge{
+	T src;
+	T dest;
+	int weight;
+	Edge(T src_, T dest_, int w):src(src_), dest(dest_), weight(w){}
+	bool operator < (const Edge& a){
+		return this->weight < a.weight;
+	}
+	 friend std::ostream &operator<<( std::ostream &output, const Edge &e ) { 
+         	output << e.src << " - " << e.dest <<  std::endl;
+         	return output;            
+      	}
+}; 
+
 
 
 template <class T>
@@ -71,13 +87,13 @@ class AdjList{
 	AdjList(){
 	}
 	Vertex<T> getVertex(T label);
+	T defaultval;
 	void addEdge(T src, T dest);
 	void addEdge(T src, T dest, int w);
 	void addUndirectedEdge(T src, T dest);
 	void addUndirectedEdge(T src, T dest, int w);
 	void printEdges(T src);
 	void print(T src);
-	bool isCyclic();
 	int size(){
 		return vertexLookup.size();
 	}
@@ -89,13 +105,25 @@ class AdjList{
 	std::unordered_map<T,T> DFS(T src);
 	void DFS(T src, std::unordered_map<T, std::string> &state, std::unordered_map<T, T> &p,std::unordered_map<T, int> &entry, 	  std::unordered_map<T, int> &exit, int& time);
 
-
+	void setdefault(T t){
+		defaultval = t;
+	}
 	std::unordered_map<T, int> dijkstra(T src);
 	std::unordered_map<T, int> bellmanford(T src);
 	std::unordered_map<T,T> prim(T src);
+	std::vector<Edge<T>> kruskal(T src);
 	int dumb();
 	int dumb2();
+	bool topoligicalsort();
+	bool dfsCyclic();
+	bool isCyclic();
+	void DFSUtil(T src, T v, T parent, std::set<T> &visited, bool &isCycle);
+	T find(std::unordered_map<T,T> &parent, T i);
+	void TUnion(std::unordered_map<T,T> &parent, T x, T y);
 	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
+	bool topoligicalsort(T src);
+	bool isReachable(T s, T d);
+	void removeEdge(T src, T dest);
 };
 
 
@@ -117,6 +145,64 @@ Depths First search has a recursive implementation which eliminates the need to 
 Gayle Lachman whatsherface used a utility function.  I will do the same... passing around references to maps.. 
 
 */
+
+/*
+
+Allright I have a function that removes an edge from the graph!!
+*/
+
+
+template <class T>
+void AdjList<T>::removeEdge(T src, T dest){
+	Vertex<T> u = vertexLookup[src];
+	for(int i =0; i < u.adjacent.size(); i++){
+		Vertex<T> v = u.adjacent[i];
+		if(v.getLabel() == dest){
+			u.adjacent.erase(u.adjacent.begin() + i);
+			vertexLookup[u.getLabel()] = u;
+			break;
+		}
+	}
+
+}
+
+template <class T>
+bool AdjList<T>::isReachable(T s, T d){
+
+	// Base case 
+
+	if(s == d)
+		return true;
+	// Mark all the vertices as not visited..	
+	std::set<T> visited;
+	
+}
+
+
+
+
+template <class T>
+void AdjList<T>::DFSUtil(T src, T v, T parent, std::set<T> &visited, bool &isCycle){
+	visited.insert(v);
+	Vertex<T> vertexu = getVertex(v);
+	for(int i =0; i < vertexu.adjacent.size(); i++){
+		Vertex<T> vertexv = vertexu.adjacent[i];
+		if(src == vertexv.getLabel() && src!=parent){
+			isCycle = true;
+			return;
+		}
+//		std::set<T>::iterator it = visited.find(v.getLabel());
+	//	if(it != visited.end()){
+		//	//std::cout << "the value " << 
+	//	}
+	}
+
+}
+template <class T>
+bool AdjList<T>::dfsCyclic(){
+
+}
+
 
 
 template <class T>
@@ -167,25 +253,6 @@ Iterate through all edges of graph, find subset of both vertices of every edge, 
 */
 
 
-template <class T>
-bool AdjList<T>::isCyclic(){
-	std::vector<int> parent(vertexLookup.size());
-	std::cout << "The number of elements in this graph is .. " << std::endl;
-}
-
-
-
-
-template <class T>
-void AdjList<T>::process_edge(T x, T y, std::unordered_map<T,T> &p, bool &iscyclic){
-
-	if(p[x] != y){			//We found edge
-		std::cout<<"We found a cycle from "  << x << "to "  << y <<std::endl; 
-		
-	}
-
-
-}
 
 /*
 
@@ -495,25 +562,66 @@ struct subset{
 
 
 template <class T>
-T find(std::vector<T> parent, int i){
+T AdjList<T>::find(std::unordered_map<T,T> &parent, T i){
+	//std::cout << "Find is getting called " << i << "and the parent of i is " << parent[i] <<  std::endl; 
+	if(parent[i] == defaultval)
+
+		return i;
+	return find(parent, parent[i]);
+
+}
+template <class T>
+void AdjList<T>::TUnion(std::unordered_map<T,T> &parent, T x, T y){
+
+	T xset = find(parent, x);
+	T yset = find(parent, y);
+	parent[xset] = yset;
+}
+
+template <class T>
+bool AdjList<T>::isCyclic(){
+
+	std::unordered_map<T,T> parent;
 	
+	// Okay I never initialized...
+
+	for(auto vertex:vertexLookup){
+		 parent[vertex.first]= defaultval;
+	//	std::cout << "vertex.first " << vertex.first << " parent[vertex.first]" << parent[vertex.first]<<std::endl;
+	}
+ 
+	
+	// Iterate through all edges of graph.. find  subset of both vertices..
+	for(auto vertex : vertexLookup){
+		Vertex<T> u= getVertex(vertex.first);
+		for(int i = 0 ; i < u.adjacent.size(); i++){
+			T ulabel = u.getLabel();
+			T x = find(parent, ulabel);
+			//std::cout << "I am label " << ulabel <<  " and my parent is.. " << x << std::endl;
+			T y = find(parent, (u.adjacent[i]).getLabel()); 
+		//	std::cout << "I am label " << (u.adjacent[i]).getLabel() << " and i am in subset " << parent[u.getLabel()] << std::endl;
+			if ( x == y)
+				return true;
+
+			TUnion(parent, x, y);
+		}
+	}
+	return false;
 }
+
+
+
 template <class T>
-void TUnion(std::vector<T> parent, T x, T y){
-	//Alocate memory for creating V subsets. 
+bool AdjList<T>::topoligicalsort(T src){
 
-	std::vector<T> parent(); 		
+	// The first step to to performing topological sort is to determine that the graph does not have a cycle
 
-}
+	bool hascycle = this->isCyclic();
+	
 
-template <class T>
-int isCycle(AdjList<T> &adjlist){
-
+	std::cout << "Does the graph have a cycle "<< hascycle << std::endl;
 
 }
-
-
-
 
 
 
