@@ -324,7 +324,7 @@ Kruskal's algorithm for minimum spanning tree
 
 1) Sort all the edges in non decreasin order of their weight..
 2) Pick the smallest edge.  Check if it forms a cycle with the spanning tree formes so far.  If cycle is not formed, inclue this edge.  Else, discard it.  
-3) Repeat step @2 until there are (V-1) edges in the spanning tree. 
+3) Repeat step #2 until there are (V-1) edges in the spanning tree. 
 
 
 */
@@ -338,17 +338,16 @@ void printedgesvector(std::vector<Edge<T>> edges){
 		std::cout << edges[i];
 	}
 	std::cout << std::endl;
-
 }
 
 
 template <class T>
 std::vector<Edge<T>> AdjList<T>::kruskal(T src){
 	std::vector<Edge<T>> edges;
+
 	for(auto vertex:vertexLookup){
 		Vertex<T> u = vertex.second;
 		for(int i=0; i < u.adjacent.size(); i++){
-
 			Vertex<T> v = u.adjacent[i];
 			int weightuv = u.adjacent_weights[i];
 			Edge<T> edgeuv(u.getLabel(), v.getLabel(), weightuv);
@@ -356,16 +355,8 @@ std::vector<Edge<T>> AdjList<T>::kruskal(T src){
 		}
 	}
 
-	
+	// Sort the edges by their weight.  
 	std::sort(edges.begin(), edges.end());
-
-	for(int i =0; i < edges.size(); i++){
-
-		//std::cout << "The edge between " << (edges[i]).src << " and " << (edges[i]).dest << " has weight of " << (edges[i]).weight << std::endl;
-	}
-
-	
-
 
 	// Now we will loop through the edges until we have |V| -1 edges.. Add edges to the graph (which begins empty).  If the edge causes a cycle in the graph.. remove it.  If it does not cause a cycle to form we will increment the count.  
 
@@ -374,6 +365,7 @@ std::vector<Edge<T>> AdjList<T>::kruskal(T src){
 	std::vector<Edge<T>> mstedges;
 	int count =0;
 	AdjList<T> detectCycle;
+
 	for(int i =0; i < edges.size(); i++){
 		if(count >= vertexLookup.size()){
 			break;
@@ -387,10 +379,8 @@ std::vector<Edge<T>> AdjList<T>::kruskal(T src){
 			mstedges.push_back(edges[i]);
 		}
 	}
-
 	printedgesvector(mstedges);
 	return mstedges;				// Now... let's return the mst..
-
 }
 
 

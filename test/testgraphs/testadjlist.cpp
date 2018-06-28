@@ -287,53 +287,66 @@ TEST_F(AdjListTest, KruskalTest) {
 	std::vector<Edge<int>> mst = adjlist.kruskal(0);
 }
 
-
-
-TEST_F(AdjListTest, UnionFindTEst) {
-
+TEST_F(AdjListTest, GreedyColoringTest) {
 	AdjList<int> adjlist;
 	adjlist.addUndirectedEdge(0,1);
+	adjlist.addUndirectedEdge(0,2);
 	adjlist.addUndirectedEdge(1,2);
-//	adjlist.addUndirectedEdge(2,0);
-	bool a = adjlist.isCyclic();
-	ASSERT_EQ(a, true);
+	adjlist.addUndirectedEdge(1,3);
+	adjlist.addUndirectedEdge(2,3);
+	adjlist.addUndirectedEdge(3,4);
+	std::cout << "Coloring of graph1" << std::endl;
+	std::unordered_map<int, int> coloredgraph = adjlist.greedyColoring(0);
 
+
+	AdjList<int> adjlist2;
+	adjlist2.addUndirectedEdge(0,1);
+	adjlist2.addUndirectedEdge(0,2);
+	adjlist2.addUndirectedEdge(1,2);
+	adjlist2.addUndirectedEdge(1,4);
+	adjlist2.addUndirectedEdge(2,4);
+	adjlist2.addUndirectedEdge(4,3);
+//	std::cout << "Coloring of graph2" << std::endl;
+//	std::unordered_map<int, int> coloredgraph2 = adjlist2.greedyColoring(0);
 }
 
 
 
-TEST_F(AdjListTest, DijikstraTest) {
-/*
-	std::string seattle = "Seattle";
-	std::string portland = "Portland";
-	std::string vancouver = "Vancouver";
-	std::string spokane = "Spokane";
-	std::string boise = "Boise";
-	std::string LA = "Los Angeles";
-	std::string chicago = "Chicago";
-	std::string newyork = "New York";
-	std::string denver = "Denver";
-	std::string boston = "Boston";
-	std::string sanfran = "San Fransisco";
-	std::string oakland = "Oakland";
-	std::string sandiego = "San Diego";
+
+TEST_F(AdjListTest, CycleDetectionTest) {
+	
+	AdjList<int> adjlist;
+	adjlist.addUndirectedEdge(0,2);
+	adjlist.addUndirectedEdge(1,0);
+	adjlist.addUndirectedEdge(1,4);
+	adjlist.addUndirectedEdge(1,3);
+	adjlist.addUndirectedEdge(1,2);
+	adjlist.setdefault(-1);
+	//bool b = adjlist.isCyclic();
+	//ASSERT_EQ(b, true);
+
+
+	AdjList<int> adjlist2;
+	adjlist2.addUndirectedEdge(0,1);
+	adjlist2.addUndirectedEdge(1,2);
+	adjlist2.setdefault(-1);
+	bool  c = adjlist2.isCyclic();
+	ASSERT_EQ(c, false);
+
+	adjlist2.addUndirectedEdge(0,2);
+//	adjlist2.addUndirectedEdge(1,2);
 
 	
-	AdjList<std::string> adjlist;
-	adjlist.addEdge(seattle,portland,300);
-	adjlist.addEdge(seattle,boise, 255);
-	adjlist.addEdge(portland , boise, 178);
-	adjlist.addEdge(boise , denver, 451);
-	adjlist.addEdge(portland , sanfran, 225);
-	adjlist.addEdge(oakland, sanfran, 543);
-	adjlist.addEdge(sanfran , LA, 354);
-	adjlist.addEdge(boston , newyork,63);
-	adjlist.addEdge(denver , newyork, 1400);
-	adjlist.addEdge(sandiego , LA, 120);
+	bool a = adjlist2.isCyclic();
+	ASSERT_EQ(a, true);
 
-*/
+//	adjlist.addUndirectedEdge(3,4);
+//	bool a = adjlist.isCyclic();
+//	ASSERT_EQ(a, true);
 
 }
+
+/*
 
 TEST_F(AdjListTest, UnionFindTest) {
 
@@ -343,13 +356,16 @@ TEST_F(AdjListTest, UnionFindTest) {
 	adjlist.addEdge(2,3);
 	adjlist.addEdge(3,4);
 	adjlist.addEdge(4,5);
-	//adjlist.addEdge(2,0);
-	adjlist.setdefault(-1);
+	adjlist.addEdge(2,0);
+	adjlist.setdefault(-1);		// This is stupid but I'm not sure of another way around this!
 	bool a = adjlist.isCyclic();
 
 	ASSERT_EQ(a, true);
+
 }
 
+
+*/
 /*
 
 
@@ -374,10 +390,25 @@ TEST_F(AdjListTest, TestConnectivity) {
 
 Of course topolgical sorting is non unique 
 
-*/
-TEST_F(AdjListTest, TestTopologicalSort) {
-	AdjList<int> adjlist; 
+The difference between DFS and topological sorting is that when we start from vertex 5 ( a source), in DFS we would never reach vertex 4.  However in topological sorting... we would reach vertex 4.  For my implementation I will start at a source vertex and perform DFS on this.  Then... I will loop through all of the vertices and perform DFS on all vertices that have not been visited... 
 
+*/
+
+
+
+TEST_F(AdjListTest, TestTopologicalSort) {
+	AdjList<int> adjlist;
+
+	adjlist.addEdge(5,0);
+	adjlist.addEdge(5,2);
+	adjlist.addEdge(2,3);
+	adjlist.addEdge(4,1);
+	adjlist.addEdge(4,0);
+	adjlist.addEdge(3,1);
+	//adjlist.setdefault(-1);
+	//bool a = adjlist.isCyclic();
+	//ASSERT_EQ(a, false);
+	adjlist.topoligicalsort(5);
 }
 
 

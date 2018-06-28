@@ -8,6 +8,7 @@
 #include <list>
 #include "AdjMatrix.h"
 #include "MST.h"
+#include <algorithm>
 
 
 /*
@@ -124,7 +125,95 @@ class AdjList{
 	bool topoligicalsort(T src);
 	bool isReachable(T s, T d);
 	void removeEdge(T src, T dest);
+	std::unordered_map<T, int> greedyColoring(T src);
+
+	void dfs(T v, std::unordered_map<T, bool> &visited, std::unordered_map<T, int> &departure, int &time);
 };
+template <class T>
+void AdjList<T>::dfs(T v, std::unordered_map<T, bool> &visited, std::unordered_map<T, int> &departure, int &time){
+	
+	visited[v] = true;
+	Vertex<T> vertex = getVertex(v);
+	for(int i=0; i < vertex.adjacent.size(); i++){
+		T adjvertex = (vertex.adjacent[i]).getLabel();
+		if(!visited[adjvertex]){
+			dfs(adjvertex, visited, departure, time);
+		}
+	}
+	departure[v] = ++time;
+}
+
+
+
+
+template <class T>
+struct paircomp{
+	bool operator()(const std::pair<T, int> &left, const std::pair<T, int> &right){
+		return left.second > right.second;
+	}
+
+};
+
+/*
+
+Topologica Sort is the most important operation on DAGs.. Must determine if the graph has a cycle.  BFS is used only on undirected graphs to determine whether there is a cycle or loop 
+
+*/
+
+
+template <class T>
+bool AdjList<T>::topoligicalsort(T src){
+
+	// The first step to to performing topological sort is to determine that the graph does not have a cycle
+
+//	if(this->isCyclic()){
+	//	std::cout << "This graph is not a DAG " << std::endl;
+//		return 0;
+//	}
+	std::unordered_map<T, int> departure;
+	std::unordered_map<T, bool> visited;
+	for(auto vertex : vertexLookup){
+		visited[vertex.first] = false;
+	}
+	int time = -1;
+
+	dfs(src, visited, departure, time);		// Guarantee that we start at the source vertex because otherwise our unordered map
+							// would perform dfs starting at a random vertex... which is not what we want...
+							// I still need to properly determine if the graph is a DAG or not... 
+	for(auto vertex : vertexLookup){
+
+		if(!visited[vertex.first]){
+			dfs(vertex.first, visited, departure, time);
+		}
+	
+	}
+	
+	/* Once we have performed this loop, do we need to sort the vertices based on departure time?  Should I use a std::map?
+	 The answer to this is no.  This would serve no purpose because the std::map is ordered by keys not the values.  So I would
+	 have to sort the unordered map by value.  Can I use std::sort to sort the unordered_map?? No... The iterator type on std::unordered_map is a ForwardIterator, not a RandomAccessIterator, so the first requirement is unsatisfied.  
+
+	From stackoverflow  -- std::sort requires...
+	-RandomIt must meet the requirements of ValueSwappable and RandomAccessIterator.
+	-The type of dereferenced RandomIt must meet the requirements of MoveAssignable and MoveConstructible.
+	
+	This guy suggests we place an std::pair into the unordered_map... 
+	std::vector<std::pair<T, int>> elems(departure.begin(), departure.end());
+	std::sort(elems.begin(), elems.end(), comp)
+
+	*/
+	std::vector<std::pair<T, int>> elems;	//(departure.begin(), departure.end(), comp);
+	for(auto v : departure){
+		elems.push_back(std::pair<T, int>(v.first, v.second));
+	}
+	std::sort(elems.begin(), elems.end(), paircomp<T>());
+	
+	// Okay now our vector is sorted by departure times... 
+	std::cout << "elems has size... " << elems.size() << std::endl;
+ 	for(int i =0; i < elems.size(); i++){
+		std::cout << elems[i].first << " ";
+	}
+	std::cout << std::endl;
+}
 
 
 /*
@@ -563,19 +652,18 @@ struct subset{
 
 template <class T>
 T AdjList<T>::find(std::unordered_map<T,T> &parent, T i){
-	//std::cout << "Find is getting called " << i << "and the parent of i is " << parent[i] <<  std::endl; 
-	if(parent[i] == defaultval)
-
+	std::cout << "Find is getting called on vertex " << i << " and the parent of " <<  i << " is " << parent[i] <<  std::endl; 
+	if(parent[i] == i)
 		return i;
 	return find(parent, parent[i]);
 
 }
 template <class T>
 void AdjList<T>::TUnion(std::unordered_map<T,T> &parent, T x, T y){
-
-	T xset = find(parent, x);
-	T yset = find(parent, y);
-	parent[xset] = yset;
+	std::cout << "Union is gettinb called with x " << x << " and y " << y << std::endl;
+	//T xset = find(parent, x);
+	//T yset = find(parent, y);
+	parent[x] = y;
 }
 
 template <class T>
@@ -586,44 +674,129 @@ bool AdjList<T>::isCyclic(){
 	// Okay I never initialized...
 
 	for(auto vertex:vertexLookup){
-		 parent[vertex.first]= defaultval;
-	//	std::cout << "vertex.first " << vertex.first << " parent[vertex.first]" << parent[vertex.first]<<std::endl;
+		parent[vertex.first]= vertex.first;
 	}
  
-	
+	for(auto vertex : vertexLookup){
+		Vertex<T> u= getVertex(vertex.first);
+		std::cout << "I am vertex " << (vertex.second).getLabel() << std::endl;
+		for(int i =0; i < u.adjacent.size(); i++){
+			Vertex<T> v = u.adjacent[i];
+			std::cout << "I am vertex " << u.getLabel() << " and I am adjacent to " << (u.adjacent[i]).getLabel() << std::endl; 
+			T x = find(parent, u.getLabel());
+			T y = find(parent, v.getLabel());
+			if(x ==y)
+				return true;
+
+			TUnion(parent, x, y);
+			std::cout << "Vertex " << u.getLabel() << " has parent of " << parent[u.getLabel()] << " while vertex " << v.getLabel() << " has parent " << parent[v.getLabel()] <<std::endl;
+		}
+
+	}
+
+	/*
 	// Iterate through all edges of graph.. find  subset of both vertices..
 	for(auto vertex : vertexLookup){
 		Vertex<T> u= getVertex(vertex.first);
+		std::cout << "I am vertex " << u.getLabel() << std::endl;
 		for(int i = 0 ; i < u.adjacent.size(); i++){
 			T ulabel = u.getLabel();
 			T x = find(parent, ulabel);
-			//std::cout << "I am label " << ulabel <<  " and my parent is.. " << x << std::endl;
+		//	std::cout << "I am label " << ulabel <<  " and my parent is.. " << x << std::endl;
 			T y = find(parent, (u.adjacent[i]).getLabel()); 
-		//	std::cout << "I am label " << (u.adjacent[i]).getLabel() << " and i am in subset " << parent[u.getLabel()] << std::endl;
+			//std::cout << "I am  "<< ulabel << " and I am adjacent to " <<  (u.adjacent[i]).getLabel() << " and i am adjacen to " << u.getLabel() << " and i am in subset " << parent[u.getLabel()] << std::endl;
 			if ( x == y)
 				return true;
 
 			TUnion(parent, x, y);
 		}
 	}
+
+	*/
 	return false;
 }
 
 
 
+
+
+/*
+
+There is no efficient algorithm to color a graph with minimum number of colors..  The following greedy algorithm will provide an upper bound to the number of colors used..
+
+1) color first vertex with the first color
+
+2) For remaining |V| - 1 vertices.. 
+	a) Consider the currently picked vertex and color it w/ the lowest numbered color that has not been previously used on any previously 		colored vertices adjacent to it.  If all previously used colors appear adjacent to it, assign a new color.  
+
+
+Welsh-Powell algorithm is a special case of the basic greedy algorithm.  The difference between it and the naive greedy algorithm, ist that it specifies a specific order in which the vertices are visited.  Visit the high-degree vertices before their neighbours.    
+
+
+
+*/
+
+
+
+
+
+
 template <class T>
-bool AdjList<T>::topoligicalsort(T src){
+std::unordered_map<T, int> AdjList<T>::greedyColoring(T src){
 
-	// The first step to to performing topological sort is to determine that the graph does not have a cycle
+	std::unordered_map<T, int> vertexcolors;
 
-	bool hascycle = this->isCyclic();
+	std::unordered_map<T, bool> available;
+	// Initialize all vertices a color of -1 (unassigned) and the first vertex (src) to 0.  
+	for(auto vertex : vertexLookup){
+		vertexcolors[vertex.first] = -1;
+		available[vertex.first] = false;
+	}	
+	//vertexcolors[src] = 0;
+
+	// Assign colors to remaining |V| - 1 vertices.  
+	for(auto vertex : vertexLookup){
+		//if(vertex.first == src){
+		//	continue;
+		//}
+		std::cout << "I am coloring vertex " << vertex.first << std::endl;
+
+		for(int i =0; i < (vertex.second).adjacent.size(); i++){
+			Vertex<T> v = (vertex.second).adjacent[i];
+			// Process all adjacent vertices and flag their colors as unavailable..
+			if(vertexcolors[v.getLabel()] != -1){
+				available[v.getLabel()] = true;
+			}
+		}
+		// Find the first available color..
+
+		int cr =0;
+		for(auto vertex2: vertexLookup){
+			std::cout << "available[vertex2.first] " << vertex2.first << "  " << available[vertex2.first] << " and the current color is " << cr << std::endl; 
+			if(available[vertex2.first] == false){
+				break;
+			}
+			cr++;
+		}
+		vertexcolors[vertex.first] = cr;
+				
+		// Once again iterate thorugh all the adjacent vertices and reset the avaiable map
+		for(int i = 0; i < (vertex.second).adjacent.size(); i++){
+			if(vertexcolors[vertex.first] != -1){
+				available[vertex.first] == false;
+			}
+		}
+	}
 	
+	for(auto vertex :vertexcolors){
+		std::cout << "Vertex " << vertex.first << " ---> Color " << vertex.second << std::endl;
+	}
 
-	std::cout << "Does the graph have a cycle "<< hascycle << std::endl;
+
+	
+	return vertexcolors;
 
 }
-
-
 
 
 
