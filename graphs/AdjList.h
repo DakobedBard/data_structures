@@ -9,6 +9,7 @@
 #include "AdjMatrix.h"
 #include "MST.h"
 #include <algorithm>
+#include <stack>
 
 
 /*
@@ -118,7 +119,7 @@ class AdjList{
 	bool topoligicalsort();
 	bool dfsCyclic();
 	bool isCyclic();
-	void DFSUtil(T src, T v, T parent, std::set<T> &visited, bool &isCycle);
+	bool isCyclicDFSUtil(T v, std::unordered_map<T, bool> &visited,std::unordered_map<T, bool> &recursionStack);
 	T find(std::unordered_map<T,T> &parent, T i);
 	void TUnion(std::unordered_map<T,T> &parent, T x, T y);
 	void process_edge(T x, T y, std::unordered_map<T,T> &p,bool &iscyclic);
@@ -128,7 +129,56 @@ class AdjList{
 	std::unordered_map<T, int> greedyColoring(T src);
 
 	void dfs(T v, std::unordered_map<T, bool> &visited, std::unordered_map<T, int> &departure, int &time);
+	void stacktopoutil(T v, std::unordered_map<T, bool> &visited, std::stack<T> &Stack);	
+	void stacktopo(T src);
+	void alltopologicalsorts();
 };
+
+template <class T>
+void alltopologicalsorts(){
+
+}
+
+template <class T>
+void AdjList<T>::stacktopoutil(T v, std::unordered_map<T, bool> &visited, std::stack<T> &Stack){
+	visited[v] = true;
+	
+	Vertex<T> u = getVertex(v);
+	for(int i =0; i < u.adjacent.size(); i++){
+		if(!visited[u.adjacent[i].getLabel()])
+			stacktopoutil(u.adjacent[i].getLabel(), visited, Stack);
+	}
+	Stack.push(v);
+}
+
+template <class T>
+void AdjList<T>::stacktopo(T src){
+
+	std::stack<T> Stack;
+	std::unordered_map<T, bool> visited;
+	// Call the recursive helper function to store topological sort starting from all vertices one by one
+
+	for(auto vertex : vertexLookup){
+		visited[vertex.first] = false;
+	}
+
+	stacktopoutil(src, visited, Stack);	
+	for(auto vertex : vertexLookup){
+		if(!visited[vertex.first]){
+			stacktopoutil(vertex.first, visited, Stack);
+		}
+	}
+	
+	while(!Stack.empty()){
+		std::cout << Stack.top() << " ";
+		Stack.pop();
+	}
+
+	std::cout << std::endl;
+}
+
+
+
 template <class T>
 void AdjList<T>::dfs(T v, std::unordered_map<T, bool> &visited, std::unordered_map<T, int> &departure, int &time){
 	
@@ -271,25 +321,40 @@ bool AdjList<T>::isReachable(T s, T d){
 
 
 template <class T>
-void AdjList<T>::DFSUtil(T src, T v, T parent, std::set<T> &visited, bool &isCycle){
-	visited.insert(v);
-	Vertex<T> vertexu = getVertex(v);
-	for(int i =0; i < vertexu.adjacent.size(); i++){
-		Vertex<T> vertexv = vertexu.adjacent[i];
-		if(src == vertexv.getLabel() && src!=parent){
-			isCycle = true;
-			return;
+bool AdjList<T>::isCyclicDFSUtil(T v, std::unordered_map<T, bool> &visited, std::unordered_map<T, bool> &recursionStack){
+	
+	if(!visited[v]){
+		visited[v] = true;
+		recursionStack[v] = true;
+		Vertex<T> u = getVertex(v);
+		for(int i=0; i < u.adjacent.size(); i++){
+			Vertex<T> vadj = u.adjacent[i];
+			if(!visited[vadj.getLabel()] && isCyclicDFSUtil(vadj.getLabel(), visited, recursionStack)) {
+				return true;
+			}else if(recursionStack[vadj.getLabel()]){
+				return true;
+			}
 		}
-//		std::set<T>::iterator it = visited.find(v.getLabel());
-	//	if(it != visited.end()){
-		//	//std::cout << "the value " << 
-	//	}
 	}
-
+	recursionStack[v] = false;
+	return false;
 }
 template <class T>
 bool AdjList<T>::dfsCyclic(){
+	std::unordered_map<T, bool> visited;
+	std::unordered_map<T, bool> recursionStack;
+	for(auto vertex : vertexLookup){
+		visited[vertex.first] = false;
+		recursionStack[vertex.first] = false;
+	}
+	// Call the recursive helper function to detect cycle in different DFS trees..
 
+	for(auto vertex: vertexLookup){
+		if(isCyclicDFSUtil(vertex.first, visited, recursionStack))
+			return true;
+	}
+
+	return false;
 }
 
 

@@ -409,6 +409,37 @@ TEST_F(AdjListTest, TestTopologicalSort) {
 	//bool a = adjlist.isCyclic();
 	//ASSERT_EQ(a, false);
 	adjlist.topoligicalsort(5);
+	adjlist.stacktopo(5);
+}
+
+// Test case for the all topological sorts... 
+
+TEST_F(AdjListTest, TestDFSCycleDetection) {
+	AdjList<int> adjlist;
+
+	adjlist.addEdge(5,0);
+	adjlist.addEdge(5,2);
+	adjlist.addEdge(2,3);
+	adjlist.addEdge(4,1);
+	adjlist.addEdge(4,0);
+	adjlist.addEdge(3,1);
+
+}
+
+
+
+TEST_F(AdjListTest, TestDFSCycleDetection2) {
+	
+	AdjList<int> adjlist;
+	adjlist.addEdge(0,1);
+	adjlist.addEdge(0,2);
+	adjlist.addEdge(1,2);
+	adjlist.addEdge(2,0);
+	adjlist.addEdge(2,3);
+//	adjlist.addEdge(3,3);	
+
+	bool b = adjlist.dfsCyclic();
+	ASSERT_EQ(b, true);
 }
 
 

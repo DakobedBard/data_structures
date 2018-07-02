@@ -150,7 +150,7 @@ class IntBST: public BinarySearchTree<int>{
 
 
 
-
+/*
 TEST_F(TreeTest, SumKLargestTest) {
 
 
@@ -179,6 +179,8 @@ TEST_F(TreeTest, SumKLargestTest) {
 
 }
 
+
+*/
 /*
 
 This test case will test the search function  
@@ -203,6 +205,20 @@ TEST_F(TreeTest, searchBST) {
 	bool b = bst.search(22);
 	ASSERT_EQ(b, false);
 
+}
+/*
+Test the Level Order traversal.  
+
+*/
+
+TEST_F(TreeTest, LevelOrderTest) {
+	BinarySearchTree<int> bst;
+	bst.insert(5);
+	bst.insert(3);
+	bst.insert(7);
+	bst.insert(2);
+	bst.insert(4);
+	bst.levelorder();	
 }
 
 

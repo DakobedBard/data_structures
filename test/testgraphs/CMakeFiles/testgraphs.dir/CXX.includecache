@@ -89,6 +89,8 @@ MST.h
 graphs/MST.h
 algorithm
 -
+stack
+-
 
 graphs/AdjMatrix.h
 vector

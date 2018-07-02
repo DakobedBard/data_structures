@@ -19,10 +19,40 @@ Can i search the fucking tree for an element ??
 
 #include <iostream>
 #include <vector>
+#include <queue>
 
 
 
 namespace DTL{
+
+/*
+
+The following is an implementaion of an AVL tree which allows for duplicates
+
+*/
+
+template <class T>
+struct node{
+	T key;
+	node *left;
+	node *right;
+	int height;
+	int count;
+	node(T key_):key(key_), left(NULL), right(NULL), height(1), count(1){}
+
+};
+
+template <class T>
+T max(T a, T b){
+	return (a > b)? a : b;
+}
+
+template <class T>
+class AVLTree{
+	
+};
+
+
 
 
 template<class T>
@@ -64,6 +94,8 @@ class BinarySearchTree{
 	bool remove(T data);
 	int getsize () const{return size;}
 	std::vector<T> inorder_array();
+	void levelorder();
+	void recursivelevelorder();
 	
 
   private:
@@ -72,6 +104,76 @@ class BinarySearchTree{
 	}
 
 };
+
+
+/*
+
+In order for us to perform a levelorder traversal we will
+
+1) create an empty queue q
+2) temp_node = root;
+3) Loop while temp_node is not NULL
+	a) print temp_node-> data
+	b) Enque temp_node's children first left then right
+
+*/
+
+template <class T>
+int height(node<T>* node){
+	if(node == nullptr){
+		return 0;
+	}else{
+		int lheight = height(node->left);	
+		int rheight = height(node->right);
+
+		// Use the larger one
+
+		if(lheight > rheight){
+			return (lheight+1);
+		}else{
+			return rheight +1;
+		}
+	}
+
+}
+
+template <class T>
+void recursivelevelorder(int level){
+	
+
+}
+
+
+// There doesn't seem to be a very compelling reason to implement this recursively.  
+
+template <class T>
+void BinarySearchTree<T>::recursivelevelorder(){
+	
+
+}
+
+
+template <class T>
+void BinarySearchTree<T>::levelorder(){
+	std::cout << " Level Order traversal " << std::endl;
+	if(root == nullptr)
+		return;
+	std::queue<Node*> q;
+	q.push(root);
+	while(!q.empty()){
+		Node *node = q.front();
+		std::cout << node->data << " ";
+		q.pop();
+		// Enqueue the left child
+		if(node->left != nullptr)
+			q.push(node->left);
+		if(node->right != nullptr)
+			q.push(node->right);
+	}
+	std::cout << std::endl;
+
+}
+
 
 template <class T>
 BinarySearchTree<T>::BinarySearchTree(std::vector<T> array){
