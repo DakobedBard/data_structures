@@ -31,11 +31,19 @@ AdjMatrix.h
 graphs/AdjMatrix.h
 MST.h
 graphs/MST.h
+algorithm
+-
+stack
+-
 
 graphs/AdjMatrix.h
 vector
 -
 iostream
+-
+unordered_map
+-
+limits.h
 -
 
 graphs/MST.h
