@@ -1,1 +1,1 @@
-Implementations and tests for various data structures and Graph algorithms in C++
+In this repository I have implemented various graph representations (adjacency lists, adjacency matrices) as well as graph algorithms such as Dijkstra, Bellman Ford for shortest paths, and Primm's minimum spanning tree algorithm.  Primm's and Dikjstra's algorithm require a priority queue with a decrease key operation which I have also implemented.  The project is built using CMake and tests and unit testswere written using the gtest C++ testing framework and are found in the tests folder.  
